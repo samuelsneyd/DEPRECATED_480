@@ -124,8 +124,17 @@ function AppFooter() {
               <Link href="https://github.com/samuelsneyd"
                     rel="sponsored"
                     title="Samuel"
+                    target="_blank"
               >
                 Samuel Sneyd
+              </Link>
+              {'. See source code on '}
+              <Link href="https://github.com/samuelsneyd/retreat_480"
+                    rel="sponsored"
+                    title="GitHub Repository"
+                    target="_blank"
+              >
+                GitHub
               </Link>
               {'. Licensed by '}
               <Link

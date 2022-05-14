@@ -3,7 +3,7 @@ import { AppBar, Toolbar } from '@mui/material';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 
-const rightLink = {
+const leftLink = {
   fontSize: 16,
   color: 'common.white',
   ml: 3
@@ -14,40 +14,54 @@ function AppAppBar() {
     <div>
       <AppBar position="fixed">
         <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <Box sx={{ flex: 1 }}/>
-          <Link
-            variant="h6"
-            underline="none"
-            color="inherit"
-            href="/"
-            sx={{ fontSize: 24 }}
-          >
-            {'Retreat 480'}
-          </Link>
           <Box sx={{
             flex: 1,
             display: 'flex',
-            justifyContent: 'flex-end'
+            justifyContent: 'flex-start'
           }}>
             <Link
               color="inherit"
               variant="h6"
               underline="none"
               href="/"
-              sx={rightLink}
+              sx={leftLink}
             >
-              {'Sign In'}
+              {'Home'}
+            </Link>
+            <Link
+              variant="h6"
+              underline="none"
+              href="/"
+              sx={leftLink}
+            >
+              {'Your loft'}
+            </Link>
+            <Link
+              variant="h6"
+              underline="none"
+              href="/"
+              sx={leftLink}
+            >
+              {'Location'}
+            </Link>
+            <Link
+              variant="h6"
+              underline="none"
+              href="/"
+              sx={leftLink}
+            >
+              {'Around the area'}
             </Link>
             <Link
               variant="h6"
               underline="none"
               href="/"
               sx={{
-                ...rightLink,
+                ...leftLink,
                 color: 'secondary.main'
               }}
             >
-              {'Sign Up'}
+              {'Book now'}
             </Link>
           </Box>
         </Toolbar>

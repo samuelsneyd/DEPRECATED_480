@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Home from './pages/HomePage/HomePage';
+import HomePage from './pages/HomePage/HomePage';
 
 function App() {
-  return <Home/>;
+  return <HomePage/>;
 }
 
 const appDiv = document.getElementById('app');

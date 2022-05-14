@@ -7,13 +7,13 @@ import Container from '@mui/material/Container';
 
 function Copyright() {
   return (
-    <React.Fragment>
+    <>
       {'© '}
       <Link color="inherit" href="/">
         Retreat 480
       </Link>{' '}
       {new Date().getFullYear()}
-    </React.Fragment>
+    </>
   );
 }
 

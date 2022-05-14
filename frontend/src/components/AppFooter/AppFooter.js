@@ -37,7 +37,7 @@ const LANGUAGES = [
   }
 ];
 
-export default function AppFooter() {
+function AppFooter() {
   return (
     <Typography
       component="footer"
@@ -143,3 +143,5 @@ export default function AppFooter() {
     </Typography>
   );
 }
+
+export default AppFooter;

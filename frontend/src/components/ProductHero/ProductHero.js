@@ -4,7 +4,7 @@ import ProductHeroLayout from '../ProductHeroLayout/ProductHeroLayout';
 
 const backgroundImage = '../../../../static/images/misty-mountains.jpg';
 
-export default function ProductHero() {
+function ProductHero() {
   return (
     <ProductHeroLayout
       sxBackground={{
@@ -52,3 +52,5 @@ export default function ProductHero() {
     </ProductHeroLayout>
   );
 }
+
+export default ProductHero;

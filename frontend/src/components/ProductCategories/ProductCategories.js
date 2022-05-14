@@ -101,7 +101,7 @@ const images = [
   }
 ];
 
-export default function ProductCategories() {
+function ProductCategories() {
   return (
     <Container component="section" sx={{
       mt: 8,
@@ -164,3 +164,5 @@ export default function ProductCategories() {
     </Container>
   );
 }
+
+export default ProductCategories;

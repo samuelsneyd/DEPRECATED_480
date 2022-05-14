@@ -63,6 +63,14 @@ function AppAppBar() {
             >
               {'Book now'}
             </Link>
+            <Link
+              variant="h6"
+              underline="none"
+              href="/"
+              sx={leftLink}
+            >
+              {'Contact'}
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>

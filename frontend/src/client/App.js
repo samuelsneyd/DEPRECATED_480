@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Home from './Home/Home';
+import Home from './screens/HomeScreen/HomeScreen';
 
 function App() {
   return <Home/>;

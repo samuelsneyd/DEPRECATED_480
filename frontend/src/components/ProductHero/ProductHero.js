@@ -44,10 +44,10 @@ function ProductHero() {
         href="/"
         sx={{ minWidth: 200 }}
       >
-        Book Now
+        {'Book Now'}
       </Button>
       <Typography variant="body2" color="inherit" sx={{ mt: 2 }}>
-        Discover the experience
+        {'Discover the experience'}
       </Typography>
     </ProductHeroLayout>
   );

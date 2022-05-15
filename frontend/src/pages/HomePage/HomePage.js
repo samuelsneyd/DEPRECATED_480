@@ -1,7 +1,6 @@
 import * as React from 'react';
 import AppAppBar from '../../components/AppAppBar/AppAppBar';
 import AppFooter from '../../components/AppFooter/AppFooter';
-import Pricing from '../../components/Pricing/Pricing';
 import ProductCategories from '../../components/ProductCategories/ProductCategories';
 import ProductCTA from '../../components/ProductCTA/ProductCTA';
 import ProductHero from '../../components/ProductHero/ProductHero';

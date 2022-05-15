@@ -10,22 +10,49 @@ const footers = [
   {
     title: 'Retreat 480',
     description: [
-      'Home',
-      'About',
-      'Contact',
-      'Location'
+      {
+        text: 'Home',
+        href: '/'
+      },
+      {
+        text: 'About',
+        href: '/about/'
+      },
+      {
+        text: 'Contact',
+        href: '/contact/'
+      },
+      {
+        text: 'Location',
+        href: '/location/'
+      }
     ]
   },
   {
     title: 'Features',
     description: [
-      'Accommodation',
-      'Activities'
+      {
+        text: 'Accommodation',
+        href: '/accommodation/'
+      },
+      {
+        text: 'Activities',
+        href: '/activities/'
+      }
     ]
   },
   {
     title: 'Legal',
-    description: ['Privacy', 'Terms']
+    description: [
+      {
+        text: 'Privacy Policy',
+        href: '/privacy/'
+      },
+      {
+        text: 'Terms and Conditions',
+        href: '/terms/'
+      }
+    ]
   }
 ];
 
@@ -63,9 +90,9 @@ function AppFooter() {
                     p: 0
                   }}>
                     {footer.description.map((item) => (
-                      <Box component="li" key={item} sx={{ py: 0.5 }}>
-                        <Link href={`/${item.replace(/ /g, '-').toLowerCase()}/`}>
-                          {item}
+                      <Box component="li" key={item.text} sx={{ py: 0.5 }}>
+                        <Link href={item.href}>
+                          {item.text}
                         </Link>
                       </Box>
                     ))}
@@ -83,19 +110,19 @@ function AppFooter() {
             <Typography variant="caption">
               {'Website built by '}
               <Link href="https://github.com/samuelsneyd"
-                    rel="sponsored"
+                    rel="noopener noreferrer"
                     title="Samuel"
                     target="_blank"
               >
-                Samuel Sneyd
+                {'Samuel Sneyd'}
               </Link>
               {'. See source code on '}
               <Link href="https://github.com/samuelsneyd/retreat_480"
-                    rel="sponsored"
+                    rel="noopener noreferrer"
                     title="GitHub Repository"
                     target="_blank"
               >
-                GitHub
+                {'GitHub'}
               </Link>
               {'. Licensed by '}
               <Link
@@ -104,7 +131,7 @@ function AppFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                CC 3.0 BY
+                {'CC 3.0 BY'}
               </Link>
             </Typography>
           </Container>

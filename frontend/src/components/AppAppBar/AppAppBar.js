@@ -3,11 +3,33 @@ import { AppBar, Toolbar } from '@mui/material';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 
-const leftLink = {
-  fontSize: 16,
-  color: 'common.white',
-  ml: 3
-};
+const links = [
+  {
+    title: 'Home',
+    href: '/'
+  },
+  {
+    title: 'Your Loft',
+    href: '/accommodation/'
+  },
+  {
+    title: 'Location',
+    href: '/location/'
+  },
+  {
+    title: 'Activities',
+    href: '/activities/'
+  },
+  {
+    title: 'Book Now',
+    href: '/book/',
+    color: 'secondary.main'
+  },
+  {
+    title: 'Contact',
+    href: '/contact/'
+  }
+];
 
 function AppAppBar() {
   return (
@@ -19,58 +41,22 @@ function AppAppBar() {
             display: 'flex',
             justifyContent: 'flex-start'
           }}>
-            <Link
-              color="inherit"
-              variant="h6"
-              underline="none"
-              href="/"
-              sx={leftLink}
-            >
-              {'Home'}
-            </Link>
-            <Link
-              variant="h6"
-              underline="none"
-              href="/"
-              sx={leftLink}
-            >
-              {'Your loft'}
-            </Link>
-            <Link
-              variant="h6"
-              underline="none"
-              href="/"
-              sx={leftLink}
-            >
-              {'Location'}
-            </Link>
-            <Link
-              variant="h6"
-              underline="none"
-              href="/"
-              sx={leftLink}
-            >
-              {'Around the area'}
-            </Link>
-            <Link
-              variant="h6"
-              underline="none"
-              href="/"
-              sx={{
-                ...leftLink,
-                color: 'secondary.main'
-              }}
-            >
-              {'Book now'}
-            </Link>
-            <Link
-              variant="h6"
-              underline="none"
-              href="/"
-              sx={leftLink}
-            >
-              {'Contact'}
-            </Link>
+            {links.map((link) => (
+              <Link
+                color="inherit"
+                variant="caption"
+                underline="none"
+                key={link.title}
+                href={link.href}
+                sx={{
+                  fontSize: 16,
+                  ml: 3,
+                  color: link.color || 'common.white'
+                }}
+              >
+                {link.title}
+              </Link>
+            ))}
           </Box>
         </Toolbar>
       </AppBar>

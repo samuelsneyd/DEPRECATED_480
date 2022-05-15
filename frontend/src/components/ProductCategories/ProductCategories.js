@@ -5,12 +5,16 @@ import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Container from '@mui/material/Container';
 
-const ImageBackdrop = styled('div')(({ theme }) => ({
+const absolutePosition = {
   position: 'absolute',
   left: 0,
   right: 0,
   top: 0,
-  bottom: 0,
+  bottom: 0
+};
+
+const ImageBackdrop = styled('div')(({ theme }) => ({
+  ...absolutePosition,
   background: '#000',
   opacity: 0.5,
   transition: theme.transitions.create('opacity')
@@ -114,11 +118,7 @@ function ProductCategories() {
           >
             <Box
               sx={{
-                position: 'absolute',
-                left: 0,
-                right: 0,
-                top: 0,
-                bottom: 0,
+                ...absolutePosition,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center 40%',
                 backgroundImage: `url(${image.url})`
@@ -127,11 +127,7 @@ function ProductCategories() {
             <ImageBackdrop className="imageBackdrop"/>
             <Box
               sx={{
-                position: 'absolute',
-                left: 0,
-                right: 0,
-                top: 0,
-                bottom: 0,
+                ...absolutePosition,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',

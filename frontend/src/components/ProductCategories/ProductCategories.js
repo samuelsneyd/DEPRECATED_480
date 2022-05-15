@@ -41,15 +41,6 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
   '& .imageTitle': {
     position: 'relative',
     padding: `${theme.spacing(2)} ${theme.spacing(4)} 14px`
-  },
-  '& .imageMarked': {
-    height: 3,
-    width: 18,
-    background: theme.palette.common.white,
-    position: 'absolute',
-    bottom: -2,
-    left: 'calc(50% - 9px)',
-    transition: theme.transitions.create('opacity')
   }
 }));
 
@@ -108,7 +99,6 @@ function ProductCategories() {
       mb: 4
     }}>
       <Typography variant="h4" marked="center" align="center" component="h4">
-
       </Typography>
       <Box sx={{
         mt: 8,

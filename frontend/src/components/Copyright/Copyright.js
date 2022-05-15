@@ -1,9 +1,10 @@
 import * as React from 'react';
+import config from '../../config/config';
 
 function Copyright() {
   return (
     <>
-      {'© Retreat 480 '}
+      {`© ${config.siteName} `}
       {new Date().getFullYear()}
     </>
   );

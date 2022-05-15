@@ -12,14 +12,14 @@ import withRoot from '../../config/withRoot';
 function Index() {
   return (
     <>
-      <AppAppBar />
-      <ProductHero />
-      <ProductValues />
-      <ProductCategories />
-      <ProductHowItWorks />
-      <ProductCTA />
-      <ProductSmokingHero />
-      <AppFooter />
+      <AppAppBar/>
+      <ProductHero/>
+      <ProductValues/>
+      <ProductCategories/>
+      <ProductHowItWorks/>
+      <ProductCTA/>
+      <ProductSmokingHero/>
+      <AppFooter/>
     </>
   );
 }

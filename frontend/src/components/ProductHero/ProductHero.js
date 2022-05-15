@@ -1,4 +1,5 @@
 import * as React from 'react';
+import config from '../../config/config';
 import { Button, Typography } from '@mui/material';
 import ProductHeroLayout from '../ProductHeroLayout/ProductHeroLayout';
 
@@ -20,7 +21,7 @@ function ProductHero() {
         alt="increase priority"
       />
       <Typography color="inherit" align="center" variant="h4" marked="center">
-        Retreat 480
+        {config.siteName}
       </Typography>
       <Typography
         color="inherit"
@@ -34,7 +35,7 @@ function ProductHero() {
           }
         }}
       >
-        Enjoy some time off in beautiful Northland scenery
+        {'Enjoy some time off in beautiful Northland scenery'}
       </Typography>
       <Button
         color="secondary"

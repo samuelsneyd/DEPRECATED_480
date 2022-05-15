@@ -5,10 +5,12 @@ import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Container from '@mui/material/Container';
 import Copyright from '../Copyright/Copyright';
+import WebsiteBuiltBy from '../WebsiteBuiltBy/WebsiteBuiltBy';
+import config from '../../config/config';
 
 const footers = [
   {
-    title: 'Retreat 480',
+    title: config.siteName,
     description: [
       {
         text: 'Home',
@@ -101,39 +103,11 @@ function AppFooter() {
               ))}
             </Grid>
           </Container>
-          <Container sx={{
-            mb: 1
-          }}>
+          <Container sx={{ mb: 1 }}>
             <Copyright/>
           </Container>
           <Container>
-            <Typography variant="caption">
-              {'Website built by '}
-              <Link href="https://github.com/samuelsneyd"
-                    rel="noopener noreferrer"
-                    title="Samuel"
-                    target="_blank"
-              >
-                {'Samuel Sneyd'}
-              </Link>
-              {'. See source code on '}
-              <Link href="https://github.com/samuelsneyd/retreat_480"
-                    rel="noopener noreferrer"
-                    title="GitHub Repository"
-                    target="_blank"
-              >
-                {'GitHub'}
-              </Link>
-              {'. Licensed by '}
-              <Link
-                href="https://creativecommons.org/licenses/by/3.0/"
-                title="Creative Commons BY 3.0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {'CC 3.0 BY'}
-              </Link>
-            </Typography>
+            <WebsiteBuiltBy/>
           </Container>
         </Container>
       </Container>

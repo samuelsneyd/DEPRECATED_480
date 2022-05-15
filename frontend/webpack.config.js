@@ -15,6 +15,18 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'html-loader',
+          },
+          {
+            loader: 'markdown-loader',
+            options: {}
+          }
+        ]
       }
     ]
   },
@@ -24,7 +36,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        // This has effect on the react lib size
+        // This has effect on the React lib size
         'process.env.NODE_ENV': JSON.stringify('production')
       }
     })

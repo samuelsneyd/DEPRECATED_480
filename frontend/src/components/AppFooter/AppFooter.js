@@ -88,10 +88,10 @@ function AppFooter() {
               p: 0
             }}>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="/">Terms</Link>
+                <Link href="/terms/">Terms</Link>
               </Box>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="/">Privacy</Link>
+                <Link href="/privacy/">Privacy</Link>
               </Box>
             </Box>
           </Grid>
@@ -124,8 +124,17 @@ function AppFooter() {
               <Link href="https://github.com/samuelsneyd"
                     rel="sponsored"
                     title="Samuel"
+                    target="_blank"
               >
                 Samuel Sneyd
+              </Link>
+              {'. See source code on '}
+              <Link href="https://github.com/samuelsneyd/retreat_480"
+                    rel="sponsored"
+                    title="GitHub Repository"
+                    target="_blank"
+              >
+                GitHub
               </Link>
               {'. Licensed by '}
               <Link

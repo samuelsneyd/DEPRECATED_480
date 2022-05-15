@@ -1,39 +1,31 @@
 import * as React from 'react';
-import { TextField, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Container from '@mui/material/Container';
+import Copyright from '../Copyright/Copyright';
 
-function Copyright() {
-  return (
-    <>
-      {'© '}
-      <Link color="inherit" href="/">
-        Retreat 480
-      </Link>{' '}
-      {new Date().getFullYear()}
-    </>
-  );
-}
-
-const iconStyle = {
-  width: 48,
-  height: 48,
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  backgroundColor: 'warning.main',
-  mr: 1,
-  '&:hover': {
-    bgcolor: 'warning.dark'
-  }
-};
-
-const LANGUAGES = [
+const footers = [
   {
-    code: 'en-US',
-    name: 'English'
+    title: 'Retreat 480',
+    description: [
+      'Home',
+      'About',
+      'Contact',
+      'Location'
+    ]
+  },
+  {
+    title: 'Features',
+    description: [
+      'Accommodation',
+      'Activities'
+    ]
+  },
+  {
+    title: 'Legal',
+    description: ['Privacy', 'Terms']
   }
 ];
 
@@ -47,78 +39,47 @@ function AppFooter() {
       }}
     >
       <Container sx={{
-        my: 8,
+        my: 4,
         display: 'flex'
       }}>
-        <Grid container spacing={5}>
-          <Grid item xs={6} sm={4} md={3}>
-            <Grid
-              container
-              direction="column"
-              justifyContent="flex-end"
-              spacing={2}
-              sx={{ height: 120 }}
-            >
-              <Grid item sx={{ display: 'flex' }}>
-                <Box component="a" href="/" sx={iconStyle}>
-                  <img
-                    src=""
-                    alt="Facebook"
-                  />
-                </Box>
-                <Box component="a" href="/" sx={iconStyle}>
-                  <img
-                    src=""
-                    alt="Twitter"
-                  />
-                </Box>
-              </Grid>
-              <Grid item>
-                <Copyright/>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item xs={6} sm={4} md={2}>
-            <Typography variant="h6" marked="left" gutterBottom>
-              Legal
-            </Typography>
-            <Box component="ul" sx={{
-              m: 0,
-              listStyle: 'none',
-              p: 0
-            }}>
-              <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="/terms/">Terms</Link>
-              </Box>
-              <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="/privacy/">Privacy</Link>
-              </Box>
-            </Box>
-          </Grid>
-          <Grid item xs={6} sm={8} md={4}>
-            <Typography variant="h6" marked="left" gutterBottom>
-              Language
-            </Typography>
-            <TextField
-              select
-              size="medium"
-              variant="standard"
-              SelectProps={{
-                native: true
-              }}
-              sx={{
-                mt: 1,
-                width: 150
-              }}
-            >
-              {LANGUAGES.map((language) => (
-                <option value={language.code} key={language.code}>
-                  {language.name}
-                </option>
+        <Container spacing={5}>
+          <Container
+            maxWidth="md"
+            component="footer"
+            sx={{
+              borderTop: (theme) => `1px solid ${theme.palette.divider}`,
+              py: 4
+            }}
+          >
+            <Grid container spacing={4} justifyContent="space-evenly">
+              {footers.map((footer) => (
+                <Grid item xs={6} sm={3} key={footer.title}>
+                  <Typography variant="h6" color="text.primary" gutterBottom>
+                    {footer.title}
+                  </Typography>
+                  <Box component="ul" sx={{
+                    m: 0,
+                    listStyle: 'none',
+                    p: 0
+                  }}>
+                    {footer.description.map((item) => (
+                      <Box component="li" key={item} sx={{ py: 0.5 }}>
+                        <Link href={`/${item.replace(/ /g, '-').toLowerCase()}/`}>
+                          {item}
+                        </Link>
+                      </Box>
+                    ))}
+                  </Box>
+                </Grid>
               ))}
-            </TextField>
-          </Grid>
-          <Grid item>
+            </Grid>
+          </Container>
+          <Container sx={{
+            mb: 1
+          }}>
+            <Copyright/>
+          </Container>
+          <Container>
             <Typography variant="caption">
               {'Website built by '}
               <Link href="https://github.com/samuelsneyd"
@@ -146,8 +107,8 @@ function AppFooter() {
                 CC 3.0 BY
               </Link>
             </Typography>
-          </Grid>
-        </Grid>
+          </Container>
+        </Container>
       </Container>
     </Typography>
   );

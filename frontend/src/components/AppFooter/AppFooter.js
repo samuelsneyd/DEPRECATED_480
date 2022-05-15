@@ -88,10 +88,10 @@ function AppFooter() {
               p: 0
             }}>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="/">Terms</Link>
+                <Link href="/terms/">Terms</Link>
               </Box>
               <Box component="li" sx={{ py: 0.5 }}>
-                <Link href="/">Privacy</Link>
+                <Link href="/privacy/">Privacy</Link>
               </Box>
             </Box>
           </Grid>

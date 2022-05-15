@@ -40,7 +40,6 @@ function ProductCTA() {
                 Watch us for news, updates, and offers.
               </Typography>
               <TextField
-                noBorder
                 placeholder="Your email"
                 variant="standard"
                 sx={{

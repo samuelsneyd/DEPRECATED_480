@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Route, Routes } from 'react-router';
 import HomePage from './pages/HomePage/HomePage';
@@ -26,7 +26,7 @@ function App() {
   );
 }
 
-const appDiv = document.getElementById('app');
-render(<App/>, appDiv);
+const root = createRoot(document.getElementById('app'));
+root.render(<App/>);
 
 export default App;

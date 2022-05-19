@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Route, Routes } from 'react-router';
 import AboutPage from './pages/AboutPage/AboutPage';
 import AccommodationPage from './pages/AccommodationPage/AccommodationPage';
+import ActivitiesPage from './pages/ActivitiesPage/ActivitiesPage';
 import BookingPage from './pages/BookingPage/BookingPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
@@ -19,7 +20,7 @@ function App() {
         <Route exact path={'/'} element={<HomePage/>}/>
         <Route path={'accommodation'} element={<AccommodationPage/>}/>
         <Route path={'location'} element={<LocationPage/>}/>
-        <Route path={'activities'} element={<LocationPage/>}/>
+        <Route path={'activities'} element={<ActivitiesPage/>}/>
         <Route path={'book'} element={<BookingPage/>}/>
         <Route path={'contact'} element={<ContactPage/>}/>
         <Route path={'about'} element={<AboutPage/>}/>

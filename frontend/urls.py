@@ -8,6 +8,7 @@ urlpatterns = [
     path("activities/", IndexView.as_view(), name="activities"),
     path("book/", IndexView.as_view(), name="book"),
     path("contact/", IndexView.as_view(), name="contact"),
+    path("about/", IndexView.as_view(), name="about"),
     path("terms/", IndexView.as_view(), name="terms"),
     path("privacy/", IndexView.as_view(), name="privacy"),
 ]

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Route, Routes } from 'react-router';
+import AboutPage from './pages/AboutPage/AboutPage';
 import AccommodationPage from './pages/AccommodationPage/AccommodationPage';
 import BookingPage from './pages/BookingPage/BookingPage';
 import ContactPage from './pages/ContactPage/ContactPage';
@@ -21,6 +22,7 @@ function App() {
         <Route path={'activities'} element={<LocationPage/>}/>
         <Route path={'book'} element={<BookingPage/>}/>
         <Route path={'contact'} element={<ContactPage/>}/>
+        <Route path={'about'} element={<AboutPage/>}/>
         <Route path={'terms'} element={<TermsPage/>}/>
         <Route path={'privacy'} element={<PrivacyPage/>}/>
         <Route path={'*'} element={<ErrorPage/>}/>

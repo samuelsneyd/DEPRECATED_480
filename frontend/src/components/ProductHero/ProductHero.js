@@ -35,14 +35,14 @@ function ProductHero() {
           }
         }}
       >
-        {'Enjoy some time off in beautiful Northland scenery'}
+        {config.siteSubtitle}
       </Typography>
       <Button
         color="secondary"
         variant="contained"
         size="large"
         component="a"
-        href="/"
+        href="/book/"
         sx={{ minWidth: 200 }}
       >
         {'Book Now'}

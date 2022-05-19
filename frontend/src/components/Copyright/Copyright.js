@@ -1,12 +1,12 @@
+import { Typography } from '@mui/material';
 import * as React from 'react';
 import config from '../../config/config';
 
 function Copyright() {
   return (
-    <>
-      {`© ${config.siteName} `}
-      {new Date().getFullYear()}
-    </>
+    <Typography>
+      {`© ${new Date().getFullYear()} ${config.siteName}`}
+    </Typography>
   );
 }
 

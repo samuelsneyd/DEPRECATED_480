@@ -1,3 +1,3 @@
-## Privacy
+## PrivacyPage
 
 Placeholder

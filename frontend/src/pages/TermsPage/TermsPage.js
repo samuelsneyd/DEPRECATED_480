@@ -8,7 +8,7 @@ import Markdown from '../../components/Markdown/Markdown';
 import withRoot from '../../config/withRoot';
 import terms from '../../../static/legal/terms.md';
 
-function Terms() {
+function TermsPage() {
   return (
     <>
       <AppAppBar />
@@ -25,4 +25,4 @@ function Terms() {
   );
 }
 
-export default withRoot(Terms);
+export default withRoot(TermsPage);

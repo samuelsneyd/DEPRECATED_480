@@ -1,3 +1,3 @@
-## Terms
+## TermsPage
 
 Placeholder

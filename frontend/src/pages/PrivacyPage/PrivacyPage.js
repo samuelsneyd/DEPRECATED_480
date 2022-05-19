@@ -8,7 +8,7 @@ import Markdown from '../../components/Markdown/Markdown';
 import withRoot from '../../config/withRoot';
 import privacy from '../../../static/legal/privacy.md';
 
-function Privacy() {
+function PrivacyPage() {
   return (
     <>
       <AppAppBar />
@@ -25,4 +25,4 @@ function Privacy() {
   );
 }
 
-export default withRoot(Privacy);
+export default withRoot(PrivacyPage);

@@ -2,25 +2,28 @@ import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Route, Routes } from 'react-router';
+import AccommodationPage from './pages/AccommodationPage/AccommodationPage';
+import BookingPage from './pages/BookingPage/BookingPage';
+import ContactPage from './pages/ContactPage/ContactPage';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
 import HomePage from './pages/HomePage/HomePage';
-import Terms from './pages/Terms/Terms';
-import Privacy from './pages/Privacy/Privacy';
+import LocationPage from './pages/LocationPage/LocationPage';
+import TermsPage from './pages/TermsPage/TermsPage';
+import PrivacyPage from './pages/PrivacyPage/PrivacyPage';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<HomePage/>}/>
-        <Route path="terms" element={<Terms/>}/>
-        <Route path="privacy" element={<Privacy/>}/>
-        <Route
-          path="*"
-          element={
-            <main style={{ padding: '1rem' }}>
-              <p>There's nothing here!</p>
-            </main>
-          }
-        />
+        <Route exact path={'/'} element={<HomePage/>}/>
+        <Route path={'accommodation'} element={<AccommodationPage/>}/>
+        <Route path={'location'} element={<LocationPage/>}/>
+        <Route path={'activities'} element={<LocationPage/>}/>
+        <Route path={'book'} element={<BookingPage/>}/>
+        <Route path={'contact'} element={<ContactPage/>}/>
+        <Route path={'terms'} element={<TermsPage/>}/>
+        <Route path={'privacy'} element={<PrivacyPage/>}/>
+        <Route path={'*'} element={<ErrorPage/>}/>
       </Routes>
     </BrowserRouter>
   );

@@ -1,9 +1,13 @@
 from django.urls import path
-from . import views
+from .views import IndexView
 
 urlpatterns = [
-    path("", views.IndexView.as_view(), name="index"),
-    path("/", views.IndexView.as_view(), name="index"),
-    path("terms/", views.IndexView.as_view(), name="terms"),
-    path("privacy/", views.IndexView.as_view(), name="privacy"),
+    path("", IndexView.as_view(), name="index"),
+    path("accommodation/", IndexView.as_view(), name="accommodation"),
+    path("location/", IndexView.as_view(), name="location"),
+    path("activities/", IndexView.as_view(), name="activities"),
+    path("book/", IndexView.as_view(), name="book"),
+    path("contact/", IndexView.as_view(), name="contact"),
+    path("terms/", IndexView.as_view(), name="terms"),
+    path("privacy/", IndexView.as_view(), name="privacy"),
 ]

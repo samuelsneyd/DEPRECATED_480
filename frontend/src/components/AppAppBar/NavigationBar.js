@@ -1,4 +1,5 @@
 import * as React from 'react';
+import withRoot from '../../config/withRoot';
 import NavigationBarView from './NavigationBarView';
 
 const links = [
@@ -35,4 +36,4 @@ function NavigationBar() {
   );
 }
 
-export default NavigationBar;
+export default withRoot(NavigationBar);

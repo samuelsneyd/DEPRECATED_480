@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Container from '@mui/material/Container';
+import withRoot from '../../config/withRoot';
 import Copyright from '../Copyright/Copyright';
 import WebsiteBuiltBy from '../WebsiteBuiltBy/WebsiteBuiltBy';
 import config from '../../config/config';
@@ -115,4 +116,4 @@ function AppFooter() {
   );
 }
 
-export default AppFooter;
+export default withRoot(AppFooter);

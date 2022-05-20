@@ -3,35 +3,9 @@ import { AppBar, Toolbar } from '@mui/material';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 
-const links = [
-  {
-    title: 'Home',
-    href: '/'
-  },
-  {
-    title: 'Your Loft',
-    href: '/accommodation/'
-  },
-  {
-    title: 'Location',
-    href: '/location/'
-  },
-  {
-    title: 'Activities',
-    href: '/activities/'
-  },
-  {
-    title: 'Book Now',
-    href: '/book/',
-    color: 'secondary.main'
-  },
-  {
-    title: 'Contact',
-    href: '/contact/'
-  }
-];
+function NavigationBarView(props) {
+  const { links } = props;
 
-function AppAppBar() {
   return (
     <div>
       <AppBar position="fixed">
@@ -51,7 +25,7 @@ function AppAppBar() {
                 sx={{
                   fontSize: 16,
                   ml: 3,
-                  color: link.color || 'common.white'
+                  color: link.color || 'secondary.light'
                 }}
               >
                 {link.title}
@@ -65,4 +39,4 @@ function AppAppBar() {
   );
 }
 
-export default AppAppBar;
+export default NavigationBarView;

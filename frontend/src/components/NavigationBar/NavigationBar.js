@@ -1,12 +1,10 @@
 import * as React from 'react';
+import { useState } from 'react';
+import { useMediaQuery, useTheme } from '@mui/material';
 import withRoot from '../../config/withRoot';
 import NavigationBarView from './NavigationBarView';
 
 const links = [
-  {
-    title: 'Home',
-    href: '/'
-  },
   {
     title: 'Your Loft',
     href: '/accommodation/'
@@ -31,8 +29,17 @@ const links = [
 ];
 
 function NavigationBar() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const [tabValue, setTabValue] = useState(0);
+
   return (
-    <NavigationBarView links={links}/>
+    <NavigationBarView
+      links={links}
+      isMobile={isMobile}
+      tabValue={tabValue}
+      setTabValue={setTabValue}
+    />
   );
 }
 

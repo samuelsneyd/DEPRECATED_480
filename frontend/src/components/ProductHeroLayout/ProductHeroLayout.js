@@ -37,7 +37,7 @@ function ProductHeroLayout(props) {
     <ProductHeroLayoutRoot>
       <Container
         sx={{
-          mt: 3,
+          mt: 8,
           mb: 14,
           display: 'flex',
           flexDirection: 'column',

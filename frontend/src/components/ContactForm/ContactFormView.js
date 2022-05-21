@@ -39,7 +39,7 @@ const ContactFormView = props => {
               component={'p'}
               gutterBottom sx={{ pb: 1 }}
             >
-              {'Send us a message and will get back to you as soon as possible'}
+              {'Send us a message and we will get back to you as soon as possible'}
             </Typography>
             <form onSubmit={handleSubmit}>
               <Grid container spacing={2}>

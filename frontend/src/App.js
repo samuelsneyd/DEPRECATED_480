@@ -7,6 +7,7 @@ import AppFooter from './components/AppFooter/AppFooter';
 import BookingPage from './pages/BookingPage/BookingPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
+import FAQPage from './pages/FAQPage/FAQPage';
 import HomePage from './pages/HomePage/HomePage';
 import LocationPage from './pages/LocationPage/LocationPage';
 import PrivacyPage from './pages/PrivacyPage/PrivacyPage';
@@ -25,6 +26,7 @@ function App() {
         <Route path={'book'} element={<BookingPage/>}/>
         <Route path={'contact'} element={<ContactPage/>}/>
         <Route path={'about'} element={<AboutPage/>}/>
+        <Route path={'faq'} element={<FAQPage/>}/>
         <Route path={'terms'} element={<TermsPage/>}/>
         <Route path={'privacy'} element={<PrivacyPage/>}/>
         <Route path={'*'} element={<ErrorPage/>}/>

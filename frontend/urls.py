@@ -11,4 +11,5 @@ urlpatterns = [
     path("about/", IndexView.as_view(), name="about"),
     path("terms/", IndexView.as_view(), name="terms"),
     path("privacy/", IndexView.as_view(), name="privacy"),
+    path("faq/", IndexView.as_view(), name="faq"),
 ]

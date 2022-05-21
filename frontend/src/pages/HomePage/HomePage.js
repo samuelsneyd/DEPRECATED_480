@@ -7,7 +7,7 @@ import ProductSmokingHero from '../../components/ProductSmokingHero/ProductSmoki
 import ProductValues from '../../components/ProductValues/ProductValues';
 import withRoot from '../../config/withRoot';
 
-function Index() {
+const HomePage = () => {
   return (
     <>
       <ProductHero/>
@@ -18,6 +18,6 @@ function Index() {
       <ProductSmokingHero/>
     </>
   );
-}
+};
 
-export default withRoot(Index);
+export default withRoot(HomePage);

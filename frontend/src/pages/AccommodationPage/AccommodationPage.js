@@ -1,13 +1,14 @@
 import * as React from 'react';
-import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import PageTitle from '../../components/PageTitle/PageTitle';
 import withRoot from '../../config/withRoot';
 
-function AccommodationPage() {
+const AccommodationPage = () => {
   return (
-    <main style={{ padding: '1rem' }}>
-      <Typography>{'Coming soon'}</Typography>
-    </main>
+    <Container>
+      <PageTitle title={'Your Loft'}/>
+    </Container>
   );
-}
+};
 
 export default withRoot(AccommodationPage);

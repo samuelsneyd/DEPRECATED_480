@@ -1,13 +1,16 @@
 import * as React from 'react';
-import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import PageTitle from '../../components/PageTitle/PageTitle';
+import ProductCategories from '../../components/ProductCategories/ProductCategories';
 import withRoot from '../../config/withRoot';
 
-function FAQPage() {
+const FAQPage = () => {
   return (
-    <main style={{ padding: '1rem' }}>
-      <Typography>{'Coming soon'}</Typography>
-    </main>
+    <Container>
+      <PageTitle title={'FAQ'}/>
+      <ProductCategories/>
+    </Container>
   );
-}
+};
 
 export default withRoot(FAQPage);

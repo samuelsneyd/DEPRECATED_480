@@ -10,10 +10,8 @@ const initialValues = {
 };
 
 function ContactForm() {
-
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState({});
-
   const minMessageLength = 30;
   const messageHelperText = `${values.message.length}/${minMessageLength} characters minimum`;
 

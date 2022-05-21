@@ -1,14 +1,12 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
-function ContactFormView(props) {
+const ContactFormView = props => {
   const {
     values,
     errors,
@@ -27,18 +25,6 @@ function ContactFormView(props) {
       justify={'center'}
     >
       <Grid item xs={6} mb={4}>
-        <Container>
-          <Box sx={{ mt: 7, mb: 7 }}>
-            <Typography
-              variant="h3"
-              gutterBottom
-              marked="center"
-              align="center"
-            >
-              {'Contact us'}
-            </Typography>
-          </Box>
-        </Container>
         <Card sx={{ maxWidth: 600 }}>
           <CardContent>
             <Typography
@@ -129,6 +115,6 @@ function ContactFormView(props) {
       </Grid>
     </Grid>
   );
-}
+};
 
 export default ContactFormView;

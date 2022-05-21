@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { useMediaQuery, useTheme } from '@mui/material';
 import ResponsiveAppBarView from './ResponsiveAppBarView';
+import useIsMobile from '../../hooks/useIsMobile';
 import withRoot from '../../config/withRoot';
 
 const pages = [
@@ -32,8 +32,7 @@ const pages = [
 ];
 
 const ResponsiveAppBar = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useIsMobile();
 
   return (
     <ResponsiveAppBarView

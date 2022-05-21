@@ -18,10 +18,6 @@ const footers = [
       {
         text: 'Contact',
         href: '/contact/'
-      },
-      {
-        text: 'Location',
-        href: '/location/'
       }
     ]
   },
@@ -35,6 +31,10 @@ const footers = [
       {
         text: 'Activities',
         href: '/activities/'
+      },
+      {
+        text: 'Location',
+        href: '/location/'
       }
     ]
   },
@@ -62,10 +62,8 @@ const footers = [
   }
 ];
 
-function AppFooter() {
-  return (
-    <AppFooterView footers={footers}/>
-  );
-}
+const AppFooter = () => (
+  <AppFooterView footers={footers}/>
+);
 
 export default withRoot(AppFooter);

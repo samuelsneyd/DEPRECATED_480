@@ -7,7 +7,12 @@ import MobileDrawer from '../MobileDrawer/MobileDrawer';
 import ResponsiveAppBarTabs from './ResponsiveAppBarTabs';
 
 const ResponsiveAppBar = (props) => {
-  const { isMobile, pages } = props;
+  const {
+    isMobile,
+    pages,
+    activeTab,
+    setActiveTab
+  } = props;
 
   return (
     <>
@@ -19,12 +24,16 @@ const ResponsiveAppBar = (props) => {
             ?
             <>
               <MobileDrawer/>
-              <HomeButton/>
+              <HomeButton setActiveTab={setActiveTab}/>
             </>
             :
             <>
-              <HomeButton/>
-              <ResponsiveAppBarTabs pages={pages}/>
+              <HomeButton setActiveTab={setActiveTab}/>
+              <ResponsiveAppBarTabs
+                pages={pages}
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+              />
             </>
           }
         </Toolbar>

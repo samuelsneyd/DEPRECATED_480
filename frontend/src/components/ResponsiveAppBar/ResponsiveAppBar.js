@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import * as React from 'react';
 import ResponsiveAppBarView from './ResponsiveAppBarView';
 import useIsMobile from '../../hooks/useIsMobile';
@@ -32,12 +33,15 @@ const pages = [
 ];
 
 const ResponsiveAppBar = () => {
+  const [activeTab, setActiveTab] = useState();
   const isMobile = useIsMobile();
 
   return (
     <ResponsiveAppBarView
       isMobile={isMobile}
       pages={pages}
+      activeTab={activeTab}
+      setActiveTab={setActiveTab}
     />
   );
 };

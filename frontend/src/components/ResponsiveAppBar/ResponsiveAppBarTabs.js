@@ -19,7 +19,9 @@ function ResponsiveAppBarTabs(props) {
             alignItems: 'flex-start',
             color: page.color || 'secondary.light',
             textTransform: 'none',
-            textDecoration: 'none'
+            textDecoration: 'none',
+            fontWeight: 'light',
+            fontSize: 'medium'
           }}
         >
           {page.title}

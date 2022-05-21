@@ -11,12 +11,13 @@ function HomeButton(props) {
       to={'/'}
       size={'large'}
       sx={{
-        ...sx,
         mr: 2,
         color: 'inherit',
         display: 'flex',
         textDecoration: 'none',
-        textTransform: 'none'
+        textTransform: 'none',
+        fontSize: 'large',
+        ...sx
       }}
     >
       {config.siteName}

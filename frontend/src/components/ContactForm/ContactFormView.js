@@ -19,19 +19,40 @@ function ContactFormView(props) {
   } = props;
 
   return (
-    <Grid container spacing={1} direction={'column'} alignItems={'center'} justify={'center'}>
+    <Grid
+      container
+      spacing={1}
+      direction={'column'}
+      alignItems={'center'}
+      justify={'center'}
+    >
       <Grid item xs={6} mb={4}>
         <Container>
           <Box sx={{ mt: 7, mb: 7 }}>
-            <Typography variant="h3" gutterBottom marked="center" align="center">
+            <Typography
+              variant="h3"
+              gutterBottom
+              marked="center"
+              align="center"
+            >
               {'Contact us'}
             </Typography>
           </Box>
         </Container>
         <Card sx={{ maxWidth: 600 }}>
           <CardContent>
-            <Typography variant={'h5'} gutterBottom>{'Get in touch'}</Typography>
-            <Typography variant={'body2'} color={'textSecondary'} component={'p'} gutterBottom>
+            <Typography
+              variant={'h5'}
+              gutterBottom
+            >
+              {'Get in touch'}
+            </Typography>
+            <Typography
+              variant={'body2'}
+              color={'textSecondary'}
+              component={'p'}
+              gutterBottom sx={{ pb: 1 }}
+            >
               {'Send us a message and will get back to you as soon as possible'}
             </Typography>
             <form onSubmit={handleSubmit}>
@@ -92,7 +113,12 @@ function ContactFormView(props) {
                   />
                 </Grid>
                 <Grid item xs={12}>
-                  <Button type={'submit'} variant={'contained'} color={'secondary'} fullWidth>
+                  <Button
+                    type={'submit'}
+                    variant={'contained'}
+                    color={'secondary'}
+                    fullWidth
+                  >
                     {'Submit'}
                   </Button>
                 </Grid>

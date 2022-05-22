@@ -37,15 +37,18 @@ const AppFooterLinks = (props) => {
           }}>
             {footer.description.map((item) => (
               <Box component="li" key={item.text} sx={{ py: 0 }}>
-                <Button variant={'text'} sx={{
-                  textTransform: 'none',
-                  justifyContent: 'flex-start',
-                  py: 0.5
-                }}>
+                <Button
+                  variant={'text'}
+                  component={Link}
+                  to={item.href}
+                  sx={{
+                    textTransform: 'none',
+                    justifyContent: 'flex-start',
+                    py: 0.5
+                  }}
+                >
                   <Typography
                     variant={'subtitle2'}
-                    component={Link}
-                    to={item.href}
                     sx={{
                       color: 'inherit',
                       fontWeight: 'light'

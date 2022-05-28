@@ -2,7 +2,6 @@ import * as React from 'react';
 import Container from '@mui/material/Container';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import ProductCategories from '../../components/ProductCategories/ProductCategories';
-import withRoot from '../../config/withRoot';
 
 const ActivitiesPage = () => {
   return (
@@ -13,4 +12,4 @@ const ActivitiesPage = () => {
   );
 };
 
-export default withRoot(ActivitiesPage);
+export default ActivitiesPage

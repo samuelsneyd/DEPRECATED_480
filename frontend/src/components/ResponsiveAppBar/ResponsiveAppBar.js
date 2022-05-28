@@ -2,7 +2,6 @@ import { useState } from 'react';
 import * as React from 'react';
 import ResponsiveAppBarView from './ResponsiveAppBarView';
 import useIsMobile from '../../hooks/useIsMobile';
-import withRoot from '../../config/withRoot';
 
 const pages = [
   {
@@ -46,4 +45,4 @@ const ResponsiveAppBar = () => {
   );
 };
 
-export default withRoot(ResponsiveAppBar);
+export default ResponsiveAppBar;

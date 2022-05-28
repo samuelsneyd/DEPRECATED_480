@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Route, Routes } from 'react-router';
+import withRoot from './config/withRoot';
 import AboutPage from './pages/AboutPage/AboutPage';
 import AccommodationPage from './pages/AccommodationPage/AccommodationPage';
 import ActivitiesPage from './pages/ActivitiesPage/ActivitiesPage';
@@ -36,5 +37,4 @@ function App() {
   );
 }
 
-export default App;
-// export default withRoot(App);
+export default withRoot(App);

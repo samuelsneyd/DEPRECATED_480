@@ -1,7 +1,6 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import withRoot from '../../config/withRoot';
 import HomeButton from '../HomeButton/HomeButton';
 import MobileDrawer from '../MobileDrawer/MobileDrawer';
 import ResponsiveAppBarTabs from './ResponsiveAppBarTabs';
@@ -43,4 +42,4 @@ const ResponsiveAppBarView = (props) => {
   );
 };
 
-export default withRoot(ResponsiveAppBarView);
+export default ResponsiveAppBarView;

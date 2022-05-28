@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
-import withRoot from '../../config/withRoot';
 
 const ErrorPage = () => {
   return (
@@ -10,4 +9,4 @@ const ErrorPage = () => {
   );
 };
 
-export default withRoot(ErrorPage);
+export default ErrorPage;

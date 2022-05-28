@@ -44,4 +44,4 @@ const AppFooterView = props => {
   );
 };
 
-export default withRoot(AppFooterView);
+export default AppFooterView;

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import AppFooterView from './AppFooterView';
-import withRoot from '../../config/withRoot';
 import config from '../../config/config';
 
 const footers = [
@@ -66,4 +65,4 @@ const AppFooter = () => (
   <AppFooterView footers={footers}/>
 );
 
-export default withRoot(AppFooter);
+export default AppFooter;

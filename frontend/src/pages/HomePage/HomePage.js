@@ -5,7 +5,6 @@ import ProductHero from '../../components/ProductHero/ProductHero';
 import ProductHowItWorks from '../../components/ProductHowItWorks/ProductHowItWorks';
 import ProductSmokingHero from '../../components/ProductSmokingHero/ProductSmokingHero';
 import ProductValues from '../../components/ProductValues/ProductValues';
-import withRoot from '../../config/withRoot';
 
 const HomePage = () => {
   return (
@@ -20,4 +19,4 @@ const HomePage = () => {
   );
 };
 
-export default withRoot(HomePage);
+export default HomePage;

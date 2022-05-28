@@ -2,7 +2,6 @@ import * as React from 'react';
 import Container from '@mui/material/Container';
 import Markdown from '../../components/Markdown/Markdown';
 import PageTitle from '../../components/PageTitle/PageTitle';
-import withRoot from '../../config/withRoot';
 import privacy from '../../../static/legal/privacy.md';
 
 const PrivacyPage = () => {
@@ -14,4 +13,4 @@ const PrivacyPage = () => {
   );
 };
 
-export default withRoot(PrivacyPage);
+export default PrivacyPage;

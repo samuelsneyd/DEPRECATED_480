@@ -6,7 +6,7 @@ import HomeButton from '../HomeButton/HomeButton';
 import MobileDrawer from '../MobileDrawer/MobileDrawer';
 import ResponsiveAppBarTabs from './ResponsiveAppBarTabs';
 
-const ResponsiveAppBar = (props) => {
+const ResponsiveAppBarView = (props) => {
   const {
     isMobile,
     pages,
@@ -43,4 +43,4 @@ const ResponsiveAppBar = (props) => {
   );
 };
 
-export default withRoot(ResponsiveAppBar);
+export default withRoot(ResponsiveAppBarView);

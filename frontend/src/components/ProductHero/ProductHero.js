@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import config from '../../config/config';
+import theme from '../../config/theme';
 import { Button, Typography } from '@mui/material';
 import ProductHeroLayout from '../ProductHeroLayout/ProductHeroLayout';
 
@@ -11,7 +12,7 @@ function ProductHero() {
     <ProductHeroLayout
       sxBackground={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundColor: '#7fc7d9', // Average color of the background image.
+        backgroundColor: theme.palette.primary.main,
         backgroundPosition: 'center'
       }}
     >

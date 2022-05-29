@@ -31,12 +31,12 @@ function ProductSmokingHero() {
       <Typography variant="subtitle1" sx={{ my: 3 }}>
         We are here to help. Get in touch!
       </Typography>
-      <Box
-        component="img"
-        src=""
-        alt="img1"
-        sx={{ width: 60 }}
-      />
+      {/* <Box */}
+      {/*   component="img" */}
+      {/*   src="" */}
+      {/*   alt="img1" */}
+      {/*   sx={{ width: 60 }} */}
+      {/* /> */}
     </Container>
   );
 }

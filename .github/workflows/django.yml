@@ -1,5 +1,11 @@
 name: Django CI
 
+env:
+  SECRET_KEY: django_github_secret_key
+  DEBUG: True
+  DATABASE_NAME: db.sqlite3
+  HOST: 127.0.0.1
+
 on:
   push:
     branches: [ main, production ]

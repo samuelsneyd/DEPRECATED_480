@@ -4,7 +4,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +18,11 @@
     "@babel/core": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
     "@babel/preset-react": "^7.16.7",
+    "babel-jest": "^28.1.0",
     "babel-loader": "^8.2.5",
+    "jest": "^28.1.0",
+    "jest-dom": "^4.0.0",
+    "jest-environment-jsdom": "^28.1.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router": "^6.3.0",

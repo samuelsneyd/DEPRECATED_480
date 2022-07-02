@@ -7,5 +7,5 @@ jest.mock('../../../static/legal/privacy.md', () => () => '<div>Privacy</div>');
 it('renders PrivacyPage without crashing', () => {
   const div = document.createElement('div');
   const root = createRoot(div);
-  root.render(<PrivacyPage/>);
+  root.render(<PrivacyPage />);
 });

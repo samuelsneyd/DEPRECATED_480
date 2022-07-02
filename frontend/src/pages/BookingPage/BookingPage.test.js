@@ -5,5 +5,5 @@ import BookingPage from './BookingPage';
 it('renders BookingPage without crashing', () => {
   const div = document.createElement('div');
   const root = createRoot(div);
-  root.render(<BookingPage/>);
+  root.render(<BookingPage />);
 });

@@ -1,20 +1,20 @@
 import * as React from 'react';
-import ProductCategories from '../../components/ProductCategories/ProductCategories';
-import ProductCTA from '../../components/ProductCTA/ProductCTA';
-import ProductHero from '../../components/ProductHero/ProductHero';
-import ProductHowItWorks from '../../components/ProductHowItWorks/ProductHowItWorks';
-import ProductSmokingHero from '../../components/ProductSmokingHero/ProductSmokingHero';
+import Activities from '../../components/Activities/Activities';
+import CallToAction from '../../components/CallToAction/CallToAction';
+import HeroHeader from '../../components/HeroHeader/HeroHeader';
+import HowItWorks from '../../components/HowItWorks/HowItWorks';
+import ContactBanner from '../../components/ContactBanner/ContentBanner';
 import ProductValues from '../../components/ProductValues/ProductValues';
 
 const HomePage = () => {
   return (
     <>
-      <ProductHero/>
-      <ProductValues/>
-      <ProductCategories/>
-      <ProductHowItWorks/>
-      <ProductCTA/>
-      <ProductSmokingHero/>
+      <HeroHeader />
+      <ProductValues />
+      <Activities />
+      <HowItWorks />
+      <CallToAction />
+      <ContactBanner />
     </>
   );
 };

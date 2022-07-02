@@ -1,8 +1,6 @@
 import * as React from 'react';
 import ReactMarkdown from 'markdown-to-jsx';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
+import { Box, Link, Typography } from '@mui/material';
 
 const options = {
   overrides: {
@@ -10,28 +8,28 @@ const options = {
       component: Typography,
       props: {
         gutterBottom: true,
-        variant: 'h4',
-      },
+        variant: 'h4'
+      }
     },
     h2: {
       component: Typography,
-      props: { gutterBottom: true, variant: 'h6' },
+      props: { gutterBottom: true, variant: 'h6' }
     },
     h3: {
       component: Typography,
-      props: { gutterBottom: true, variant: 'subtitle1' },
+      props: { gutterBottom: true, variant: 'subtitle1' }
     },
     h4: {
       component: Typography,
       props: {
         gutterBottom: true,
         variant: 'caption',
-        paragraph: true,
-      },
+        paragraph: true
+      }
     },
     p: {
       component: Typography,
-      props: { paragraph: true },
+      props: { paragraph: true }
     },
     a: { component: Link },
     li: {
@@ -39,11 +37,13 @@ const options = {
         <Box component="li" sx={{ mt: 1 }}>
           <Typography component="span" {...props} />
         </Box>
-      ),
-    },
-  },
+      )
+    }
+  }
 };
 
-export default function Markdown(props) {
-  return <ReactMarkdown options={options} {...props}/>;
-}
+const Markdown = ({ children }) => {
+  return <ReactMarkdown options={options} children={children} />;
+};
+
+export default Markdown;

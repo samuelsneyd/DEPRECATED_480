@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import config from '../../config/config';
 import theme from '../../config/theme';
 import { Button, Typography } from '@mui/material';
-import ProductHeroLayout from '../ProductHeroLayout/ProductHeroLayout';
+import HeroHeaderLayout from './HeroHeaderLayout';
 
 const backgroundImage = '../../../../static/images/misty-mountains.jpg';
 
-function ProductHero() {
+const HeroHeader = () => {
   return (
-    <ProductHeroLayout
+    <HeroHeaderLayout
       sxBackground={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundColor: theme.palette.primary.main,
@@ -46,15 +46,14 @@ function ProductHero() {
         size="large"
         component={Link}
         to={'/book/'}
-        sx={{ minWidth: 200 }}
       >
         {'Book Now'}
       </Button>
       <Typography variant="body2" color="inherit" sx={{ mt: 2 }}>
         {'Discover the experience'}
       </Typography>
-    </ProductHeroLayout>
+    </HeroHeaderLayout>
   );
-}
+};
 
-export default ProductHero;
+export default HeroHeader;

@@ -1,8 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { styled } from '@mui/material/styles';
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
+import { Box, Container, styled } from '@mui/material';
 
 const ProductHeroLayoutRoot = styled('section')(({ theme }) => ({
   color: theme.palette.common.white,
@@ -27,12 +25,7 @@ const Background = styled(Box)({
   zIndex: -2
 });
 
-function ProductHeroLayout(props) {
-  const {
-    sxBackground,
-    children
-  } = props;
-
+const HeroHeaderLayout = ({ sxBackground, children }) => {
   return (
     <ProductHeroLayoutRoot>
       <Container
@@ -57,7 +50,7 @@ function ProductHeroLayout(props) {
             zIndex: -1
           }}
         />
-        <Background sx={sxBackground}/>
+        <Background sx={sxBackground} />
         <Box
           component="img"
           src="../../../../static/images/icons/productHeroArrowDown.png"
@@ -72,9 +65,9 @@ function ProductHeroLayout(props) {
       </Container>
     </ProductHeroLayoutRoot>
   );
-}
+};
 
-ProductHeroLayout.propTypes = {
+HeroHeaderLayout.propTypes = {
   children: PropTypes.node,
   sxBackground: PropTypes.oneOfType([
     PropTypes.arrayOf(
@@ -85,4 +78,4 @@ ProductHeroLayout.propTypes = {
   ])
 };
 
-export default ProductHeroLayout;
+export default HeroHeaderLayout;

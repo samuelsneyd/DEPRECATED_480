@@ -1,17 +1,13 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
+import { Container, Typography } from '@mui/material';
 import AppFooterLinks from './AppFooterLinks';
 import Copyright from '../Copyright/Copyright';
 import WebsiteBuiltBy from '../WebsiteBuiltBy/WebsiteBuiltBy';
-import withRoot from '../../config/withRoot';
 
-const AppFooterView = props => {
-  const { footers } = props;
-
+const AppFooterView = ({ footers }) => {
   return (
     <Typography
-      component="footer"
+      component={"footer"}
       sx={{
         display: 'flex',
         bgcolor: 'secondary.light'
@@ -23,14 +19,14 @@ const AppFooterView = props => {
       }}>
         <Container spacing={5}>
           <Container
-            maxWidth="md"
-            component="footer"
+            maxWidth={"md"}
+            component={"footer"}
             sx={{
               borderTop: (theme) => `1px solid ${theme.palette.divider}`,
               py: 4
             }}
           >
-            <AppFooterLinks footers={footers}/>
+            <AppFooterLinks footers={footers} />
           </Container>
           <Container sx={{ mb: 1 }}>
             <Copyright/>

@@ -1,12 +1,11 @@
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
 import * as React from 'react';
+import { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Box, Button, Grid, Typography } from '@mui/material';
+import { Context } from '../../Context';
 
-const AppFooterLinks = (props) => {
-  const { footers } = props;
+const AppFooterLinks = ({ footers }) => {
+  const { setActiveTab } = useContext(Context);
 
   return (
     <Grid container spacing={4} justifyContent="space-evenly">
@@ -41,6 +40,7 @@ const AppFooterLinks = (props) => {
                   variant={'text'}
                   component={Link}
                   to={item.href}
+                  onClick={() => setActiveTab(item.href)}
                   sx={{
                     textTransform: 'none',
                     justifyContent: 'flex-start',

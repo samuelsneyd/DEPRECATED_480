@@ -1,8 +1,5 @@
 import * as React from 'react';
-import { Typography } from '@mui/material';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Container from '@mui/material/Container';
+import { Box, Container, Grid, Typography } from '@mui/material';
 
 const item = {
   display: 'flex',
@@ -11,10 +8,10 @@ const item = {
   px: 5
 };
 
-function ProductValues() {
+const ProductValues = () => {
   return (
     <Box
-      component="section"
+      component={'section'}
       sx={{
         display: 'flex',
         overflow: 'hidden',
@@ -28,9 +25,9 @@ function ProductValues() {
         position: 'relative'
       }}>
         <Box
-          component="img"
-          src=""
-          alt="transparent image"
+          component={'img'}
+          src={''}
+          alt={'transparent image'}
           sx={{
             pointerEvents: 'none',
             position: 'absolute',
@@ -41,15 +38,15 @@ function ProductValues() {
           <Grid item xs={12} md={4}>
             <Box sx={item}>
               <Box
-                component="img"
-                src="../../../../static/images/accommodation.jpg"
-                alt="img1"
+                component={'img'}
+                src={'../../../../static/images/accommodation.jpg'}
+                alt={'img1'}
                 sx={{ height: 104 }}
               />
-              <Typography variant="h6" sx={{ my: 5 }}>
-                The best accommodation in Northland
+              <Typography variant={'h6'} sx={{ my: 5 }}>
+                Luxury accommodation
               </Typography>
-              <Typography variant="h5">
+              <Typography variant={'h5'}>
                 {'Placeholder description text. '}
                 {'More placeholder description text.'}
               </Typography>
@@ -58,15 +55,15 @@ function ProductValues() {
           <Grid item xs={12} md={4}>
             <Box sx={item}>
               <Box
-                component="img"
-                src="../../../../static/images/night-sky.jpg"
-                alt="img2"
+                component={'img'}
+                src={'../../../../static/images/night-sky.jpg'}
+                alt={'img2'}
                 sx={{ height: 104 }}
               />
-              <Typography variant="h6" sx={{ my: 5 }}>
+              <Typography variant={'h6'} sx={{ my: 5 }}>
                 New experiences
               </Typography>
-              <Typography variant="h5">
+              <Typography variant={'h5'}>
                 {'Placeholder description text. '}
                 {'More placeholder description text.'}
               </Typography>
@@ -75,15 +72,15 @@ function ProductValues() {
           <Grid item xs={12} md={4}>
             <Box sx={item}>
               <Box
-                component="img"
-                src="../../../../static/images/dog.jpg"
-                alt="img3"
+                component={'img'}
+                src={'../../../../static/images/dog.jpg'}
+                alt={'img3'}
                 sx={{ height: 104 }}
               />
-              <Typography variant="h6" sx={{ my: 5 }}>
+              <Typography variant={'h6'} sx={{ my: 5 }}>
                 Exclusive rates
               </Typography>
-              <Typography variant="h5">
+              <Typography variant={'h5'}>
                 {'Placeholder description text. '}
                 {'Placeholder description text.'}
               </Typography>
@@ -93,6 +90,6 @@ function ProductValues() {
       </Container>
     </Box>
   );
-}
+};
 
 export default ProductValues;

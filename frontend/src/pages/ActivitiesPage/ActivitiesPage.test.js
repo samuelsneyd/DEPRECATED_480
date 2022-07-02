@@ -5,5 +5,5 @@ import ActivitiesPage from './ActivitiesPage';
 it('renders ActivitiesPage without crashing', () => {
   const div = document.createElement('div');
   const root = createRoot(div);
-  root.render(<ActivitiesPage/>);
+  root.render(<ActivitiesPage />);
 });

@@ -1,15 +1,15 @@
 import * as React from 'react';
 import Container from '@mui/material/Container';
 import PageTitle from '../../components/PageTitle/PageTitle';
-import ProductCategories from '../../components/ProductCategories/ProductCategories';
+import Activities from '../../components/Activities/Activities';
 
 const ActivitiesPage = () => {
   return (
     <Container>
-      <PageTitle title={'Activities'}/>
-      <ProductCategories/>
+      <PageTitle title={'Activities'} />
+      <Activities />
     </Container>
   );
 };
 
-export default ActivitiesPage
+export default ActivitiesPage;

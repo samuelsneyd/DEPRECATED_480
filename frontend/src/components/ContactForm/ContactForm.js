@@ -9,7 +9,7 @@ const initialValues = {
   message: ''
 };
 
-function ContactForm() {
+const ContactForm = () => {
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState({});
   const minMessageLength = 30;
@@ -43,7 +43,7 @@ function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateInput()) {
-      //
+      // TODO - send email
       alert('testing');
     }
   };
@@ -58,6 +58,6 @@ function ContactForm() {
       handleSubmit={handleSubmit}
     />
   );
-}
+};
 
 export default ContactForm;

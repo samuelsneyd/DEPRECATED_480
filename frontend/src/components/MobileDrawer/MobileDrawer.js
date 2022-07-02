@@ -32,6 +32,18 @@ const pages = [
   {
     title: 'Contact',
     href: '/contact/'
+  },
+  {
+    title: 'FAQ',
+    href: '/faq/'
+  },
+  {
+    title: 'Terms',
+    href: '/terms/'
+  },
+  {
+    title: 'Privacy',
+    href: '/privacy/'
   }
 ];
 

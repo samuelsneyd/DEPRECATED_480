@@ -5,7 +5,7 @@ import PageTitle from '../../components/PageTitle/PageTitle';
 const BookingPage = () => {
   return (
     <Container>
-      <PageTitle title={'Booking'}/>
+      <PageTitle title={'Booking'} />
     </Container>
   );
 };

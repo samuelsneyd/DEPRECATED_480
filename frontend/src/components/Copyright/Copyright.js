@@ -1,13 +1,13 @@
-import { Typography } from '@mui/material';
 import * as React from 'react';
+import { Typography } from '@mui/material';
 import config from '../../config/config';
 
-function Copyright() {
+const Copyright = () => {
   return (
     <Typography>
       {`© ${new Date().getFullYear()} ${config.siteName}`}
     </Typography>
   );
-}
+};
 
 export default Copyright;

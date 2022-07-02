@@ -7,8 +7,8 @@ import privacy from '../../../static/legal/privacy.md';
 const PrivacyPage = () => {
   return (
     <Container>
-      <PageTitle title={'Privacy Policy'}/>
-      <Markdown>{privacy}</Markdown>
+      <PageTitle title={'Privacy Policy'} />
+      <Markdown children={privacy}></Markdown>
     </Container>
   );
 };

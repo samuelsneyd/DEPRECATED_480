@@ -7,7 +7,7 @@ import ScrollToTop from './hooks/ScrollToTop';
 const root = createRoot(document.getElementById('app'));
 root.render(
   <BrowserRouter>
-    <ScrollToTop/>
-    <App/>
+    <ScrollToTop />
+    <App />
   </BrowserRouter>
 );

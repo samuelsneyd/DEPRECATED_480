@@ -7,5 +7,5 @@ jest.mock('../../../static/legal/terms.md', () => () => '<div>Terms</div>');
 it('renders TermsPage without crashing', () => {
   const div = document.createElement('div');
   const root = createRoot(div);
-  root.render(<TermsPage/>);
+  root.render(<TermsPage />);
 });

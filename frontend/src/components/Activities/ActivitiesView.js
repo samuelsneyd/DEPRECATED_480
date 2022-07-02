@@ -1,9 +1,6 @@
 import * as React from 'react';
-import { Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import ButtonBase from '@mui/material/ButtonBase';
-import Container from '@mui/material/Container';
+import { Box, ButtonBase, Container, Typography } from '@mui/material';
 
 const absolutePosition = {
   position: 'absolute',
@@ -48,55 +45,7 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
   }
 }));
 
-const images = [
-  {
-    url: '../../../../static/images/accommodation.jpg',
-    title: 'Accommodation',
-    width: '40%'
-  },
-  {
-    url: '../../../../static/images/cake.jpg',
-    title: 'Food',
-    width: '20%'
-  },
-  {
-    url: '../../../../static/images/marina-boats.jpg',
-    title: 'Boating',
-    width: '40%'
-  },
-  {
-    url: '../../../../static/images/school-of-fish.jpg',
-    title: 'Swimming',
-    width: '38%'
-  },
-  {
-    url: '../../../../static/images/bird3.jpg',
-    title: 'Birdwatching',
-    width: '38%'
-  },
-  {
-    url: '../../../../static/images/beach.jpg',
-    title: 'Beaches',
-    width: '24%'
-  },
-  {
-    url: '../../../../static/images/rainbow.jpg',
-    title: 'Hiking',
-    width: '40%'
-  },
-  {
-    url: '../../../../static/images/boat.jpg',
-    title: 'Ocean',
-    width: '20%'
-  },
-  {
-    url: '../../../../static/images/night-sky-2.jpg',
-    title: 'Stargazing',
-    width: '40%'
-  }
-];
-
-function ProductCategories() {
+const ActivitiesView = ({ images }) => {
   return (
     <Container component="section" sx={{
       mt: 8,
@@ -124,7 +73,7 @@ function ProductCategories() {
                 backgroundImage: `url(${image.url})`
               }}
             />
-            <ImageBackdrop className="imageBackdrop"/>
+            <ImageBackdrop className="imageBackdrop" />
             <Box
               sx={{
                 ...absolutePosition,
@@ -141,7 +90,7 @@ function ProductCategories() {
                 className="imageTitle"
               >
                 {image.title}
-                <div className="imageMarked"/>
+                <div className="imageMarked" />
               </Typography>
             </Box>
           </ImageIconButton>
@@ -149,6 +98,6 @@ function ProductCategories() {
       </Box>
     </Container>
   );
-}
+};
 
-export default ProductCategories;
+export default ActivitiesView;

@@ -35,7 +35,7 @@ const pages = [
   }
 ];
 
-function MobileDrawer() {
+const MobileDrawer = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   return (
@@ -45,6 +45,6 @@ function MobileDrawer() {
       setOpenDrawer={setOpenDrawer}
     />
   );
-}
+};
 
 export default MobileDrawer;

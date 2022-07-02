@@ -5,7 +5,7 @@ import PageTitle from '../../components/PageTitle/PageTitle';
 const FAQPage = () => {
   return (
     <Container>
-      <PageTitle title={'FAQ'}/>
+      <PageTitle title={'FAQ'} />
     </Container>
   );
 };

@@ -1,24 +1,21 @@
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import * as React from 'react';
+import { useContext } from 'react';
+import { Box, Button } from '@mui/material';
+import { Context } from '../../Context';
 import { Link } from 'react-router-dom';
 
-function ResponsiveAppBarTabs(props) {
-  const {
-    pages,
-    activeTab,
-    setActiveTab
-  } = props;
+function ResponsiveAppBarTabs({ pages }) {
+  const { activeTab, setActiveTab } = useContext(Context);
 
   return (
     <Box sx={{ flexGrow: 1, display: 'flex' }}>
       {pages.map((page) => (
         <Button
           component={Link}
-          variant={activeTab === page.title ? 'contained' : 'text'}
+          variant={activeTab === page.href ? 'contained' : 'text'}
           to={page.href}
           key={page.title}
-          onClick={() => setActiveTab(page.title)}
+          onClick={() => setActiveTab(page.href)}
           sx={{
             my: 2,
             px: 1,

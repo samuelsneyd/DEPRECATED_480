@@ -1,21 +1,15 @@
 import * as React from 'react';
-import { Button, Snackbar, TextField, Typography } from '@mui/material';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Container from '@mui/material/Container';
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Snackbar,
+  TextField,
+  Typography
+} from '@mui/material';
 
-function ProductCTA() {
-  const [open, setOpen] = React.useState(false);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
+const CallToActionView = ({ open, handleSubmit, handleClose }) => {
   return (
     <Container component="section" sx={{
       mt: 10,
@@ -106,6 +100,6 @@ function ProductCTA() {
       />
     </Container>
   );
-}
+};
 
-export default ProductCTA;
+export default CallToActionView;

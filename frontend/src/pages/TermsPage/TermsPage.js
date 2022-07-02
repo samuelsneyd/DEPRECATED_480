@@ -7,8 +7,8 @@ import terms from '../../../static/legal/terms.md';
 const TermsPage = () => {
   return (
     <Container>
-      <PageTitle title={'Terms and Conditions'}/>
-      <Markdown>{terms}</Markdown>
+      <PageTitle title={'Terms and Conditions'} />
+      <Markdown children={terms} />
     </Container>
   );
 };

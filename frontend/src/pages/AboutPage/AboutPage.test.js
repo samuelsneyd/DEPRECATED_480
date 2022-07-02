@@ -5,5 +5,5 @@ import AboutPage from './AboutPage';
 it('renders AboutPage without crashing', () => {
   const div = document.createElement('div');
   const root = createRoot(div);
-  root.render(<AboutPage/>);
+  root.render(<AboutPage />);
 });

@@ -6,8 +6,8 @@ import PageTitle from '../../components/PageTitle/PageTitle';
 const ContactPage = () => {
   return (
     <Container>
-      <PageTitle title={'Contact us'}/>
-      <ContactForm/>
+      <PageTitle title={'Contact us'} />
+      <ContactForm />
     </Container>
   );
 };

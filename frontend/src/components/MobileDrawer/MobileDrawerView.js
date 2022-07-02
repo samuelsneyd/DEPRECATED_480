@@ -1,14 +1,16 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import MenuIcon from '@mui/icons-material/Menu';
+import { Menu as MenuIcon } from '@mui/icons-material';
+import {
+  Box,
+  Drawer,
+  IconButton,
+  List,
+  ListItemButton,
+  ListItemText
+} from '@mui/material';
 
-function MobileDrawerView(props) {
+const MobileDrawerView = (props) => {
   const {
     pages,
     openDrawer,
@@ -46,10 +48,10 @@ function MobileDrawerView(props) {
         onClick={() => setOpenDrawer(!openDrawer)}
         color={'inherit'}
       >
-        <MenuIcon/>
+        <MenuIcon />
       </IconButton>
     </Box>
   );
-}
+};
 
 export default MobileDrawerView;

@@ -62,7 +62,7 @@ const footers = [
 ];
 
 const AppFooter = () => (
-  <AppFooterView footers={footers}/>
+  <AppFooterView footers={footers} />
 );
 
 export default AppFooter;

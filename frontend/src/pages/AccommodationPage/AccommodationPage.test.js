@@ -5,5 +5,5 @@ import AccommodationPage from './AccommodationPage';
 it('renders AccommodationPage without crashing', () => {
   const div = document.createElement('div');
   const root = createRoot(div);
-  root.render(<AccommodationPage/>);
+  root.render(<AccommodationPage />);
 });

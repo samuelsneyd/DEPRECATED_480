@@ -1,8 +1,12 @@
-import { Button, Typography } from '@mui/material';
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Container from '@mui/material/Container';
+import { Link } from 'react-router-dom';
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Typography
+} from '@mui/material';
 
 const item = {
   display: 'flex',
@@ -23,10 +27,10 @@ const image = {
   my: 4
 };
 
-function ProductHowItWorks() {
+const HowItWorks = () => {
   return (
     <Box
-      component="section"
+      component={'section'}
       sx={{
         display: 'flex',
         bgcolor: 'secondary.light',
@@ -44,9 +48,9 @@ function ProductHowItWorks() {
         }}
       >
         <Box
-          component="img"
-          src="../../../../static/images/misty-mountains.jpg"
-          alt="misty mountains"
+          component={'img'}
+          src={'../../../../static/images/misty-mountains.jpg'}
+          alt={'misty mountains'}
           sx={{
             pointerEvents: 'none',
             position: 'absolute',
@@ -54,8 +58,13 @@ function ProductHowItWorks() {
             opacity: 0.2
           }}
         />
-        <Typography variant="h4" marked="center" component="h2" sx={{ mb: 14 }}>
-          How it works
+        <Typography
+          variant={'h4'}
+          marked={'center'}
+          component={'h2'}
+          sx={{ mb: 14 }}
+        >
+          {'How it works'}
         </Typography>
         <div>
           <Grid container spacing={5}>
@@ -63,12 +72,12 @@ function ProductHowItWorks() {
               <Box sx={item}>
                 <Box sx={number}>1.</Box>
                 <Box
-                  component="img"
-                  src="../../../../static/images/marina-boats.jpg"
-                  alt="img1"
+                  component={'img'}
+                  src={'../../../../static/images/marina-boats.jpg'}
+                  alt={'img1'}
                   sx={image}
                 />
-                <Typography variant="h5" align="center">
+                <Typography variant={'h5'} align={'center'}>
                   Placeholder description text.
                 </Typography>
               </Box>
@@ -77,12 +86,12 @@ function ProductHowItWorks() {
               <Box sx={item}>
                 <Box sx={number}>2.</Box>
                 <Box
-                  component="img"
-                  src="../../../../static/images/rainbow.jpg"
-                  alt="img2"
+                  component={'img'}
+                  src={'../../../../static/images/rainbow.jpg'}
+                  alt={'img2'}
                   sx={image}
                 />
-                <Typography variant="h5" align="center">
+                <Typography variant={'h5'} align={'center'}>
                   Placeholder description text.
                 </Typography>
               </Box>
@@ -91,12 +100,12 @@ function ProductHowItWorks() {
               <Box sx={item}>
                 <Box sx={number}>3.</Box>
                 <Box
-                  component="img"
-                  src="../../../../static/images/school-of-fish.jpg"
-                  alt="img3"
+                  component={'img'}
+                  src={'../../../../static/images/school-of-fish.jpg'}
+                  alt={'img3'}
                   sx={image}
                 />
-                <Typography variant="h5" align="center">
+                <Typography variant={'h5'} align={'center'}>
                   {'Placeholder description text. '}
                   {'More placeholder description text.'}
                 </Typography>
@@ -105,18 +114,18 @@ function ProductHowItWorks() {
           </Grid>
         </div>
         <Button
-          color="secondary"
-          size="large"
-          variant="contained"
-          component="a"
-          href="/"
+          color={'secondary'}
+          variant={'contained'}
+          size={'large'}
+          component={Link}
+          to={'/book/'}
           sx={{ mt: 8 }}
         >
-          Get started
+          {'Book Now'}
         </Button>
       </Container>
     </Box>
   );
-}
+};
 
-export default ProductHowItWorks;
+export default HowItWorks;

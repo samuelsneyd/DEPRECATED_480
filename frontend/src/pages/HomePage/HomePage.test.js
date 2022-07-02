@@ -5,5 +5,5 @@ import HomePage from './HomePage';
 it('renders HomePage without crashing', () => {
   const div = document.createElement('div');
   const root = createRoot(div);
-  root.render(<HomePage/>);
+  root.render(<HomePage />);
 });

@@ -1,10 +1,12 @@
 import * as React from 'react';
+import { useContext } from 'react';
+import { Button } from '@mui/material';
+import { Context } from '../../Context';
 import { Link } from 'react-router-dom';
-import Button from '@mui/material/Button';
 import config from '../../config/config';
 
-function HomeButton(props) {
-  const { setActiveTab } = props;
+const HomeButton = () => {
+  const { setActiveTab } = useContext(Context);
 
   return (
     <Button
@@ -24,6 +26,6 @@ function HomeButton(props) {
       {config.siteName}
     </Button>
   );
-}
+};
 
 export default HomeButton;

@@ -5,14 +5,7 @@ import HomeButton from '../HomeButton/HomeButton';
 import MobileDrawer from '../MobileDrawer/MobileDrawer';
 import ResponsiveAppBarTabs from './ResponsiveAppBarTabs';
 
-const ResponsiveAppBarView = (props) => {
-  const {
-    isMobile,
-    pages,
-    activeTab,
-    setActiveTab
-  } = props;
-
+const ResponsiveAppBarView = ({ isMobile, pages }) => {
   return (
     <>
       <AppBar position="fixed">
@@ -22,22 +15,18 @@ const ResponsiveAppBarView = (props) => {
           {isMobile
             ?
             <>
-              <MobileDrawer/>
-              <HomeButton setActiveTab={setActiveTab}/>
+              <MobileDrawer />
+              <HomeButton />
             </>
             :
             <>
-              <HomeButton setActiveTab={setActiveTab}/>
-              <ResponsiveAppBarTabs
-                pages={pages}
-                activeTab={activeTab}
-                setActiveTab={setActiveTab}
-              />
+              <HomeButton />
+              <ResponsiveAppBarTabs pages={pages} />
             </>
           }
         </Toolbar>
       </AppBar>
-      <Toolbar/>
+      <Toolbar />
     </>
   );
 };

@@ -5,7 +5,7 @@ import PageTitle from '../../components/PageTitle/PageTitle';
 const AccommodationPage = () => {
   return (
     <Container>
-      <PageTitle title={'Your Loft'}/>
+      <PageTitle title={'Your Loft'} />
     </Container>
   );
 };

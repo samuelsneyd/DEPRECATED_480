@@ -1,11 +1,11 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
+import { Container } from '@mui/material';
 import PageTitle from '../../components/PageTitle/PageTitle';
 
 const LocationPage = () => {
   return (
     <Container>
-      <PageTitle title={'Location'}/>
+      <PageTitle title={'Location'} />
     </Container>
   );
 };

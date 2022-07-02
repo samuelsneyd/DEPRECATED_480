@@ -5,5 +5,5 @@ import ErrorPage from './ErrorPage';
 it('renders ErrorPage without crashing', () => {
   const div = document.createElement('div');
   const root = createRoot(div);
-  root.render(<ErrorPage/>);
+  root.render(<ErrorPage />);
 });

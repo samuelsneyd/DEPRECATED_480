@@ -5,5 +5,5 @@ import ContactPage from './ContactPage';
 it('renders ContactPage without crashing', () => {
   const div = document.createElement('div');
   const root = createRoot(div);
-  root.render(<ContactPage/>);
+  root.render(<ContactPage />);
 });

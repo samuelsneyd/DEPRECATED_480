@@ -3,47 +3,56 @@ import ActivitiesView from './ActivitiesView';
 
 const images = [
   {
-    url: '../../../../static/images/accommodation.jpg',
+    src: '../../../../static/images/accommodation.jpg',
+    href: '/accommodation/',
     title: 'Accommodation',
     width: '40%'
   },
   {
-    url: '../../../../static/images/cake.jpg',
+    src: '../../../../static/images/cake.jpg',
+    href: '/activities/food/',
     title: 'Food',
     width: '20%'
   },
   {
-    url: '../../../../static/images/marina-boats.jpg',
+    src: '../../../../static/images/marina-boats.jpg',
+    href: '/activities/boating/',
     title: 'Boating',
     width: '40%'
   },
   {
-    url: '../../../../static/images/school-of-fish.jpg',
+    src: '../../../../static/images/school-of-fish.jpg',
+    href: '/activities/swimming/',
     title: 'Swimming',
     width: '38%'
   },
   {
-    url: '../../../../static/images/bird3.jpg',
+    src: '../../../../static/images/bird3.jpg',
+    href: '/activities/birds/',
     title: 'Birdwatching',
     width: '38%'
   },
   {
-    url: '../../../../static/images/beach.jpg',
+    src: '../../../../static/images/beach.jpg',
+    href: '/activities/beaches/',
     title: 'Beaches',
     width: '24%'
   },
   {
-    url: '../../../../static/images/rainbow.jpg',
+    src: '../../../../static/images/rainbow.jpg',
+    href: '/activities/hiking/',
     title: 'Hiking',
     width: '40%'
   },
   {
-    url: '../../../../static/images/boat.jpg',
+    src: '../../../../static/images/boat.jpg',
+    href: '/activities/ocean/',
     title: 'Ocean',
     width: '20%'
   },
   {
-    url: '../../../../static/images/night-sky-2.jpg',
+    src: '../../../../static/images/night-sky-2.jpg',
+    href: '/activities/stars/',
     title: 'Stargazing',
     width: '40%'
   }

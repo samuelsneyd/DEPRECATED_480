@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import { Box, ButtonBase, Container, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const absolutePosition = {
   position: 'absolute',
@@ -47,11 +48,17 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
 
 const ActivitiesView = ({ images }) => {
   return (
-    <Container component="section" sx={{
+    <Container component={'section'} sx={{
       mt: 8,
       mb: 4
     }}>
-      <Typography variant="h4" marked="center" align="center" component="h4">
+      <Typography
+        variant={'h4'}
+        marked={'center'}
+        align={'center'}
+        component={'h4'}
+      >
+      {/* Optional header goes here */}
       </Typography>
       <Box sx={{
         mt: 8,
@@ -70,27 +77,33 @@ const ActivitiesView = ({ images }) => {
                 ...absolutePosition,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center 40%',
-                backgroundImage: `url(${image.url})`
+                backgroundImage: `url(${image.src})`
               }}
             />
-            <ImageBackdrop className="imageBackdrop" />
+            <ImageBackdrop className={'imageBackdrop'} />
             <Box
+              component={Link}
+              to={image.href || ''}
               sx={{
                 ...absolutePosition,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: 'common.white'
+                color: 'common.white',
+                textDecoration: 'none'
               }}
             >
               <Typography
-                component="h3"
-                variant="h6"
-                color="inherit"
-                className="imageTitle"
+                component={'h3'}
+                variant={'h6'}
+                color={'inherit'}
+                className={'imageTitle'}
+                sx={{
+                  textTransform: 'none'
+                }}
               >
                 {image.title}
-                <div className="imageMarked" />
+                <div className={'imageMarked'} />
               </Typography>
             </Box>
           </ImageIconButton>

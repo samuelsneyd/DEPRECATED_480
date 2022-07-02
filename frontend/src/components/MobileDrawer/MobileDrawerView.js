@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { useContext } from 'react';
-import { Context } from '../../Context';
 import { Link } from 'react-router-dom';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import {

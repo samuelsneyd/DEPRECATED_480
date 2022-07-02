@@ -3,7 +3,7 @@ import Activities from '../../components/Activities/Activities';
 import CallToAction from '../../components/CallToAction/CallToAction';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import HowItWorks from '../../components/HowItWorks/HowItWorks';
-import ContentBanner from '../../components/ContactBanner/ContentBanner';
+import ContactBanner from '../../components/ContactBanner/ContentBanner';
 import ProductValues from '../../components/ProductValues/ProductValues';
 
 const HomePage = () => {
@@ -14,7 +14,7 @@ const HomePage = () => {
       <Activities />
       <HowItWorks />
       <CallToAction />
-      <ContentBanner />
+      <ContactBanner />
     </>
   );
 };

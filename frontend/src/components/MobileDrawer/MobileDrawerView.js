@@ -18,7 +18,7 @@ const MobileDrawerView = (props) => {
   } = props;
 
   return (
-    <Box sx={{ flexGrow: 1, display: 'flex' }}>
+    <Box sx={{ display: 'flex' }}>
       <Drawer
         open={openDrawer}
         onClose={() => setOpenDrawer(false)}

@@ -1,6 +1,5 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
+import { AppBar, Toolbar } from '@mui/material';
 import HomeButton from '../HomeButton/HomeButton';
 import MobileDrawer from '../MobileDrawer/MobileDrawer';
 import ResponsiveAppBarTabs from './ResponsiveAppBarTabs';
@@ -20,6 +19,7 @@ const ResponsiveAppBarView = ({ isMobile, pages }) => {
             </>
             :
             <>
+              <MobileDrawer />
               <HomeButton />
               <ResponsiveAppBarTabs pages={pages} />
             </>

@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useContext } from 'react';
+import { Context } from '../../Context';
 import { Link } from 'react-router-dom';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import {
@@ -14,7 +16,8 @@ const MobileDrawerView = (props) => {
   const {
     pages,
     openDrawer,
-    setOpenDrawer
+    setOpenDrawer,
+    setActiveTab
   } = props;
 
   return (
@@ -24,16 +27,19 @@ const MobileDrawerView = (props) => {
         onClose={() => setOpenDrawer(false)}
       >
         <List>
-          {pages.map((link) => {
+          {pages.map((page) => {
             return (
               <ListItemButton
-                key={link.title}
+                key={page.title}
                 component={Link}
-                to={link.href}
-                onClick={() => setOpenDrawer(false)}
+                to={page.href}
+                onClick={() => {
+                  setOpenDrawer(false);
+                  setActiveTab(page.href);
+                }}
               >
                 <ListItemText>
-                  {link.title}
+                  {page.title}
                 </ListItemText>
               </ListItemButton>
             );

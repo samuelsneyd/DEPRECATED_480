@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { Context } from '../../Context';
 import config from '../../config/config';
 import MobileDrawerView from './MobileDrawerView';
 
@@ -49,12 +50,14 @@ const pages = [
 
 const MobileDrawer = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
+  const { setActiveTab } = useContext(Context);
 
   return (
     <MobileDrawerView
       pages={pages}
       openDrawer={openDrawer}
       setOpenDrawer={setOpenDrawer}
+      setActiveTab={setActiveTab}
     />
   );
 };

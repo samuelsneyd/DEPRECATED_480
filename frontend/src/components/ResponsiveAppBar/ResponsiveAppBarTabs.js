@@ -4,7 +4,7 @@ import { Box, Button } from '@mui/material';
 import { Context } from '../../Context';
 import { Link } from 'react-router-dom';
 
-function ResponsiveAppBarTabs({ pages }) {
+const ResponsiveAppBarTabs = ({ pages }) => {
   const { activeTab, setActiveTab } = useContext(Context);
 
   return (
@@ -33,6 +33,6 @@ function ResponsiveAppBarTabs({ pages }) {
       ))}
     </Box>
   );
-}
+};
 
 export default ResponsiveAppBarTabs;

@@ -1,7 +1,8 @@
 from rest_framework import serializers
+from api.models import Email
 
 
-# class SerializerTest(serializers.ModelSerializer):
-#     class Meta:
-#         model = "model_goes_here"
-#         fields = ("field1", "field2")
+class EmailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Email
+        fields = "__all__"

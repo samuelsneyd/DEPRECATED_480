@@ -5,7 +5,7 @@ import AnimatedRoutes from './AnimatedRoutes';
 jest.mock('../static/legal/privacy.md', () => () => '<div>Privacy</div>');
 jest.mock('../static/legal/terms.md', () => () => '<div>Terms</div>');
 
-it('renders App without crashing', () => {
+it('renders AnimatedRoutes without crashing', () => {
   const div = document.createElement('div');
   const root = createRoot(div);
   root.render(<AnimatedRoutes />);

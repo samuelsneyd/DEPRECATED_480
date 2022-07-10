@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box, Button, Container, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
+import LooksIcon from '@mui/icons-material/Looks';
 
 const ContentBanner = () => {
   return (
@@ -33,10 +34,8 @@ const ContentBanner = () => {
         {'We are here to help. Get in touch!'}
       </Typography>
       <Box
-        component={'img'}
-        src={''}
-        alt={'img1'}
-        sx={{ width: 60 }}
+        component={LooksIcon}
+        sx={{ width: 60, height: 60 }}
       />
     </Container>
   );

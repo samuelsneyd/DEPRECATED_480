@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Container from '@mui/material/Container';
 import PageTitle from '../../components/PageTitle/PageTitle';
+import withAnimation from '../../hooks/withAnimation';
 
 const FAQPage = () => {
   return (
@@ -10,4 +11,4 @@ const FAQPage = () => {
   );
 };
 
-export default FAQPage;
+export default withAnimation(FAQPage);

@@ -6,11 +6,15 @@ from api.serializers import EmailSerializer
 
 
 class MainApiTestView(APIView):
+    test_message = {"message": "test"}
+
     def get(self, request) -> Response:
-        return Response({"message": "test"}, status=status.HTTP_200_OK)
+        return Response(self.test_message, status=status.HTTP_200_OK)
 
 
 class EmailView(APIView):
+    bad_request_message = {"message": "bad request"}
+
     def post(self, request) -> Response:
         serializer = EmailSerializer(data=request.data)
 
@@ -21,4 +25,4 @@ class EmailView(APIView):
 
             return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-        return Response({"message": "bad request"}, status=status.HTTP_400_BAD_REQUEST)
+        return Response(self.bad_request_message, status=status.HTTP_400_BAD_REQUEST)

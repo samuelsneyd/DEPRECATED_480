@@ -3,6 +3,7 @@ import Container from '@mui/material/Container';
 import Markdown from '../../components/Markdown/Markdown';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import terms from '../../../static/legal/terms.md';
+import withAnimation from '../../hooks/withAnimation';
 
 const TermsPage = () => {
   return (
@@ -13,4 +14,4 @@ const TermsPage = () => {
   );
 };
 
-export default TermsPage;
+export default withAnimation(TermsPage);

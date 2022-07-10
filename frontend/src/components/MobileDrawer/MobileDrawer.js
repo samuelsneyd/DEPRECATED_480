@@ -22,7 +22,7 @@ const pages = [
     href: '/location/'
   },
   {
-    title: 'Activities',
+    title: 'In the Area',
     href: '/activities/'
   },
   {

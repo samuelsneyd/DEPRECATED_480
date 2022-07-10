@@ -18,7 +18,7 @@ const LocationPage = () => {
             {'Where to find us'}
           </Typography>
           <Typography sx={{ mt: 1, mb: 1 }}>
-            {'Located a short drive away from the Tutukaka marina, Retreat 480 is located at the end of Waiotoi Road.'}
+            {'Located a short drive away from the Tutukaka marina, Retreat 480 is tucked away at the end of Waiotoi Road.'}
           </Typography>
           <Typography sx={{ mt: 1, mb: 1 }}>
             {'Follow the driveway at the end of Waiotoi road until the Kiwi sign, then look out for the 480 sign.'}

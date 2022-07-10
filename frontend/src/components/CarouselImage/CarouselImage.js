@@ -7,9 +7,8 @@ const CarouselImage = ({ image }) => {
       elevation={3}
       component={'img'}
       sx={{
-        minHeight: { xs: 250, md: 450 },
-        minWidth: { xs: '100%' },
-        maxWidth: { xs: '100%' },
+        width: { xs: '100%' },
+        height: { xs: 350, sm: 400, md: 450 },
         objectFit: 'cover'
       }}
       alt={image.alt || image.title}

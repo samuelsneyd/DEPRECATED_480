@@ -7,19 +7,23 @@ import withAnimation from '../../../hooks/withAnimation';
 
 const images = [
   {
-    title: 'Mountains',
-    src: '../../../../static/images/misty-mountains.jpg'
+    title: 'Bird 1',
+    src: '../../../../static/images/bird.jpg'
   },
   {
-    title: 'Rainbow',
-    src: '../../../../static/images/rainbow.jpg'
+    title: 'Bird 2',
+    src: '../../../../static/images/bird3.jpg'
+  },
+  {
+    title: 'Bird 3',
+    src: '../../../../static/images/hawk.jpg'
   }
 ];
 
-const HikingPage = () => {
+const BirdsPage = () => {
   return (
     <Container>
-      <PageTitle title={'Hiking'} />
+      <PageTitle title={'Birds'} />
       <Grid container spacing={2} minHeight={450} sx={{ mb: 1 }}>
         <Grid item xs={12} md={6}>
           <Carousel
@@ -32,10 +36,10 @@ const HikingPage = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant={'h5'}>
-            {'See the scenery'}
+            {'See the wildlife'}
           </Typography>
           <Typography sx={{ mt: 1, mb: 1 }}>
-            {'The forests and bush are a great place for anything from short walks to long hikes.'}
+            {'The forests and bush are filled with native birds.'}
           </Typography>
         </Grid>
       </Grid>
@@ -43,4 +47,4 @@ const HikingPage = () => {
   );
 };
 
-export default withAnimation(HikingPage);
+export default withAnimation(BirdsPage);

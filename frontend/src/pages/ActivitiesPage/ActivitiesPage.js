@@ -7,7 +7,7 @@ import withAnimation from '../../hooks/withAnimation';
 const ActivitiesPage = () => {
   return (
     <Container>
-      <PageTitle title={'Activities'} />
+      <PageTitle title={'In the Area'} />
       <Activities />
     </Container>
   );

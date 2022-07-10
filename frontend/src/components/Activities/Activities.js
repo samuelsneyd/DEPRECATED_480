@@ -29,7 +29,7 @@ const images = [
   {
     src: '../../../../static/images/bird3.jpg',
     href: '/activities/birds/',
-    title: 'Birdwatching',
+    title: 'Birds',
     width: '38%'
   },
   {

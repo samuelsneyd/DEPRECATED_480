@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
-import BirdwatchingPage from './BirdwatchingPage';
+import BirdsPage from './BirdsPage';
 
-it('renders BirdwatchingPage without crashing', () => {
+it('renders BirdsPage without crashing', () => {
   const div = document.createElement('div');
   const root = createRoot(div);
-  root.render(<BirdwatchingPage />);
+  root.render(<BirdsPage />);
 });

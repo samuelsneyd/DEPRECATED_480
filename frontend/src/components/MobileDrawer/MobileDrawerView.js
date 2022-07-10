@@ -10,14 +10,7 @@ import {
   ListItemText
 } from '@mui/material';
 
-const MobileDrawerView = (props) => {
-  const {
-    pages,
-    openDrawer,
-    setOpenDrawer,
-    setActiveTab
-  } = props;
-
+const MobileDrawerView = ({ pages, openDrawer, setOpenDrawer }) => {
   return (
     <Box sx={{ display: 'flex' }}>
       <Drawer
@@ -31,10 +24,7 @@ const MobileDrawerView = (props) => {
                 key={page.title}
                 component={Link}
                 to={page.href}
-                onClick={() => {
-                  setOpenDrawer(false);
-                  setActiveTab(page.href);
-                }}
+                onClick={() => setOpenDrawer(false)}
               >
                 <ListItemText>
                   {page.title}

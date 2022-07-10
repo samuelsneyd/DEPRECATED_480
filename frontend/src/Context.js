@@ -1,19 +1,16 @@
 import * as React from 'react';
-import { useState, createContext } from 'react';
+import { createContext } from 'react';
 
-export const Context = createContext({});
+const Context = createContext({});
 
-export const ContextProvider = ({ children }) => {
-  const [activeTab, setActiveTab] = useState('');
-
+const ContextProvider = ({ children }) => {
   return (
     <Context.Provider
-      value={{
-        activeTab,
-        setActiveTab
-      }}
+      value={{}}
     >
       {children}
     </Context.Provider>
   );
 };
+
+export { Context, ContextProvider };

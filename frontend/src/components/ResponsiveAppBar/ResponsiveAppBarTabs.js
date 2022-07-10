@@ -4,14 +4,14 @@ import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 
 const ResponsiveAppBarTabs = ({ pages }) => {
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   return (
     <Box sx={{ flexGrow: 1, display: 'flex' }}>
       {pages.map((page) => (
         <Button
           component={Link}
-          variant={location.pathname === page.href ? 'contained' : 'text'}
+          variant={pathname.includes(page.href) ? 'contained' : 'text'}
           to={page.href}
           key={page.title}
           sx={{

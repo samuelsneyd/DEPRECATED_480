@@ -9,7 +9,7 @@ const PrivacyPage = () => {
   return (
     <Container>
       <PageTitle title={'Privacy Policy'} />
-      <Markdown children={privacy}/>
+      <Markdown children={privacy} />
     </Container>
   );
 };

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Button, Typography, Stack, IconButton, ButtonGroup } from '@mui/material';
-import withRoot from '../../config/withRoot';
+import withTheme from '../../hooks/withTheme';
 import SendIcon from '@mui/icons-material/Send';
 
 // For testing purposes, display theme for MUI components

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
+import withAnimation from '../../hooks/withAnimation';
 
 const ErrorPage = () => {
   return (
@@ -9,4 +10,4 @@ const ErrorPage = () => {
   );
 };
 
-export default ErrorPage;
+export default withAnimation(ErrorPage);

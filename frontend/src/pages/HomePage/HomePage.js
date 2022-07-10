@@ -5,6 +5,7 @@ import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import HowItWorks from '../../components/HowItWorks/HowItWorks';
 import ContactBanner from '../../components/ContactBanner/ContentBanner';
 import ProductValues from '../../components/ProductValues/ProductValues';
+import withAnimation from '../../hooks/withAnimation';
 
 const HomePage = () => {
   return (
@@ -19,4 +20,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default withAnimation(HomePage);

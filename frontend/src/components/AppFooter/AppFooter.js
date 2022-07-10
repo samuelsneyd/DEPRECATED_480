@@ -1,4 +1,5 @@
 import * as React from 'react';
+import withAnimation from '../../hooks/withAnimation';
 import AppFooterView from './AppFooterView';
 import config from '../../config/config';
 
@@ -65,4 +66,4 @@ const AppFooter = () => (
   <AppFooterView footers={footers} />
 );
 
-export default AppFooter;
+export default withAnimation(AppFooter);

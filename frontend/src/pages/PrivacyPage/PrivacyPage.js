@@ -3,14 +3,15 @@ import Container from '@mui/material/Container';
 import Markdown from '../../components/Markdown/Markdown';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import privacy from '../../../static/legal/privacy.md';
+import withAnimation from '../../hooks/withAnimation';
 
 const PrivacyPage = () => {
   return (
     <Container>
       <PageTitle title={'Privacy Policy'} />
-      <Markdown children={privacy}></Markdown>
+      <Markdown children={privacy}/>
     </Container>
   );
 };
 
-export default PrivacyPage;
+export default withAnimation(PrivacyPage);

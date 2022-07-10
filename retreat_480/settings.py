@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
     env("HOST"),
 ]
 
+SECURE_SSL_REDIRECT = env("SECURE_SSL_REDIRECT") == "True"
 
 # Application definition
 

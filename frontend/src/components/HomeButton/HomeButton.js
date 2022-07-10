@@ -1,20 +1,18 @@
 import * as React from 'react';
-import { useContext } from 'react';
 import { Button } from '@mui/material';
-import { Context } from '../../Context';
+import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import config from '../../config/config';
 
 const HomeButton = () => {
-  const { setActiveTab } = useContext(Context);
+  const location = useLocation();
 
   return (
     <Button
       component={Link}
-      variant={'outlined'}
+      variant={location.pathname === '/' ? 'contained' : 'outlined'}
       to={'/'}
       size={'large'}
-      onClick={() => setActiveTab(config.siteName)}
       sx={{
         color: 'inherit',
         display: 'flex',

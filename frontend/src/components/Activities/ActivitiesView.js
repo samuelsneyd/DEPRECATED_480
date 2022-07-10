@@ -58,7 +58,7 @@ const ActivitiesView = ({ images }) => {
         align={'center'}
         component={'h4'}
       >
-      {/* Optional header goes here */}
+        {/* Optional header goes here */}
       </Typography>
       <Box sx={{
         mt: 8,

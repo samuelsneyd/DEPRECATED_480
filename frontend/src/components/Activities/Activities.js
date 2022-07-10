@@ -59,7 +59,9 @@ const images = [
 ];
 
 const Activities = () => {
-  return <ActivitiesView images={images} />
+  return (
+    <ActivitiesView images={images} />
+  );
 };
 
 export default Activities;

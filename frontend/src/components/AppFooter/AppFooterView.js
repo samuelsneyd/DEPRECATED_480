@@ -7,7 +7,7 @@ import WebsiteBuiltBy from '../WebsiteBuiltBy/WebsiteBuiltBy';
 const AppFooterView = ({ footers }) => {
   return (
     <Typography
-      component={"footer"}
+      component={'footer'}
       sx={{
         display: 'flex',
         bgcolor: 'secondary.light'
@@ -19,8 +19,8 @@ const AppFooterView = ({ footers }) => {
       }}>
         <Container spacing={5}>
           <Container
-            maxWidth={"md"}
-            component={"footer"}
+            maxWidth={'md'}
+            component={'footer'}
             sx={{
               borderTop: (theme) => `1px solid ${theme.palette.divider}`,
               py: 4
@@ -29,10 +29,10 @@ const AppFooterView = ({ footers }) => {
             <AppFooterLinks footers={footers} />
           </Container>
           <Container sx={{ mb: 1 }}>
-            <Copyright/>
+            <Copyright />
           </Container>
           <Container>
-            <WebsiteBuiltBy/>
+            <WebsiteBuiltBy />
           </Container>
         </Container>
       </Container>

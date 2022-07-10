@@ -1,12 +1,8 @@
 import * as React from 'react';
-import { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Box, Button, Grid, Typography } from '@mui/material';
-import { Context } from '../../Context';
 
 const AppFooterLinks = ({ footers }) => {
-  const { setActiveTab } = useContext(Context);
-
   return (
     <Grid container spacing={4} justifyContent="space-evenly">
       {footers.map((footer) => (
@@ -40,7 +36,6 @@ const AppFooterLinks = ({ footers }) => {
                   variant={'text'}
                   component={Link}
                   to={item.href}
-                  onClick={() => setActiveTab(item.href)}
                   sx={{
                     textTransform: 'none',
                     justifyContent: 'flex-start',

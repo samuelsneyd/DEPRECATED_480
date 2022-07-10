@@ -1,5 +1,5 @@
-import { Grid, Typography } from '@mui/material';
 import * as React from 'react';
+import { Grid, Typography } from '@mui/material';
 import Container from '@mui/material/Container';
 import Carousel from 'react-material-ui-carousel';
 import AccommodationIcons from '../../components/AccommodationIcons/AccommodationIcons';

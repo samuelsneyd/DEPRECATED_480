@@ -25,11 +25,11 @@ const footers = [
     title: 'Features',
     description: [
       {
-        text: 'Accommodation',
+        text: 'Your Loft',
         href: '/accommodation/'
       },
       {
-        text: 'Activities',
+        text: 'In the Area',
         href: '/activities/'
       },
       {

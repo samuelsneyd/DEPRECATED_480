@@ -4,7 +4,7 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import AccommodationPage from './pages/AccommodationPage/AccommodationPage';
 import ActivitiesPage from './pages/ActivitiesPage/ActivitiesPage';
 import BeachesPage from './pages/Activities/BeachesPage/BeachesPage';
-import BirdwatchingPage from './pages/Activities/BirdwatchingPage/BirdwatchingPage';
+import BirdsPage from './pages/Activities/BirdsPage/BirdsPage';
 import BoatingPage from './pages/Activities/BoatingPage/BoatingPage';
 import BookingPage from './pages/BookingPage/BookingPage';
 import ContactPage from './pages/ContactPage/ContactPage';
@@ -21,6 +21,7 @@ import TermsPage from './pages/TermsPage/TermsPage';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
+
   return (
     <Routes location={location} key={location.pathname}>
       <Route exact path={'/'} element={<HomePage />} />
@@ -30,7 +31,7 @@ const AnimatedRoutes = () => {
         <Route path={''} element={<ActivitiesPage />} />
         <Route path={'boating'} element={<BoatingPage />} />
         <Route path={'swimming'} element={<SwimmingPage />} />
-        <Route path={'birds'} element={<BirdwatchingPage />} />
+        <Route path={'birds'} element={<BirdsPage />} />
         <Route path={'beaches'} element={<BeachesPage />} />
         <Route path={'hiking'} element={<HikingPage />} />
         <Route path={'ocean'} element={<OceanPage />} />

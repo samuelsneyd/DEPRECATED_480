@@ -2,21 +2,21 @@ import * as React from 'react';
 import { Route, Routes, useLocation } from 'react-router';
 import AboutPage from './pages/AboutPage/AboutPage';
 import AccommodationPage from './pages/AccommodationPage/AccommodationPage';
-import ActivitiesPage from './pages/ActivitiesPage/ActivitiesPage';
-import BeachesPage from './pages/Activities/BeachesPage/BeachesPage';
-import BirdsPage from './pages/Activities/BirdsPage/BirdsPage';
-import BoatingPage from './pages/Activities/BoatingPage/BoatingPage';
+import BeachesPage from './pages/Features/BeachesPage/BeachesPage';
+import BirdsPage from './pages/Features/BirdsPage/BirdsPage';
+import BoatingPage from './pages/Features/BoatingPage/BoatingPage';
 import BookingPage from './pages/BookingPage/BookingPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import FAQPage from './pages/FAQPage/FAQPage';
-import HikingPage from './pages/Activities/HikingPage/HikingPage';
+import FeaturesPage from './pages/FeaturesPage/FeaturesPage';
+import HikingPage from './pages/Features/HikingPage/HikingPage';
 import HomePage from './pages/HomePage/HomePage';
 import LocationPage from './pages/LocationPage/LocationPage';
-import OceanPage from './pages/Activities/OceanPage/OceanPage';
+import OceanPage from './pages/Features/OceanPage/OceanPage';
 import PrivacyPage from './pages/PrivacyPage/PrivacyPage';
-import StargazingPage from './pages/Activities/StargazingPage/StargazingPage';
-import SwimmingPage from './pages/Activities/SwimmingPage/SwimmingPage';
+import StargazingPage from './pages/Features/StargazingPage/StargazingPage';
+import SwimmingPage from './pages/Features/SwimmingPage/SwimmingPage';
 import TermsPage from './pages/TermsPage/TermsPage';
 
 const AnimatedRoutes = () => {
@@ -27,8 +27,8 @@ const AnimatedRoutes = () => {
       <Route exact path={'/'} element={<HomePage />} />
       <Route path={'accommodation'} element={<AccommodationPage />} />
       <Route path={'location'} element={<LocationPage />} />
-      <Route path={'activities'}>
-        <Route path={''} element={<ActivitiesPage />} />
+      <Route path={'features'}>
+        <Route path={''} element={<FeaturesPage />} />
         <Route path={'boating'} element={<BoatingPage />} />
         <Route path={'swimming'} element={<SwimmingPage />} />
         <Route path={'birds'} element={<BirdsPage />} />

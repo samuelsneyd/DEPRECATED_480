@@ -46,7 +46,7 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
   }
 }));
 
-const ActivitiesView = ({ images }) => {
+const FeaturesView = ({ images }) => {
   return (
     <Container component={'section'} sx={{
       mt: 8,
@@ -113,4 +113,4 @@ const ActivitiesView = ({ images }) => {
   );
 };
 
-export default ActivitiesView;
+export default FeaturesView;

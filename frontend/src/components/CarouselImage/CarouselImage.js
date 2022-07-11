@@ -12,7 +12,7 @@ const CarouselImage = ({ image }) => {
         objectFit: 'cover'
       }}
       alt={image.alt || image.title}
-      src={image.src}
+      src={image.src || image.image}
     />
   );
 };

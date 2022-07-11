@@ -1,26 +1,33 @@
 import * as React from 'react';
+import { useEffect, useState } from 'react';
 import { Container, Grid, Typography } from '@mui/material';
+import axios from 'axios';
 import Carousel from 'react-material-ui-carousel';
 import CarouselImage from '../../../components/CarouselImage/CarouselImage';
 import PageTitle from '../../../components/PageTitle/PageTitle';
 import withAnimation from '../../../hooks/withAnimation';
 
-const images = [
+const fallbackImages = [
   {
     title: 'Bird 1',
-    src: '../../../../static/images/bird.jpg'
-  },
-  {
-    title: 'Bird 2',
-    src: '../../../../static/images/bird3.jpg'
-  },
-  {
-    title: 'Bird 3',
-    src: '../../../../static/images/hawk.jpg'
+    src: '../../../../static/images/bird.jpg',
+    id: 1
   }
 ];
 
 const BirdsPage = () => {
+  const [images, setImages] = useState(fallbackImages);
+
+  useEffect(() => {
+    return () => {
+      axios.get('/api/images?tag=birds')
+        .then((response) => {
+          response.data?.length > 0 ? setImages(response.data) : null;
+        })
+        .catch(() => setImages(fallbackImages));
+    };
+  }, []);
+
   return (
     <Container>
       <PageTitle title={'Birds'} />
@@ -31,7 +38,7 @@ const BirdsPage = () => {
             duration={2000}
             swipe
           >
-            {images.map((image) => <CarouselImage key={image.title} image={image} />)}
+            {images.map((image) => <CarouselImage key={image.id} image={image} />)}
           </Carousel>
         </Grid>
         <Grid item xs={12} md={6}>

@@ -85,7 +85,7 @@ class Image(models.Model):
     name = models.CharField(max_length=128)
     alt = models.CharField(max_length=128)
     description = models.CharField(max_length=2048)
-    image = models.ImageField(upload_to="django-uploads/images")
+    image = models.ImageField(upload_to="static/images/django-uploads")
     tags = MultiSelectField(choices=Tags.tags)
     priority = models.IntegerField(default=10)
     created_at = models.DateTimeField(auto_now_add=True)

@@ -57,6 +57,7 @@ cover/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+django-uploads/
 
 # User-specific stuff
 .idea/**/workspace.xml
@@ -228,3 +229,7 @@ sftp-config.json
 # Visual Studio Code - https://code.visualstudio.com/
 .settings/
 .vscode/
+
+
+### Static ###
+staticfiles/

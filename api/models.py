@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.mail import send_mail
 from django.utils.translation import gettext_lazy as _
+from multiselectfield import MultiSelectField
 from smtplib import SMTPException
 
 
@@ -61,4 +62,34 @@ class Email(models.Model):
         return emails_sent
 
     def __str__(self):
-        return f"Email ID: {self.pk}, From: {self.sender}, To: {self.recipient}"
+        return f"ID: {self.pk}, From: {self.sender}, To: {self.recipient}"
+
+
+class Image(models.Model):
+    """Images uploaded to the Django backend"""
+
+    class Tags:
+        tags = (
+            ("ABOUT", "About"),
+            ("ACCOMMODATION", "Accommodation"),
+            ("BEACHES", "Beaches"),
+            ("BIRDS", "Birds"),
+            ("BOATING", "Boating"),
+            ("HIKING", "Hiking"),
+            ("MISC", "Misc"),
+            ("OCEAN", "Ocean"),
+            ("STARS", "Stars"),
+            ("SWIMMING", "Swimming"),
+        )
+
+    name = models.CharField(max_length=128)
+    alt = models.CharField(max_length=128)
+    description = models.CharField(max_length=2048)
+    image = models.ImageField(upload_to="django-uploads/images")
+    tags = MultiSelectField(choices=Tags.tags)
+    priority = models.IntegerField(default=10)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"ID: {self.pk}, Name: {self.name}"

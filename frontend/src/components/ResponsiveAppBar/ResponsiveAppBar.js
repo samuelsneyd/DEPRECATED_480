@@ -17,7 +17,7 @@ const pages = [
   },
   {
     title: 'In the Area',
-    href: '/activities/'
+    href: '/features/'
   },
   {
     title: 'Book Now',

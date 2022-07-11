@@ -30,7 +30,7 @@ const footers = [
       },
       {
         text: 'In the Area',
-        href: '/activities/'
+        href: '/features/'
       },
       {
         text: 'Location',

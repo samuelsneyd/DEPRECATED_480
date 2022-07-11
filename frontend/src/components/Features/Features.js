@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ActivitiesView from './ActivitiesView';
+import FeaturesView from './FeaturesView';
 
 const images = [
   {
@@ -10,58 +10,58 @@ const images = [
   },
   {
     src: '../../../../static/images/cake.jpg',
-    href: '/activities/food/',
+    href: '/features/food/',
     title: 'Food',
     width: '20%'
   },
   {
     src: '../../../../static/images/marina-boats.jpg',
-    href: '/activities/boating/',
+    href: '/features/boating/',
     title: 'Boating',
     width: '40%'
   },
   {
     src: '../../../../static/images/school-of-fish.jpg',
-    href: '/activities/swimming/',
+    href: '/features/swimming/',
     title: 'Swimming',
     width: '38%'
   },
   {
     src: '../../../../static/images/bird3.jpg',
-    href: '/activities/birds/',
+    href: '/features/birds/',
     title: 'Birds',
     width: '38%'
   },
   {
     src: '../../../../static/images/beach.jpg',
-    href: '/activities/beaches/',
+    href: '/features/beaches/',
     title: 'Beaches',
     width: '24%'
   },
   {
     src: '../../../../static/images/rainbow.jpg',
-    href: '/activities/hiking/',
+    href: '/features/hiking/',
     title: 'Hiking',
     width: '40%'
   },
   {
     src: '../../../../static/images/boat.jpg',
-    href: '/activities/ocean/',
+    href: '/features/ocean/',
     title: 'Ocean',
     width: '20%'
   },
   {
     src: '../../../../static/images/night-sky-2.jpg',
-    href: '/activities/stars/',
+    href: '/features/stars/',
     title: 'Stargazing',
     width: '40%'
   }
 ];
 
-const Activities = () => {
+const Features = () => {
   return (
-    <ActivitiesView images={images} />
+    <FeaturesView images={images} />
   );
 };
 
-export default Activities;
+export default Features;

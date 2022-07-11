@@ -1,16 +1,16 @@
 import * as React from 'react';
 import Container from '@mui/material/Container';
 import PageTitle from '../../components/PageTitle/PageTitle';
-import Activities from '../../components/Activities/Activities';
+import Features from '../../components/Features/Features';
 import withAnimation from '../../hooks/withAnimation';
 
-const ActivitiesPage = () => {
+const FeaturesPage = () => {
   return (
     <Container>
       <PageTitle title={'In the Area'} />
-      <Activities />
+      <Features />
     </Container>
   );
 };
 
-export default withAnimation(ActivitiesPage);
+export default withAnimation(FeaturesPage);

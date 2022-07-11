@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
-import ActivitiesPage from './ActivitiesPage';
+import FeaturesPage from './FeaturesPage';
 
-it('renders ActivitiesPage without crashing', () => {
+it('renders FeaturesPage without crashing', () => {
   const div = document.createElement('div');
   const root = createRoot(div);
-  root.render(<ActivitiesPage />);
+  root.render(<FeaturesPage />);
 });

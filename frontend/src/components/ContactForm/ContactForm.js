@@ -1,6 +1,10 @@
 import * as React from 'react';
 import { useState } from 'react';
 import ContactFormView from './ContactFormView';
+import axios from 'axios';
+
+axios.defaults.xsrfHeaderName = 'X-CSRFTOKEN';
+axios.defaults.xsrfCookieName = 'csrftoken';
 
 const initialValues = {
   firstName: '',
@@ -12,6 +16,8 @@ const initialValues = {
 const ContactForm = () => {
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState({});
+  const [isSent, setIsSent] = useState(false);
+  const [failSend, setFailSend] = useState(false);
   const minMessageLength = 30;
   const messageHelperText = `${values.message.length}/${minMessageLength} characters minimum`;
 
@@ -43,8 +49,18 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateInput()) {
-      // TODO - send email
-      alert('testing');
+      axios
+        .post('/api/email', { ...values })
+        .then((response) => {
+          if (response.status === 201) {
+            setIsSent(true);
+            setValues(initialValues);
+            setErrors({});
+          } else {
+            setFailSend(true);
+          }
+        })
+        .catch(() => setFailSend(true));
     }
   };
 

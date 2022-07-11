@@ -1,8 +1,10 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from django.conf import settings
 from api.models import Email, Image
 from api.serializers import EmailSerializer, ImageSerializer
+from api import util
 
 
 class MainApiTestView(APIView):
@@ -16,10 +18,15 @@ class EmailView(APIView):
     """An API View for creating emails"""
 
     bad_request_message = {"message": "bad request"}
+    default_subject = "Inquiry about Retreat 480"
 
     def post(self, request) -> Response:
         """Creates and sends an email."""
-        serializer = EmailSerializer(data=request.data)
+        snake_case_data = util.snake_case_dict(request.data)
+        snake_case_data["sender"] = snake_case_data["email"]
+        snake_case_data["recipient"] = settings.RECIPIENT_EMAIL or ""
+        snake_case_data["subject"] = self.default_subject
+        serializer = EmailSerializer(data=snake_case_data)
 
         if serializer.is_valid():
             email: Email = serializer.save()
@@ -38,6 +45,7 @@ class ImageView(APIView):
 
     def get(self, request, image_id):
         """Gets a single image by ID"""
+
         try:
             image = Image.objects.get(pk=image_id)
             serializer = ImageSerializer(image)
@@ -55,6 +63,7 @@ class ImagesView(APIView):
 
     def get(self, request):
         """Gets all images, or images that match the keyword arguments."""
+
         if "tag" in request.GET:
             tag = request.GET.get("tag", "").upper()
             self.images = list(filter(lambda image: tag in image.tags, self.images))

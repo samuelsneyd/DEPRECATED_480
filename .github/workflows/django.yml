@@ -6,6 +6,7 @@ env:
   SECURE_SSL_REDIRECT: False
   DATABASE_NAME: db.sqlite3
   HOST: 127.0.0.1
+  RECIPIENT_EMAIL: test@test.com
 
 on:
   push:

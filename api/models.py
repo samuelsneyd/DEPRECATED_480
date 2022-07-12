@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.utils.translation import gettext_lazy as _
 from multiselectfield import MultiSelectField
 from smtplib import SMTPException
@@ -38,19 +38,16 @@ class Email(models.Model):
         Sends an email, even if it has been sent before.
         Returns the number of emails it has sent successfully.
         """
+        email = EmailMessage(
+            self.subject,
+            self.message,
+            self.sender,
+            [self.recipient],
+            reply_to=[self.sender],
+        )
         try:
-            emails_sent = send_mail(
-                self.subject,
-                self.message,
-                self.sender,
-                [self.recipient],
-                fail_silently=False,
-            )
-        except SMTPException as err:
-            self.status = "ERROR"
-            self.save()
-            raise err
-        except ConnectionRefusedError as err:
+            emails_sent = email.send(fail_silently=False)
+        except (SMTPException, ConnectionRefusedError) as err:
             self.status = "ERROR"
             self.save()
             raise err

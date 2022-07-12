@@ -31,7 +31,7 @@ class EmailView(APIView):
         if serializer.is_valid():
             email: Email = serializer.save()
             # TODO - config email sending options
-            # email.send()
+            email.send()
 
             return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -43,7 +43,7 @@ class ImageView(APIView):
 
     not_found_message = {"message", "image not found"}
 
-    def get(self, request, image_id):
+    def get(self, request, image_id) -> Response:
         """Gets a single image by ID"""
 
         try:
@@ -61,7 +61,7 @@ class ImagesView(APIView):
         super().__init__(**kwargs)
         self.images = Image.objects.all().order_by("priority")
 
-    def get(self, request):
+    def get(self, request) -> Response:
         """Gets all images, or images that match the keyword arguments."""
 
         if "tag" in request.GET:

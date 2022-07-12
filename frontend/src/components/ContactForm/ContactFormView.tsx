@@ -8,7 +8,26 @@ import {
   Typography
 } from '@mui/material';
 
-const ContactFormView = (props) => {
+type ContactFormViewProps = {
+  values: {
+    firstName: string,
+    lastName: string,
+    email: string,
+    message: string
+  },
+  errors: {
+    firstName: string,
+    lastName: string,
+    email: string,
+    message: string
+  },
+  minMessageLength: number,
+  messageHelperText: string,
+  handleInputChange: (e: any) => void,
+  handleSubmit: (e: any) => void
+};
+
+const ContactFormView = (props: ContactFormViewProps) => {
   const {
     values,
     errors,
@@ -24,7 +43,7 @@ const ContactFormView = (props) => {
       spacing={1}
       direction={'column'}
       alignItems={'center'}
-      justify={'center'}
+      justifyItems={'center'}
     >
       <Grid item xs={6} mb={4}>
         <Card sx={{ maxWidth: 600 }}>

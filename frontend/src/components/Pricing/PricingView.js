@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StarBorder } from '@mui/icons-material';
+import StarBorder from '@mui/icons-material/Starborder';
 import {
   Box,
   Button,

@@ -15,7 +15,7 @@ const initialValues = {
 
 const ContactForm = () => {
   const [values, setValues] = useState(initialValues);
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState(initialValues);
   const [isSent, setIsSent] = useState(false);
   const [failSend, setFailSend] = useState(false);
   const minMessageLength = 30;
@@ -55,7 +55,7 @@ const ContactForm = () => {
           if (response.status === 201) {
             setIsSent(true);
             setValues(initialValues);
-            setErrors({});
+            setErrors(initialValues);
           } else {
             setFailSend(true);
           }

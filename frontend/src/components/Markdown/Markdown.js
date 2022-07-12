@@ -34,8 +34,8 @@ const options = {
     a: { component: Link },
     li: {
       component: (props) => (
-        <Box component="li" sx={{ mt: 1 }}>
-          <Typography component="span" {...props} />
+        <Box component={'li'} sx={{ mt: 1 }}>
+          <Typography component={'span'} {...props} />
         </Box>
       )
     }

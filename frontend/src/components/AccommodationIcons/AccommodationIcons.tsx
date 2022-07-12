@@ -13,29 +13,29 @@ import WeekendIcon from '@mui/icons-material/Weekend';
 import WifiIcon from '@mui/icons-material/Wifi';
 import AccommodationIconsView from './AccommodationIconsView';
 
-const iconsLeft = [
-  { text: '1 double bed', icon: BedIcon },
-  { text: '1 bathroom', icon: ShowerIcon },
-  { text: '1 kitchen', icon: KitchenIcon },
-  { text: '2 decks', icon: DeckIcon },
-  { text: '1 kayak', icon: KayakingIcon },
-  { text: 'forest views', icon: ForestIcon }
-];
-
-const iconsRight = [
-  { text: '2 comfy chairs', icon: ChairIcon },
-  { text: '1 couch', icon: WeekendIcon },
-  { text: '1 TV', icon: TvIcon },
-  { text: 'free wifi', icon: WifiIcon },
-  { text: 'mobile coverage', icon: SignalCellularAltIcon },
-  { text: 'LGBTQ+ friendly', icon: LooksIcon }
-];
+const icons = {
+  left: [
+    { text: '1 double bed', icon: BedIcon },
+    { text: '1 bathroom', icon: ShowerIcon },
+    { text: '1 kitchen', icon: KitchenIcon },
+    { text: '2 decks', icon: DeckIcon },
+    { text: '1 kayak', icon: KayakingIcon },
+    { text: 'forest views', icon: ForestIcon }
+  ],
+  right: [
+    { text: '2 comfy chairs', icon: ChairIcon },
+    { text: '1 couch', icon: WeekendIcon },
+    { text: '1 TV', icon: TvIcon },
+    { text: 'free wifi', icon: WifiIcon },
+    { text: 'mobile coverage', icon: SignalCellularAltIcon },
+    { text: 'LGBTQ+ friendly', icon: LooksIcon }
+  ]
+};
 
 const AccommodationIcons = () => {
   return (
     <AccommodationIconsView
-      iconsLeft={iconsLeft}
-      iconsRight={iconsRight}
+      icons={icons}
     />
   );
 };

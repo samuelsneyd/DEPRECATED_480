@@ -18,14 +18,14 @@ const rawTheme = createTheme({
       dark: '#ffb25e'
     },
     error: {
-      light: red[50],
-      main: red[500],
-      dark: red[700]
+      light: red[500],
+      main: red[700],
+      dark: red[900]
     },
     success: {
-      light: green[50],
-      main: green[500],
-      dark: green[700]
+      light: green[500],
+      main: green[700],
+      dark: green[900]
     }
   },
   typography: {

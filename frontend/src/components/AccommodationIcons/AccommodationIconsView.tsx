@@ -19,10 +19,8 @@ const AccommodationIconsView = ({ icons }: AccommodationIconsProps) => {
     return (
       <Typography
         key={text}
-        sx={{
-          mt: 1,
-          mb: 1
-        }}>
+        sx={{ mt: 1, mb: 1 }}
+      >
         <Icon />
         {` ${text}`}
       </Typography>

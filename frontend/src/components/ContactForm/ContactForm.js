@@ -72,6 +72,10 @@ const ContactForm = () => {
       messageHelperText={messageHelperText}
       handleInputChange={handleInputChange}
       handleSubmit={handleSubmit}
+      isSent={isSent}
+      setIsSent={setIsSent}
+      failSend={failSend}
+      setFailSend={setFailSend}
     />
   );
 };

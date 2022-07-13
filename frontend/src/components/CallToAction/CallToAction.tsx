@@ -5,8 +5,8 @@ import CallToActionView from './CallToActionView';
 const CallToAction = () => {
   const [open, setOpen] = useState(false);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e: React.FormEvent<HTMLInputElement>) => {
+    e.preventDefault();
     setOpen(true);
   };
 

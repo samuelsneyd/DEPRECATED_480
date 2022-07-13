@@ -1,7 +1,16 @@
 import React from 'react';
 import { Paper } from '@mui/material';
 
-const CarouselImage = ({ image }) => {
+type CarouselImageProps = {
+  image: {
+    alt: string | undefined,
+    image: string | undefined,
+    src: string | undefined,
+    title: string | undefined
+  }
+};
+
+const CarouselImage = ({ image }: CarouselImageProps) => {
   return (
     <Paper
       elevation={3}

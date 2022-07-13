@@ -9,7 +9,13 @@ import {
   Typography
 } from '@mui/material';
 
-const CallToActionView = ({ open, handleSubmit, handleClose }) => {
+type CallToActionViewProps = {
+  open: boolean,
+  handleSubmit: (e: React.FormEvent<HTMLInputElement>) => void,
+  handleClose: () => void
+}
+
+const CallToActionView = ({ open, handleSubmit, handleClose }: CallToActionViewProps) => {
   return (
     <Container component="section" sx={{
       mt: 10,
@@ -95,7 +101,6 @@ const CallToActionView = ({ open, handleSubmit, handleClose }) => {
       <Snackbar
         open={open}
         onClick={handleClose}
-        closeFunc={handleClose}
         message="We will be in touch with news and offers."
       />
     </Container>

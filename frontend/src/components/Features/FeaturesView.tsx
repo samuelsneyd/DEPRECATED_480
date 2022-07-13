@@ -12,7 +12,11 @@ const absolutePosition = {
 };
 
 const ImageBackdrop = styled('div')(({ theme }) => ({
-  ...absolutePosition,
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
   background: '#000',
   opacity: 0.5,
   transition: theme.transitions.create('opacity')
@@ -46,7 +50,18 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
   }
 }));
 
-const FeaturesView = ({ images }) => {
+type Image = {
+  src: string,
+  href: string,
+  title: string,
+  width: string
+};
+
+type FeaturesViewProps = {
+  images: Image[]
+};
+
+const FeaturesView = ({ images } : FeaturesViewProps) => {
   return (
     <Container component={'section'} sx={{
       mt: 8,
@@ -54,7 +69,6 @@ const FeaturesView = ({ images }) => {
     }}>
       <Typography
         variant={'h4'}
-        marked={'center'}
         align={'center'}
         component={'h4'}
       >

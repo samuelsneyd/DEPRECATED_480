@@ -10,7 +10,17 @@ import {
   ListItemText
 } from '@mui/material';
 
-const MobileDrawerView = ({ pages, openDrawer, setOpenDrawer }) => {
+type Page = {
+  title: string,
+  href: string
+};
+type MobileDrawerViewProps = {
+  pages: Page[],
+  openDrawer: boolean,
+  setOpenDrawer: (openDrawer: boolean) => void
+};
+
+const MobileDrawerView = ({ pages, openDrawer, setOpenDrawer }: MobileDrawerViewProps) => {
   return (
     <Box sx={{ display: 'flex' }}>
       <Drawer

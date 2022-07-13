@@ -26,8 +26,7 @@ const pages = [
   },
   {
     title: 'Book Now',
-    href: '/book/',
-    color: 'secondary.main'
+    href: '/book/'
   },
   {
     title: 'Contact',

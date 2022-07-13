@@ -22,6 +22,7 @@ class EmailView(APIView):
 
     def post(self, request) -> Response:
         """Creates and sends an email."""
+
         snake_case_data = util.snake_case_dict(request.data)
         snake_case_data["sender"] = snake_case_data["email"]
         snake_case_data["recipient"] = settings.RECIPIENT_EMAIL or ""
@@ -30,7 +31,6 @@ class EmailView(APIView):
 
         if serializer.is_valid():
             email: Email = serializer.save()
-            # TODO - config email sending options
             email.send()
 
             return Response(serializer.data, status=status.HTTP_201_CREATED)

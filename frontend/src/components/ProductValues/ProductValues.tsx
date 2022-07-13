@@ -1,5 +1,9 @@
 import * as React from 'react';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, IconButton, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+import CabinIcon from '@mui/icons-material/Cabin';
+import KayakingIcon from '@mui/icons-material/Kayaking';
+import ForestIcon from '@mui/icons-material/Forest';
 
 const item = {
   display: 'flex',
@@ -19,70 +23,69 @@ const ProductValues = () => {
       }}
     >
       <Container sx={{
-        mt: 15,
-        mb: 30,
+        mt: 12,
+        mb: 12,
         display: 'flex',
         position: 'relative'
       }}>
-        <Box
-          component={'img'}
-          src={''}
-          alt={'transparent image'}
-          sx={{
-            pointerEvents: 'none',
-            position: 'absolute',
-            top: -180
-          }}
-        />
         <Grid container spacing={5}>
+          <Grid item xs={12}>
+            <Typography
+              variant={'h4'}
+              component={'h2'}
+              align={'center'}
+            >
+              {'During your stay'}
+            </Typography>
+          </Grid>
           <Grid item xs={12} md={4}>
             <Box sx={item}>
-              <Box
-                component={'img'}
-                src={'../../../../static/images/accommodation.jpg'}
-                alt={'img1'}
-                sx={{ height: 104 }}
-              />
-              <Typography variant={'h6'} sx={{ my: 5 }}>
-                Luxury accommodation
+              <IconButton
+                size={'large'}
+                component={Link}
+                to={'/accommodation/'}
+              >
+                <CabinIcon fontSize={'large'} />
+              </IconButton>
+              <Typography variant={'h6'} sx={{ my: 4 }}>
+                {'Comfy accommodation'}
               </Typography>
-              <Typography variant={'h5'}>
-                {'Placeholder description text. '}
-                {'More placeholder description text.'}
+              <Typography variant={'h5'} align={'center'}>
+                {'Beautiful studio accommodation nestled within native New Zealand bush'}
               </Typography>
             </Box>
           </Grid>
           <Grid item xs={12} md={4}>
             <Box sx={item}>
-              <Box
-                component={'img'}
-                src={'../../../../static/images/night-sky.jpg'}
-                alt={'img2'}
-                sx={{ height: 104 }}
-              />
-              <Typography variant={'h6'} sx={{ my: 5 }}>
-                New experiences
+              <IconButton
+                size={'large'}
+                component={Link}
+                to={'/features/'}
+              >
+                <KayakingIcon fontSize={'large'} />
+              </IconButton>
+              <Typography variant={'h6'} sx={{ my: 4 }}>
+                {'New experiences'}
               </Typography>
-              <Typography variant={'h5'}>
-                {'Placeholder description text. '}
-                {'More placeholder description text.'}
+              <Typography variant={'h5'} align={'center'}>
+                {'A wide range of activities in the area, in the bush and on or under the water'}
               </Typography>
             </Box>
           </Grid>
           <Grid item xs={12} md={4}>
             <Box sx={item}>
-              <Box
-                component={'img'}
-                src={'../../../../static/images/dog.jpg'}
-                alt={'img3'}
-                sx={{ height: 104 }}
-              />
-              <Typography variant={'h6'} sx={{ my: 5 }}>
-                Exclusive rates
+              <IconButton
+                size={'large'}
+                component={Link}
+                to={'/features/'}
+              >
+                <ForestIcon fontSize={'large'} />
+              </IconButton>
+              <Typography variant={'h6'} sx={{ my: 4 }}>
+                {'Beautiful scenery'}
               </Typography>
-              <Typography variant={'h5'}>
-                {'Placeholder description text. '}
-                {'Placeholder description text.'}
+              <Typography variant={'h5'} align={'center'}>
+                {'Discover the best of New Zealand land, ocean, and wildlife at your doorstep'}
               </Typography>
             </Box>
           </Grid>

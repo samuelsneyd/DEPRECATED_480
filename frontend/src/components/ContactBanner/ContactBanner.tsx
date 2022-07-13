@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Box, Button, Container, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
-import LooksIcon from '@mui/icons-material/Looks';
+import SpaIcon from '@mui/icons-material/Spa';
 
-const ContentBanner = () => {
+const ContactBanner = () => {
   return (
     <Container
       component={'section'}
@@ -11,7 +11,7 @@ const ContentBanner = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        my: 9
+        my: 8
       }}
     >
       <Button
@@ -26,7 +26,7 @@ const ContentBanner = () => {
           textTransform: 'none'
         }}
       >
-        <Typography variant={'h4'} component={'span'}>
+        <Typography variant={'h4'} component={'span'} align={'center'}>
           {'Got any questions?'}
         </Typography>
       </Button>
@@ -34,11 +34,11 @@ const ContentBanner = () => {
         {'We are here to help. Get in touch!'}
       </Typography>
       <Box
-        component={LooksIcon}
+        component={SpaIcon}
         sx={{ width: 60, height: 60 }}
       />
     </Container>
   );
 };
 
-export default ContentBanner;
+export default ContactBanner;

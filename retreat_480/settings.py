@@ -64,7 +64,26 @@ MIDDLEWARE = [
     "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
+# Rest Framework API HTML views
+
+DEFAULT_RENDERER_CLASSES = ("rest_framework.renderers.JSONRenderer",)
+
+if DEBUG:
+    DEFAULT_RENDERER_CLASSES = DEFAULT_RENDERER_CLASSES + (
+        "rest_framework.renderers.BrowsableAPIRenderer",
+    )
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": (
+        "rest_framework.permissions.IsAuthenticatedOrReadOnly",
+    ),
+    "DEFAULT_RENDERER_CLASSES": DEFAULT_RENDERER_CLASSES,
+}
+
+# URLs
+
 ROOT_URLCONF = "retreat_480.urls"
+APPEND_SLASH = True
 
 TEMPLATES = [
     {

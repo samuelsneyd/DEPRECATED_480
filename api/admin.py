@@ -1,10 +1,10 @@
 from django.contrib import admin
 from django import forms
-from api.models import Email, Image
+from api import models
 
 
 class EmailAdmin(admin.ModelAdmin):
-    """Settings for the Email class in Django admin"""
+    """Settings for the Email class in Django admin."""
 
     readonly_fields = ("created_at", "updated_at", "id")
 
@@ -14,7 +14,7 @@ class EmailAdmin(admin.ModelAdmin):
 
 
 class ImageAdmin(admin.ModelAdmin):
-    """Settings for the Image class in Django admin"""
+    """Settings for the Image class in Django admin."""
 
     readonly_fields = ("created_at", "updated_at", "id")
 
@@ -23,5 +23,16 @@ class ImageAdmin(admin.ModelAdmin):
         return super().get_form(request, obj, **kwargs)
 
 
-admin.site.register(Email, EmailAdmin)
-admin.site.register(Image, ImageAdmin)
+class FeatureItemAdmin(admin.ModelAdmin):
+    """Settings for the FeatureItem class in Django admin."""
+
+    readonly_fields = ("created_at", "updated_at", "id")
+
+    def get_form(self, request, obj=None, **kwargs):
+        kwargs["widgets"] = {"description": forms.Textarea}
+        return super().get_form(request, obj, **kwargs)
+
+
+admin.site.register(models.Email, EmailAdmin)
+admin.site.register(models.Image, ImageAdmin)
+admin.site.register(models.FeatureItem, FeatureItemAdmin)

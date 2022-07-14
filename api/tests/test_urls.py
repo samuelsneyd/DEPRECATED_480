@@ -1,6 +1,13 @@
 from django.test import TestCase
 from django.urls import reverse, resolve
-from api.views import MainApiTestView, EmailView, ImageView, ImagesView
+from api.views import (
+    MainApiTestView,
+    EmailView,
+    ImageView,
+    ImagesView,
+    FeatureItemView,
+    FeatureItemsView,
+)
 
 
 class TestApiUrls(TestCase):
@@ -22,6 +29,14 @@ class TestApiUrls(TestCase):
     def test_images_url_is_resolved(self):
         resolver = resolve(reverse("api:images"))
         self.assertEqual(resolver.func.view_class, ImagesView)
+
+    def test_feature_item_url_is_resolved(self):
+        resolver = resolve(reverse("api:feature_item", args=["1"]))
+        self.assertEqual(resolver.func.view_class, FeatureItemView)
+
+    def test_feature_items_url_is_resolved(self):
+        resolver = resolve(reverse("api:feature_items"))
+        self.assertEqual(resolver.func.view_class, FeatureItemsView)
 
     def tearDown(self):
         return

@@ -1,14 +1,20 @@
 from rest_framework import serializers
-from api.models import Email, Image
+from api import models
 
 
 class EmailSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Email
+        model = models.Email
         fields = "__all__"
 
 
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Image
+        model = models.Image
+        fields = "__all__"
+
+
+class FeatureItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.FeatureItem
         fields = "__all__"

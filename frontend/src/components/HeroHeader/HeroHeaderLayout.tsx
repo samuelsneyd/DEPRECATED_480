@@ -1,6 +1,5 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
-import { Box, Container, styled } from '@mui/material';
+import { Box, Container, styled, SxProps, Theme } from '@mui/material';
 
 const ProductHeroLayoutRoot = styled('section')(({ theme }) => ({
   color: theme.palette.common.white,
@@ -28,7 +27,13 @@ const Background = styled(Box)({
   zIndex: -2
 });
 
-const HeroHeaderLayout = ({ sxBackground, children }) => {
+interface ProductHeroLayoutProps {
+  sxBackground: SxProps<Theme>;
+}
+
+const HeroHeaderLayout = (props: React.HTMLAttributes<HTMLDivElement> & ProductHeroLayoutProps) => {
+  const { children, sxBackground } = props;
+
   return (
     <ProductHeroLayoutRoot>
       <Container
@@ -68,17 +73,6 @@ const HeroHeaderLayout = ({ sxBackground, children }) => {
       </Container>
     </ProductHeroLayoutRoot>
   );
-};
-
-HeroHeaderLayout.propTypes = {
-  children: PropTypes.node,
-  sxBackground: PropTypes.oneOfType([
-    PropTypes.arrayOf(
-      PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool])
-    ),
-    PropTypes.func,
-    PropTypes.object
-  ])
 };
 
 export default HeroHeaderLayout;

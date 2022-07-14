@@ -1,6 +1,7 @@
 import * as React from 'react';
 import ReactMarkdown from 'markdown-to-jsx';
 import { Box, Link, Typography } from '@mui/material';
+import { ReactNode } from 'react';
 
 const options = {
   overrides: {
@@ -33,7 +34,7 @@ const options = {
     },
     a: { component: Link },
     li: {
-      component: (props) => (
+      component: (props: any) => (
         <Box component={'li'} sx={{ mt: 1 }}>
           <Typography component={'span'} {...props} />
         </Box>
@@ -42,7 +43,11 @@ const options = {
   }
 };
 
-const Markdown = ({ children }) => {
+interface MarkdownProps {
+  children: string;
+}
+
+const Markdown = ({ children }: MarkdownProps) => {
   return <ReactMarkdown options={options} children={children} />;
 };
 

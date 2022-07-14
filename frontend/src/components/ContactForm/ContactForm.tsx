@@ -6,7 +6,14 @@ import axios from 'axios';
 axios.defaults.xsrfHeaderName = 'X-CSRFTOKEN';
 axios.defaults.xsrfCookieName = 'csrftoken';
 
-const initialValues = {
+type Values = {
+  firstName: string,
+  lastName: string,
+  email: string,
+  message: string
+}
+
+const initialValues: Values = {
   firstName: '',
   lastName: '',
   email: '',
@@ -21,7 +28,7 @@ const ContactForm = () => {
   const minMessageLength = 30;
   const messageHelperText = `${values.message.length}/${minMessageLength} characters minimum`;
 
-  const handleInputChange = (e) => {
+  const handleInputChange: React.ChangeEventHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setValues({
       ...values,
@@ -33,8 +40,8 @@ const ContactForm = () => {
     });
   };
 
-  const validateInput = () => {
-    const currentErrors = {
+  const validateInput = (): boolean => {
+    const currentErrors: Values = {
       firstName: values.firstName ? '' : 'This field is required',
       lastName: values.lastName ? '' : 'This field is required',
       email: (/\S+@\S+\.\S+/).test(values.email) ? '' : 'Email is not valid',
@@ -46,7 +53,7 @@ const ContactForm = () => {
     return Object.values(currentErrors).every((error) => error === '');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit: React.FormEventHandler = (e: React.FormEvent<HTMLInputElement>) => {
     e.preventDefault();
     if (validateInput()) {
       axios

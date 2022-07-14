@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "lib": [
+      "es2021",
+      "dom"
+    ],
+    "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
     "types": [
@@ -11,7 +15,6 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": true,
-//    "strictNullChecks": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
     "noImplicitReturns": true,

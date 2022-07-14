@@ -9,7 +9,7 @@ const LocationPage = () => {
   return (
     <Container>
       <PageTitle title={'Location'} />
-      <Grid container spacing={2} minHeight={450} sx={{ mb: 1 }}>
+      <Grid container spacing={2} minHeight={450} sx={{ mb: 4 }}>
         <Grid item xs={12} md={6}>
           <GoogleMapsLocation />
         </Grid>
@@ -17,17 +17,17 @@ const LocationPage = () => {
           <Typography variant={'h5'}>
             {'Where to find us'}
           </Typography>
-          <Typography sx={{ mt: 1, mb: 1 }}>
+          <Typography sx={{ my: 1 }}>
             {'Located a short drive away from the Tutukaka marina, Retreat 480 is tucked away at the end of Waiotoi Road.'}
           </Typography>
-          <Typography sx={{ mt: 1, mb: 1 }}>
+          <Typography sx={{ my: 1 }}>
             {'Follow the driveway at the end of Waiotoi road until the Kiwi sign, then look out for the 480 sign.'}
           </Typography>
-          <Typography sx={{ mt: 1, mb: 1 }}>
+          <Typography sx={{ my: 1 }}>
             {'Turn right at the 480 sign, then you will have arrived.'}
           </Typography>
           <Typography
-            sx={{ mt: 1, mb: 1 }}
+            sx={{ my: 1 }}
             component={'address'}
           >
             {config.address}

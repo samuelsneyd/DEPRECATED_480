@@ -7,19 +7,16 @@ import withAnimation from '../../../hooks/withAnimation';
 
 const images = [
   {
-    title: 'Mountains',
-    src: '../../../../static/images/misty-mountains.jpg'
-  },
-  {
-    title: 'Rainbow',
-    src: '../../../../static/images/rainbow.jpg'
+    title: 'School of fish',
+    alt: 'School of fish',
+    image: '../../../../static/images/school-of-fish.jpg'
   }
 ];
 
-const HikingPage = () => {
+const SwimmingPage = () => {
   return (
     <Container>
-      <PageTitle title={'Hiking'} />
+      <PageTitle title={'Swimming'} />
       <Grid container spacing={2} minHeight={450} sx={{ mb: 1 }}>
         <Grid item xs={12} md={6}>
           <Carousel
@@ -32,10 +29,15 @@ const HikingPage = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant={'h5'}>
-            {'See the scenery'}
+            {'View the sea'}
           </Typography>
-          <Typography sx={{ mt: 1, mb: 1 }}>
-            {'The forests and bush are a great place for anything from short walks to long hikes.'}
+          <Typography sx={{ my: 1 }}>
+            {'Just twenty-three kilometres off the Tutukaka coast are the Poor Knights Islands (Tawhiti Rahi), one of '}
+            {'the world\'s best locations for scuba diving, snorkeling, and swimming.'}
+          </Typography>
+          <Typography sx={{ my: 1 }}>
+            {'Closer to shore, there are a plethora of sandy beaches and quiet coves for swimming, kayaking, surfing, '}
+            {'and sunbathing.'}
           </Typography>
         </Grid>
       </Grid>
@@ -43,4 +45,4 @@ const HikingPage = () => {
   );
 };
 
-export default withAnimation(HikingPage);
+export default withAnimation(SwimmingPage);

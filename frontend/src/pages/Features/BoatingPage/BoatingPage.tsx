@@ -7,19 +7,21 @@ import withAnimation from '../../../hooks/withAnimation';
 
 const images = [
   {
-    title: 'Boat on the ocean',
-    src: '../../../../static/images/boat.jpg'
+    title: 'Marina boats',
+    alt: 'Marina boats',
+    image: '../../../../static/images/marina-boats.jpg'
   },
   {
-    title: 'Marina boats',
-    src: '../../../../static/images/marina-boats.jpg'
+    title: 'Boat on the ocean',
+    alt: 'Boat on the ocean',
+    image: '../../../../static/images/boat.jpg'
   }
 ];
 
-const OceanPage = () => {
+const BoatingPage = () => {
   return (
     <Container>
-      <PageTitle title={'Ocean'} />
+      <PageTitle title={'Boating'} />
       <Grid container spacing={2} minHeight={450} sx={{ mb: 1 }}>
         <Grid item xs={12} md={6}>
           <Carousel
@@ -48,4 +50,4 @@ const OceanPage = () => {
   );
 };
 
-export default withAnimation(OceanPage);
+export default withAnimation(BoatingPage);

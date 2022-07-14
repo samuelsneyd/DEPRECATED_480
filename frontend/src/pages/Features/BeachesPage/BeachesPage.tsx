@@ -8,7 +8,8 @@ import withAnimation from '../../../hooks/withAnimation';
 const images = [
   {
     title: 'Beach',
-    src: '../../../../static/images/beach.jpg'
+    alt: 'A beach',
+    image: '../../../../static/images/beach.jpg'
   }
 ];
 
@@ -30,7 +31,7 @@ const BeachesPage = () => {
           <Typography variant={'h5'}>
             {'Explore the beaches'}
           </Typography>
-          <Typography sx={{ mt: 1, mb: 1 }}>
+          <Typography sx={{ my: 1 }}>
             {'With numerous sandy beaches, quiet coves, and a great view of the open ocean, there\'s always somewhere '}
             {'to swim, surf, kayak, sunbath, or walk along.'}
           </Typography>

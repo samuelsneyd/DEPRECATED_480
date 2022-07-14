@@ -4,25 +4,27 @@ import HomeButton from '../HomeButton/HomeButton';
 import MobileDrawer from '../MobileDrawer/MobileDrawer';
 import ResponsiveAppBarTabs from './ResponsiveAppBarTabs';
 
-const ResponsiveAppBarView = ({ isMobile, pages }) => {
+type Page = {
+  title: string;
+  href: string,
+  color?: string
+};
+
+type ResponsiveAppBarViewProps = {
+  isMobile: boolean,
+  pages: Page[]
+};
+
+const ResponsiveAppBarView = ({ isMobile, pages }: ResponsiveAppBarViewProps) => {
   return (
     <>
       <AppBar position="fixed">
         <Toolbar sx={{ justifyContent: 'space-between' }}>
-          {/* Optional icon or logo */}
-          {/* <MenuIcon sx={{ display: 'flex', mr: 1 }}/> */}
+          <MobileDrawer />
+          <HomeButton />
           {isMobile
-            ?
-            <>
-              <MobileDrawer />
-              <HomeButton />
-            </>
-            :
-            <>
-              <MobileDrawer />
-              <HomeButton />
-              <ResponsiveAppBarTabs pages={pages} />
-            </>
+            ? null
+            : <ResponsiveAppBarTabs pages={pages} />
           }
         </Toolbar>
       </AppBar>

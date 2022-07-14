@@ -3,7 +3,17 @@ import { Box, Button } from '@mui/material';
 import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 
-const ResponsiveAppBarTabs = ({ pages }) => {
+type Page = {
+  title: string;
+  href: string,
+  color?: string
+};
+
+type ResponsiveAppBarTabsProps = {
+  pages: Page[]
+};
+
+const ResponsiveAppBarTabs = ({ pages }: ResponsiveAppBarTabsProps) => {
   const { pathname } = useLocation();
 
   return (

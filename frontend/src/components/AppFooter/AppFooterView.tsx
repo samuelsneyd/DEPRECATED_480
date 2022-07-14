@@ -4,7 +4,21 @@ import AppFooterLinks from './AppFooterLinks';
 import Copyright from '../Copyright/Copyright';
 import WebsiteBuiltBy from '../WebsiteBuiltBy/WebsiteBuiltBy';
 
-const AppFooterView = ({ footers }) => {
+type Link = {
+  text: string,
+  href: string
+};
+
+type Footer = {
+  title: string,
+  description: Link[]
+};
+
+type AppFooterViewProps = {
+  footers: Footer[]
+};
+
+const AppFooterView = ({ footers }: AppFooterViewProps) => {
   return (
     <Typography
       component={'footer'}
@@ -17,7 +31,7 @@ const AppFooterView = ({ footers }) => {
         my: 4,
         display: 'flex'
       }}>
-        <Container spacing={5}>
+        <Container>
           <Container
             maxWidth={'md'}
             component={'footer'}

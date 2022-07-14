@@ -1,14 +1,16 @@
 import * as React from 'react';
 import { Container } from '@mui/material';
 import PageTitle from '../../../components/PageTitle/PageTitle';
+import Restaurants from '../../../components/Restaurants/Restaurants';
 import withAnimation from '../../../hooks/withAnimation';
 
-const FoodPage = () => {
+const RestaurantsPage = () => {
   return (
     <Container>
-      <PageTitle title={'Food'} />
+      <PageTitle title={'Restaurants'} />
+      <Restaurants />
     </Container>
   );
 };
 
-export default withAnimation(FoodPage);
+export default withAnimation(RestaurantsPage);

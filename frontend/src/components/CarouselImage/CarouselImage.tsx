@@ -5,7 +5,7 @@ type CarouselImageProps = {
   image: {
     alt: string | undefined,
     image: string | undefined,
-    src: string | undefined,
+    src?: string
     title: string | undefined
   }
 };

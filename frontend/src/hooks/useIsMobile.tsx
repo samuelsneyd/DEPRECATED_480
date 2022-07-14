@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react';
-import { useMediaQuery } from '@mui/material';
+import { Breakpoint, useMediaQuery } from '@mui/material';
 
-const useIsMobile = (breakpoint = 'sm') => {
+const useIsMobile = (breakpoint: Breakpoint = 'sm') => {
   const theme = useTheme();
   return useMediaQuery(theme.breakpoints.down(breakpoint));
 };

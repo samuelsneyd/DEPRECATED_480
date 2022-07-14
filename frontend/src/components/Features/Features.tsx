@@ -9,9 +9,9 @@ const images = [
     width: '40%'
   },
   {
-    src: '../../../../static/images/cake.jpg',
-    href: '/features/food/',
-    title: 'Food',
+    src: '../../../../static/images/boat.jpg',
+    href: '/features/ocean/',
+    title: 'Ocean',
     width: '20%'
   },
   {
@@ -45,9 +45,9 @@ const images = [
     width: '40%'
   },
   {
-    src: '../../../../static/images/boat.jpg',
-    href: '/features/ocean/',
-    title: 'Ocean',
+    src: '../../../../static/images/cake.jpg',
+    href: '/features/restaurants/',
+    title: 'Restaurants',
     width: '20%'
   },
   {

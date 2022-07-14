@@ -8,11 +8,13 @@ import withAnimation from '../../../hooks/withAnimation';
 const images = [
   {
     title: 'Night Sky 2',
-    src: '../../../../static/images/night-sky-2.jpg'
+    alt: 'Night sky 2',
+    image: '../../../../static/images/night-sky-2.jpg'
   },
   {
     title: 'Night Sky 1',
-    src: '../../../../static/images/night-sky.jpg'
+    alt: 'Night sky 1',
+    image: '../../../../static/images/night-sky.jpg'
   }
 ];
 
@@ -20,7 +22,7 @@ const StargazingPage = () => {
   return (
     <Container>
       <PageTitle title={'Stargazing'} />
-      <Grid container spacing={2} minHeight={450} sx={{ mb: 1}}>
+      <Grid container spacing={2} minHeight={450} sx={{ mb: 1 }}>
         <Grid item xs={12} md={6}>
           <Carousel
             animation={'fade'}

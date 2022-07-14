@@ -7,15 +7,21 @@ import withAnimation from '../../../hooks/withAnimation';
 
 const images = [
   {
-    title: 'School of fish',
-    src: '../../../../static/images/school-of-fish.jpg'
+    title: 'Boat on the ocean',
+    alt: '',
+    image: '../../../../static/images/boat.jpg'
+  },
+  {
+    title: 'Marina boats',
+    alt: '',
+    image: '../../../../static/images/marina-boats.jpg'
   }
 ];
 
-const SwimmingPage = () => {
+const OceanPage = () => {
   return (
     <Container>
-      <PageTitle title={'Swimming'} />
+      <PageTitle title={'Ocean'} />
       <Grid container spacing={2} minHeight={450} sx={{ mb: 1 }}>
         <Grid item xs={12} md={6}>
           <Carousel
@@ -28,15 +34,15 @@ const SwimmingPage = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant={'h5'}>
-            {'View the sea'}
+            {'Explore the ocean'}
           </Typography>
-          <Typography sx={{ mt: 1, mb: 1 }}>
-            {'Just twenty-three kilometres off the Tutukaka coast are the Poor Knights Islands (Tawhiti Rahi), one of '}
-            {'the world\'s best locations for scuba diving, snorkeling, and swimming.'}
+          <Typography sx={{ my: 1 }}>
+            {'A stone\'s throw away from the Poor Knights Islands and Marine Reserve, the Northland oceans are a once '}
+            {'in a lifetime stop for all things on and below the water.'}
           </Typography>
-          <Typography sx={{ mt: 1, mb: 1 }}>
-            {'Closer to shore, there are a plethora of sandy beaches and quiet coves for swimming, kayaking, surfing, '}
-            {'and sunbathing.'}
+          <Typography sx={{ my: 1 }}>
+            {'Charter a boat at the Tutukaka marina to see the Knights. Plunge into the depths with scuba diving or '}
+            {'snorkeling packages in one of the world\'s best dive sites.'}
           </Typography>
         </Grid>
       </Grid>
@@ -44,4 +50,4 @@ const SwimmingPage = () => {
   );
 };
 
-export default withAnimation(SwimmingPage);
+export default withAnimation(OceanPage);

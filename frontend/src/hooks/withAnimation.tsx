@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 
-const withAnimation = (Component) => {
-  return (props) => {
+const withAnimation = (Component: React.ComponentType) => {
+  return (props: any) => {
     return (
       <motion.div
         initial={{ opacity: 0 }}

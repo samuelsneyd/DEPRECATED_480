@@ -1,7 +1,16 @@
 import * as React from 'react';
 import PricingView from './PricingView';
 
-const tiers = [
+type Tier = {
+  title: string,
+  subheader?: string,
+  price: string,
+  description: string[],
+  buttonText: string,
+  buttonVariant?: 'outlined' | 'text' | 'contained'
+};
+
+const tiers: Tier[] = [
   {
     title: '2 Days',
     price: '200',
@@ -37,6 +46,7 @@ const tiers = [
     buttonVariant: 'outlined'
   }
 ];
+
 
 const Pricing = () => {
   return <PricingView tiers={tiers} />;

@@ -10,8 +10,8 @@ import withAnimation from '../../../hooks/withAnimation';
 const fallbackImages = [
   {
     title: 'Bird 1',
-    src: '../../../../static/images/bird.jpg',
-    id: 1
+    alt: 'A bird',
+    image: '../../../../static/images/bird.jpg'
   }
 ];
 
@@ -38,14 +38,14 @@ const BirdsPage = () => {
             duration={2000}
             swipe
           >
-            {images.map((image) => <CarouselImage key={image.id} image={image} />)}
+            {images.map((image) => <CarouselImage key={image.title} image={image} />)}
           </Carousel>
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant={'h5'}>
             {'See the wildlife'}
           </Typography>
-          <Typography sx={{ mt: 1, mb: 1 }}>
+          <Typography sx={{ my: 1 }}>
             {'The forests and bush are filled with native birds.'}
           </Typography>
         </Grid>

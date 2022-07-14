@@ -15,6 +15,7 @@ import HomePage from './pages/HomePage/HomePage';
 import LocationPage from './pages/LocationPage/LocationPage';
 import OceanPage from './pages/Features/OceanPage/OceanPage';
 import PrivacyPage from './pages/PrivacyPage/PrivacyPage';
+import RestaurantsPage from './pages/Features/RestaurantsPage/RestaurantsPage';
 import StargazingPage from './pages/Features/StargazingPage/StargazingPage';
 import SwimmingPage from './pages/Features/SwimmingPage/SwimmingPage';
 import TermsPage from './pages/TermsPage/TermsPage';
@@ -29,12 +30,13 @@ const AnimatedRoutes = () => {
       <Route path={'location'} element={<LocationPage />} />
       <Route path={'features'}>
         <Route path={''} element={<FeaturesPage />} />
+        <Route path={'ocean'} element={<OceanPage />} />
         <Route path={'boating'} element={<BoatingPage />} />
         <Route path={'swimming'} element={<SwimmingPage />} />
         <Route path={'birds'} element={<BirdsPage />} />
         <Route path={'beaches'} element={<BeachesPage />} />
         <Route path={'hiking'} element={<HikingPage />} />
-        <Route path={'ocean'} element={<OceanPage />} />
+        <Route path={'restaurants'} element={<RestaurantsPage />} />
         <Route path={'stars'} element={<StargazingPage />} />
       </Route>
       <Route path={'book'} element={<BookingPage />} />

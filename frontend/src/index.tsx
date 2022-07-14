@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import ScrollToTop from './hooks/ScrollToTop';
 import App from './App';
 
-const root = createRoot(document.getElementById('root') as Element);
+const root = createRoot(document.getElementById('app') as Element);
 root.render(
   <React.StrictMode>
     <BrowserRouter>

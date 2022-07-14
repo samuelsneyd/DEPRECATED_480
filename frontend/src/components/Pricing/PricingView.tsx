@@ -14,7 +14,20 @@ import {
   GlobalStyles
 } from '@mui/material';
 
-const PricingView = ({ tiers }) => {
+type Tier = {
+  title: string,
+  subheader?: string,
+  price: string,
+  description: string[],
+  buttonText: string,
+  buttonVariant?: 'outlined' | 'text' | 'contained'
+};
+
+type PricingViewProps = {
+  tiers: Tier[]
+};
+
+const PricingView = ({ tiers }: PricingViewProps) => {
   return (
     <>
       <GlobalStyles styles={{
@@ -25,27 +38,43 @@ const PricingView = ({ tiers }) => {
         }
       }} />
       <CssBaseline />
-      <Container disableGutters maxWidth="sm" component="main" sx={{
-        pt: 8,
-        pb: 6
-      }}>
+      <Container
+        disableGutters
+        maxWidth={'sm'}
+        component={'main'}
+        sx={{
+          pt: 8,
+          pb: 6
+        }}>
         <Typography
-          component="h1"
-          variant="h2"
-          align="center"
-          color="text.primary"
+          component={'h1'}
+          variant={'h2'}
+          align={'center'}
+          color={'text.primary'}
           gutterBottom
         >
           Pricing
         </Typography>
-        <Typography variant="h5" align="center" color="text.secondary" component="p">
+        <Typography
+          variant={'h5'}
+          align={'center'}
+          color={'text.secondary'}
+          component={'p'}
+        >
           Quickly build an effective pricing table for your potential customers with
           this layout. It&apos;s built with default MUI components with little
           customization.
         </Typography>
       </Container>
-      <Container maxWidth="md" component="main">
-        <Grid container spacing={5} alignItems="flex-end">
+      <Container
+        maxWidth={'md'}
+        component={'main'}
+      >
+        <Grid
+          container
+          spacing={5}
+          alignItems={'flex-end'}
+        >
           {tiers.map((tier) => (
             <Grid
               item
@@ -79,19 +108,26 @@ const PricingView = ({ tiers }) => {
                       mb: 2
                     }}
                   >
-                    <Typography component="h2" variant="h3" color="text.primary">
+                    <Typography
+                      component={'h2'}
+                      variant={'h3'}
+                      color={'text.primary'}
+                    >
                       ${tier.price}
                     </Typography>
-                    <Typography variant="h6" color="text.secondary">
+                    <Typography
+                      variant={'h6'}
+                      color={'text.secondary'}
+                    >
                       /day
                     </Typography>
                   </Box>
                   <ul>
                     {tier.description.map((line) => (
                       <Typography
-                        component="li"
-                        variant="subtitle1"
-                        align="center"
+                        component={'li'}
+                        variant={'subtitle1'}
+                        align={'center'}
                         key={line}
                       >
                         {line}
@@ -100,7 +136,10 @@ const PricingView = ({ tiers }) => {
                   </ul>
                 </CardContent>
                 <CardActions>
-                  <Button fullWidth variant={tier.buttonVariant}>
+                  <Button
+                    fullWidth
+                    variant={tier.buttonVariant}
+                  >
                     {tier.buttonText}
                   </Button>
                 </CardActions>

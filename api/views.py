@@ -18,16 +18,17 @@ class EmailView(APIView):
     """An API View for creating emails"""
 
     bad_request_message = {"message": "bad request"}
-    default_subject = "Inquiry about Retreat 480"
+    subject = "Inquiry about Retreat 480"
 
     def post(self, request) -> Response:
         """Creates and sends an email."""
 
-        snake_case_data = util.snake_case_dict(request.data)
-        snake_case_data["sender"] = snake_case_data["email"]
-        snake_case_data["recipient"] = settings.RECIPIENT_EMAIL or ""
-        snake_case_data["subject"] = self.default_subject
-        serializer = EmailSerializer(data=snake_case_data)
+        data = util.snake_case_dict(request.data)
+        data["sender"] = data["email"]
+        data["recipient"] = settings.RECIPIENT_EMAIL
+        data["subject"] = f'{self.subject}: {data["first_name"]} {data["last_name"]}'
+
+        serializer = EmailSerializer(data=data)
 
         if serializer.is_valid():
             email: Email = serializer.save()

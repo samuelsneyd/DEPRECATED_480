@@ -2,11 +2,34 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Box, Button, Grid, Typography } from '@mui/material';
 
-const AppFooterLinks = ({ footers }) => {
+type Link = {
+  text: string,
+  href: string
+};
+
+type Footer = {
+  title: string
+  description: Link[]
+};
+
+type AppFooterLinksProps = {
+  footers: Footer[]
+};
+
+const AppFooterLinks = ({ footers }: AppFooterLinksProps) => {
   return (
-    <Grid container spacing={4} justifyContent="space-evenly">
+    <Grid
+      container
+      spacing={4}
+      justifyContent={'space-evenly'}
+    >
       {footers.map((footer) => (
-        <Grid item xs={6} sm={3} key={footer.title}>
+        <Grid
+          item
+          xs={6}
+          sm={3}
+          key={footer.title}
+        >
           <Button
             variant={'text'}
             disableRipple
@@ -21,17 +44,25 @@ const AppFooterLinks = ({ footers }) => {
               }
             }}
           >
-            <Typography variant="h6" color="text.primary" gutterBottom>
+            <Typography
+              variant={'h6'}
+              color={'text.primary'}
+              gutterBottom
+            >
               {footer.title}
             </Typography>
           </Button>
-          <Box component="ul" sx={{
+          <Box component={'ul'} sx={{
             m: 0,
             listStyle: 'none',
             p: 0
           }}>
             {footer.description.map((item) => (
-              <Box component="li" key={item.text} sx={{ py: 0 }}>
+              <Box
+                component={'li'}
+                key={item.text}
+                sx={{ py: 0 }}
+              >
                 <Button
                   variant={'text'}
                   component={Link}

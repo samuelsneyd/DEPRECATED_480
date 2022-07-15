@@ -11,8 +11,9 @@ import withAnimation from '../../hooks/withAnimation';
 const fallbackImages = [
   {
     title: 'Accommodation',
-    src: '../../../../static/images/accommodation.jpg',
-    id: 1
+    alt: 'Accommodation',
+    image: '../../../../static/images/accommodation.jpg',
+    src: ''
   }
 ];
 
@@ -39,17 +40,17 @@ const AccommodationPage = () => {
             duration={2000}
             swipe
           >
-            {images.map((image) => <CarouselImage key={image.id} image={image} />)}
+            {images.map((image) => <CarouselImage key={image.title} image={image} />)}
           </Carousel>
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant={'h5'}>
             {'See your loft'}
           </Typography>
-          <Typography sx={{ mt: 1, mb: 1 }}>
+          <Typography sx={{ my: 1 }}>
             {'Luxury accommodation right on the edge of native forests.'}
           </Typography>
-          <Typography sx={{ mt: 1, mb: 1 }}>
+          <Typography sx={{ my: 1 }}>
             {'Features a double bed, living area, full kitchen, and acres of outdoor space.'}
           </Typography>
           <AccommodationIcons />

@@ -8,7 +8,7 @@ const BookingPage = () => {
   return (
     <Container>
       <PageTitle title={'Booking'} />
-      <Typography sx={{ mt: 1, mb: 1 }}>
+      <Typography variant={'h5'} sx={{ my: 2 }} align={'center'}>
         {'Booking coming soon!'}
       </Typography>
     </Container>

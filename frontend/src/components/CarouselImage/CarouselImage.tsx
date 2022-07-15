@@ -1,14 +1,14 @@
 import React from 'react';
 import { Paper } from '@mui/material';
 
-type CarouselImageProps = {
+interface CarouselImageProps {
   image: {
     alt: string | undefined,
     image: string | undefined,
     src?: string
     title: string | undefined
-  }
-};
+  };
+}
 
 const CarouselImage = ({ image }: CarouselImageProps) => {
   return (
@@ -21,7 +21,7 @@ const CarouselImage = ({ image }: CarouselImageProps) => {
         objectFit: 'cover'
       }}
       alt={image.alt || image.title}
-      src={image.src || image.image}
+      src={image.image || image.src}
     />
   );
 };

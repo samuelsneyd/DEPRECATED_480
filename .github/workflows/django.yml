@@ -12,6 +12,9 @@ env:
   EMAIL_HOST_PASSWORD: ''
   EMAIL_USE_TLS: False
   RECIPIENT_EMAIL: test@test.com
+  AWS_ACCESS_KEY_ID: ''
+  AWS_SECRET_ACCESS_KEY: ''
+  AWS_STORAGE_BUCKET_NAME: ''
 
 on:
   push:

@@ -3,6 +3,9 @@ from django.core.mail import EmailMessage
 from django.utils.translation import gettext_lazy as _
 from multiselectfield import MultiSelectField
 from smtplib import SMTPException
+from django.conf import settings
+
+MEDIA_URL = settings.MEDIA_URL.lstrip("/")
 
 
 class Email(models.Model):
@@ -82,7 +85,7 @@ class Image(models.Model):
     name = models.CharField(max_length=128)
     alt = models.CharField(max_length=128)
     description = models.CharField(max_length=2048)
-    image = models.ImageField(upload_to="staticfiles/images/")
+    image = models.ImageField(upload_to=MEDIA_URL)
     tags = MultiSelectField(choices=Tags.tags)
     priority = models.IntegerField(default=10)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -106,7 +109,7 @@ class FeatureItem(models.Model):
     description = models.CharField(max_length=4096)
     website = models.CharField(max_length=128)
     tags = MultiSelectField(choices=Tags.tags)
-    image = models.ImageField(upload_to="staticfiles/images/")
+    image = models.ImageField(upload_to=MEDIA_URL)
     alt = models.CharField(max_length=128)
     priority = models.IntegerField(default=10)
     created_at = models.DateTimeField(auto_now_add=True)

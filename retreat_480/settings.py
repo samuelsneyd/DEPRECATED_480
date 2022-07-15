@@ -18,19 +18,19 @@ import dj_database_url
 env = environ.Env()
 environ.Env.read_env()
 
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = env("DEBUG") == "True"
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 MEDIA_ROOT = ""
-MEDIA_URL = ""
+MEDIA_URL = "media/"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env("SECRET_KEY")
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env("DEBUG") == "True"
 
 ALLOWED_HOSTS = [
     env("HOST"),
@@ -169,3 +169,18 @@ EMAIL_HOST_USER = env("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
 EMAIL_USE_TLS = env("EMAIL_USE_TLS") == "True"
 RECIPIENT_EMAIL = env("RECIPIENT_EMAIL")
+
+# Boto3
+
+DEFAULT_FILE_STORAGE = (
+    "storages.backends.s3boto3.S3Boto3Storage"
+    if not DEBUG
+    else "django.core.files.storage.FileSystemStorage"
+)
+
+# AWS
+
+AWS_ACCESS_KEY_ID = env("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = env("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = env("AWS_STORAGE_BUCKET_NAME")
+AWS_QUERYSTRING_AUTH = False

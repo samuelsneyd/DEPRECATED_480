@@ -47,7 +47,11 @@ const ProductValues = () => {
               >
                 <CabinIcon fontSize={'large'} />
               </IconButton>
-              <Typography variant={'h6'} sx={{ my: 4 }}>
+              <Typography
+                variant={'h6'}
+                align={'center'}
+                sx={{ my: 4 }}
+              >
                 {'Comfy accommodation'}
               </Typography>
               <Typography variant={'h5'} align={'center'}>
@@ -64,7 +68,11 @@ const ProductValues = () => {
               >
                 <KayakingIcon fontSize={'large'} />
               </IconButton>
-              <Typography variant={'h6'} sx={{ my: 4 }}>
+              <Typography
+                variant={'h6'}
+                align={'center'}
+                sx={{ my: 4 }}
+              >
                 {'New experiences'}
               </Typography>
               <Typography variant={'h5'} align={'center'}>
@@ -81,7 +89,11 @@ const ProductValues = () => {
               >
                 <ForestIcon fontSize={'large'} />
               </IconButton>
-              <Typography variant={'h6'} sx={{ my: 4 }}>
+              <Typography
+                variant={'h6'}
+                align={'center'}
+                sx={{ my: 4 }}
+              >
                 {'Beautiful scenery'}
               </Typography>
               <Typography variant={'h5'} align={'center'}>

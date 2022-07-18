@@ -4,8 +4,10 @@ import Carousel from 'react-material-ui-carousel';
 import CarouselImage from '../../../components/CarouselImage/CarouselImage';
 import PageTitle from '../../../components/PageTitle/PageTitle';
 import withAnimation from '../../../hooks/withAnimation';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-const images = [
+const fallbackImages = [
   {
     title: 'Marina boats',
     alt: 'Marina boats',
@@ -19,6 +21,16 @@ const images = [
 ];
 
 const BoatingPage = () => {
+  const [images, setImages] = useState(fallbackImages);
+
+  useEffect(() => {
+    axios.get('/api/images?tag=boating')
+      .then((response) => {
+        response.data?.length > 0 ? setImages(response.data) : null;
+      })
+      .catch(() => setImages(fallbackImages));
+  }, []);
+
   return (
     <Container>
       <PageTitle title={'Boating'} />

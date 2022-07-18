@@ -19,13 +19,11 @@ const BirdsPage = () => {
   const [images, setImages] = useState(fallbackImages);
 
   useEffect(() => {
-    return () => {
-      axios.get('/api/images?tag=birds')
-        .then((response) => {
-          response.data?.length > 0 ? setImages(response.data) : null;
-        })
-        .catch(() => setImages(fallbackImages));
-    };
+    axios.get('/api/images?tag=birds')
+      .then((response) => {
+        response.data?.length > 0 ? setImages(response.data) : null;
+      })
+      .catch(() => setImages(fallbackImages));
   }, []);
 
   return (

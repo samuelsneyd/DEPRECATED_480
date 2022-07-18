@@ -1,4 +1,4 @@
-# Retreat 480
+# 480
 
 https://retreat-480.herokuapp.com/
 

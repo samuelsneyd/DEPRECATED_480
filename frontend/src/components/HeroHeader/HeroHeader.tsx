@@ -25,13 +25,8 @@ const HeroHeader = () => {
       <Typography
         color={'inherit'}
         align={'center'}
-        variant={'h4'}
-        sx={{
-          mb: {
-            xs: 8,
-            sm: 10
-          }
-        }}
+        variant={'h1'}
+        sx={{ mb: 4 }}
       >
         {config.siteName}
       </Typography>

@@ -1,15 +1,14 @@
 import * as React from 'react';
 import { useState } from 'react';
-import config from '../../config/config';
 import MobileDrawerView from './MobileDrawerView';
 
 const pages = [
   {
-    title: config.siteName,
+    title: 'Home',
     href: '/'
   },
   {
-    title: 'About',
+    title: 'About Us',
     href: '/about/'
   },
   {

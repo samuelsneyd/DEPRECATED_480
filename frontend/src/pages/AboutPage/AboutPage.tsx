@@ -6,6 +6,7 @@ import CarouselImage from '../../components/CarouselImage/CarouselImage';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import withAnimation from '../../hooks/withAnimation';
 import axios from 'axios';
+import config from '../../config/config';
 
 const fallbackImages = [
   {
@@ -42,11 +43,11 @@ const AboutPage = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant={'h5'}>
-            {'What makes Retreat 480 special'}
+            {`What makes ${config.siteName} special`}
           </Typography>
           <Typography sx={{ my: 1 }}>
-            {`Nestled in the beautiful Northland region, a 10-minute drive from the Tutukaka marina, Retreat 480 is \
-              an experience like no other.`}
+            {`Nestled in the beautiful Northland region, a 10-minute drive from the Tutukaka marina, ${config.siteName}\
+              is an experience like no other.`}
           </Typography>
           <Typography sx={{ my: 1 }}>
             {`Visit for a short weekend away, or stay longer for a holiday in one of New Zealand's most beautiful \

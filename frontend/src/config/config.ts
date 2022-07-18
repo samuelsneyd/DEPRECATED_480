@@ -1,5 +1,5 @@
 const config = {
-  siteName: 'Retreat 480',
+  siteName: '480',
   siteSubtitle: 'Nature without barriers',
   address: '480 Waiotoi Road, Matapouri 0173'
 };

@@ -14,11 +14,12 @@ type Page = {
   title: string,
   href: string
 };
-type MobileDrawerViewProps = {
-  pages: Page[],
-  openDrawer: boolean,
-  setOpenDrawer: (openDrawer: boolean) => void
-};
+
+interface MobileDrawerViewProps {
+  pages: Page[];
+  openDrawer: boolean;
+  setOpenDrawer: (openDrawer: boolean) => void;
+}
 
 const MobileDrawerView = ({ pages, openDrawer, setOpenDrawer }: MobileDrawerViewProps) => {
   return (

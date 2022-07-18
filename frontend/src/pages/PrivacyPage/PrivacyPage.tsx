@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
+import { Container } from '@mui/material';
 import Markdown from '../../components/Markdown/Markdown';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import privacy from '../../../static/legal/privacy.md';

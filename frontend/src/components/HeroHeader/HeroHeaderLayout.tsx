@@ -27,11 +27,11 @@ const Background = styled(Box)({
   zIndex: -2
 });
 
-interface ProductHeroLayoutProps {
+interface HeroHeaderLayoutProps {
   sxBackground: SxProps<Theme>;
 }
 
-const HeroHeaderLayout = (props: React.HTMLAttributes<HTMLDivElement> & ProductHeroLayoutProps) => {
+const HeroHeaderLayout = (props: React.HTMLAttributes<HTMLDivElement> & HeroHeaderLayoutProps) => {
   const { children, sxBackground } = props;
 
   return (

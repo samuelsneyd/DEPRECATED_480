@@ -21,7 +21,7 @@ class EmailView(APIView):
     """An API View for creating emails."""
 
     bad_request_message = {"message": "bad request"}
-    subject = "Inquiry about Retreat 480"
+    subject = "Inquiry about 480"
 
     def post(self, request) -> Response:
         """Creates and sends an email."""

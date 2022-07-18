@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
-import config from '../../config/config';
 
 const HomeButton = () => {
   return (
@@ -18,7 +17,7 @@ const HomeButton = () => {
         fontSize: 'large'
       }}
     >
-      {config.siteName}
+      {'Home'}
     </Button>
   );
 };

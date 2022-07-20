@@ -9,11 +9,6 @@ import axios from 'axios';
 
 const fallbackImages = [
   {
-    title: 'Mountains',
-    alt: 'Mountains',
-    image: '../../../../static/images/misty-mountains.jpg'
-  },
-  {
     title: 'Rainbow',
     alt: 'Rainbow',
     image: '../../../../static/images/rainbow.jpg'

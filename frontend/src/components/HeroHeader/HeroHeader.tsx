@@ -5,7 +5,7 @@ import HeroHeaderLayout from './HeroHeaderLayout';
 import config from '../../config/config';
 import theme from '../../config/theme';
 
-const backgroundImage = '../../../../static/images/misty-mountains.jpg';
+const backgroundImage = '../../../../static/images/home_page.jpg';
 
 const HeroHeader = () => {
   return (

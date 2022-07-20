@@ -99,7 +99,7 @@ const HowToBook = () => {
                   align={'center'}
                   sx={{ my: 2 }}
                 >
-                  {'Get directions to your loft'}
+                  {'Get directions to your studio'}
                 </Typography>
               </Box>
             </Grid>

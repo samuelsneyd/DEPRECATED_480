@@ -47,7 +47,7 @@ const images = [
   {
     src: '../../../../static/images/cake.jpg',
     href: '/features/restaurants/',
-    title: 'Restaurants',
+    title: 'Local Eating',
     width: '20%'
   },
   {

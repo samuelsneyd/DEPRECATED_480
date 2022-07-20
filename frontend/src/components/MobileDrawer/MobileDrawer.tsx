@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import MobileDrawerView from './MobileDrawerView';
+import config from '../../config/config';
 
 const pages = [
   {
@@ -8,11 +9,11 @@ const pages = [
     href: '/'
   },
   {
-    title: 'About Us',
+    title: `About ${config.siteName}`,
     href: '/about/'
   },
   {
-    title: 'Your Loft',
+    title: 'Your Studio',
     href: '/accommodation/'
   },
   {

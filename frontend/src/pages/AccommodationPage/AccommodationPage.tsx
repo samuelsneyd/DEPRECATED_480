@@ -30,7 +30,7 @@ const AccommodationPage = () => {
 
   return (
     <Container>
-      <PageTitle title={'Your Loft'} />
+      <PageTitle title={'Your Studio'} />
       <Grid container spacing={2} minHeight={450} sx={{ mb: 1 }}>
         <Grid item xs={12} md={6}>
           <Carousel
@@ -43,13 +43,14 @@ const AccommodationPage = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant={'h5'}>
-            {'See your loft'}
+            {'See your studio'}
           </Typography>
           <Typography sx={{ my: 1 }}>
-            {'Luxury accommodation right on the edge of native forests.'}
+            {'Set on two levels, your spacious studio includes a kitchen and dining area downstairs with two decks.'}
           </Typography>
           <Typography sx={{ my: 1 }}>
-            {'Features a double bed, living area, full kitchen, and acres of outdoor space.'}
+            {'Upstairs is a large open plan bedroom with bathroom. '}
+            {'Your shower is outside nestled in the trees but under cover in case it rains.'}
           </Typography>
           <AccommodationIcons />
         </Grid>

@@ -25,7 +25,7 @@ const footers = [
     title: 'Features',
     description: [
       {
-        text: 'Your Loft',
+        text: 'Your Studio',
         href: '/accommodation/'
       },
       {

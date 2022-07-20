@@ -7,10 +7,10 @@ import withAnimation from '../../../hooks/withAnimation';
 const RestaurantsPage = () => {
   return (
     <Container>
-      <PageTitle title={'Restaurants'} />
+      <PageTitle title={'Local Eating'} />
       <Typography variant={'h5'} sx={{ mt: 2 }} align={'center'}>
-        {`While a full kitchen and dining area are provided, there are plenty of great places to eat out on the \
-          Tutukaka coast.`}
+        While a full kitchen and dining area are provided, there are plenty of great places to eat out on the Tutukaka
+        coast.
       </Typography>
       <Restaurants />
     </Container>

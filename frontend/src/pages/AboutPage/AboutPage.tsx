@@ -10,9 +10,9 @@ import config from '../../config/config';
 
 const fallbackImages = [
   {
-    title: 'Misty Mountains',
-    alt: 'Misty mountains',
-    image: '../../../../static/images/misty-mountains.jpg',
+    title: '480 - Nature Without Barriers',
+    alt: '480 - Nature Without Barriers',
+    image: '../../../../static/images/home_page.jpg',
     src: ''
   }
 ];
@@ -30,7 +30,7 @@ const AboutPage = () => {
 
   return (
     <Container>
-      <PageTitle title={'About Us'} />
+      <PageTitle title={`About ${config.siteName}`} />
       <Grid container spacing={2} minHeight={450} sx={{ mb: 1 }}>
         <Grid item xs={12} md={6}>
           <Carousel
@@ -43,19 +43,32 @@ const AboutPage = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant={'h5'}>
-            {`What makes ${config.siteName} special`}
+            Nature without barriers
           </Typography>
           <Typography sx={{ my: 1 }}>
-            {`Nestled in the beautiful Northland region, a 10-minute drive from the Tutukaka marina, ${config.siteName}\
-              is an experience like no other.`}
+            {config.siteName} is surrounded by bush full of birdlife.
           </Typography>
           <Typography sx={{ my: 1 }}>
-            {`Visit for a short weekend away, or stay longer for a holiday in one of New Zealand's most beautiful \
-              areas.`}
+            Your loft is the only guest accommodation on our 18ha (50 acre) property, providing you with peace and
+            privacy.
           </Typography>
           <Typography sx={{ my: 1 }}>
-            {`While you're here, charter a boat to the Poor Knights Islands, go scuba diving or snorkeling, go for a \
-              hike in the bush, and spend time on one of Tutukaka's many beautiful beaches.`}
+            We are a clothing optional retreat. If you wish, you are welcome to shed your clothes and experience air and
+            warmth on your skin.
+          </Typography>
+          <Typography sx={{ my: 1 }}>
+            You can sit and relax on the deck, surrounded by trees and the song of the Tui by day and the call of the
+            Kiwi at night.
+          </Typography>
+          <Typography sx={{ my: 1 }}>
+            You can wander the tracks we have, stopping just to listen to nothing.
+          </Typography>
+          <Typography sx={{ my: 1 }}>
+            Once you arrive in tranquility of {config.siteName}, you won’t want to leave.
+          </Typography>
+          <Typography sx={{ my: 1 }}>
+            To protect our biodiversity {config.siteName} is not open to pets, and due to fire danger is a no smoking
+            retreat.
           </Typography>
         </Grid>
       </Grid>

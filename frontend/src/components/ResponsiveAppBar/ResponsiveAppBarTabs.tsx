@@ -29,7 +29,7 @@ const ResponsiveAppBarTabs = ({ pages }: ResponsiveAppBarTabsProps) => {
             px: 1,
             display: 'flex',
             alignItems: 'flex-start',
-            color: page.color || 'secondary.light',
+            color: pathname.includes(page.href) ? 'secondary.main' : 'secondary.light',
             textTransform: 'none',
             textDecoration: 'none',
             fontWeight: 'light',

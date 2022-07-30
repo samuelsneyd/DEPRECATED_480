@@ -3,6 +3,7 @@
 https://retreat-480.herokuapp.com/
 
 ### Tech stack
+
 <table>
    <tbody>
      <tr>
@@ -23,3 +24,18 @@ https://retreat-480.herokuapp.com/
      </tr>
   </tbody>
 </table>
+
+## About
+
+480 is a Django/React web application with some basic content-management features. It is built as a marketing and
+booking website for accommodation in Northland. It is still a work in progress with several more features to be
+completed, pending discussions with the owner.
+
+The frontend uses TypeScript, React, and the Material UI component library.
+
+The backend uses Django and the Django Rest API framework for several endpoints. There are basic CRUD functionalities
+using a PostgreSQL database to save emails and upload images to an Amazon Web Services S3 bucket. Emails are sent using
+Gmail's API, and images can be displayed on the frontend.
+
+480 is hosted on Heroku, and has a full CI/CD pipeline with automatic building, unit tests, and deployment from GitHub
+after pushing to the production branch.

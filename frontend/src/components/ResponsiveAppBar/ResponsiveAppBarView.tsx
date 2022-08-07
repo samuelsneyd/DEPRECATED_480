@@ -5,15 +5,14 @@ import MobileDrawer from '../MobileDrawer/MobileDrawer';
 import ResponsiveAppBarTabs from './ResponsiveAppBarTabs';
 
 type Page = {
-  title: string;
-  href: string,
-  color?: string
+  title: string,
+  href: string
 };
 
-type ResponsiveAppBarViewProps = {
-  isMobile: boolean,
-  pages: Page[]
-};
+interface ResponsiveAppBarViewProps {
+  isMobile: boolean;
+  pages: Page[];
+}
 
 const ResponsiveAppBarView = ({ isMobile, pages }: ResponsiveAppBarViewProps) => {
   return (

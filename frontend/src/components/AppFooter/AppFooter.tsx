@@ -29,7 +29,7 @@ const footers = [
         href: '/accommodation/'
       },
       {
-        text: 'In the Area',
+        text: 'Things To Do',
         href: '/features/'
       },
       {

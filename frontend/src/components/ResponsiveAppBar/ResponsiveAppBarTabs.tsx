@@ -4,14 +4,13 @@ import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 
 type Page = {
-  title: string;
-  href: string,
-  color?: string
+  title: string,
+  href: string
 };
 
-type ResponsiveAppBarTabsProps = {
-  pages: Page[]
-};
+interface ResponsiveAppBarTabsProps {
+  pages: Page[];
+}
 
 const ResponsiveAppBarTabs = ({ pages }: ResponsiveAppBarTabsProps) => {
   const { pathname } = useLocation();

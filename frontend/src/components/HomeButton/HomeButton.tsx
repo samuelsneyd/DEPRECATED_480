@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { Button } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const HomeButton = () => {
+  const { pathname } = useLocation();
+
   return (
     <Button
       component={Link}
@@ -10,7 +12,7 @@ const HomeButton = () => {
       to={'/'}
       size={'large'}
       sx={{
-        color: 'inherit',
+        color: pathname == '/' ? 'secondary.main' : 'secondary.light',
         display: 'flex',
         textDecoration: 'none',
         textTransform: 'none',

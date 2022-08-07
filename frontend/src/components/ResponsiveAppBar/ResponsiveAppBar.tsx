@@ -17,13 +17,12 @@ const pages = [
     href: '/location/'
   },
   {
-    title: 'In the Area',
+    title: 'Things To Do',
     href: '/features/'
   },
   {
     title: 'Book Now',
-    href: '/book/',
-    color: 'secondary.main'
+    href: '/book/'
   },
   {
     title: 'Contact',

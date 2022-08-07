@@ -21,7 +21,7 @@ const pages = [
     href: '/location/'
   },
   {
-    title: 'In the Area',
+    title: 'Things To Do',
     href: '/features/'
   },
   {

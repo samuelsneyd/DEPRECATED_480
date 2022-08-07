@@ -6,6 +6,7 @@ import axios from 'axios';
 import PageTitle from '../../../components/PageTitle/PageTitle';
 import Carousel from 'react-material-ui-carousel';
 import CarouselImage from '../../../components/CarouselImage/CarouselImage';
+import withAnimation from '../../../hooks/withAnimation';
 
 const fallbackImages = [
   {
@@ -73,4 +74,4 @@ const OtherPage = () => {
   );
 };
 
-export default OtherPage;
+export default withAnimation(OtherPage);

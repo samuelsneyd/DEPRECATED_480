@@ -4,6 +4,7 @@ import { Container, Grid, Link, Typography } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import CarouselImage from '../../../components/CarouselImage/CarouselImage';
 import PageTitle from '../../../components/PageTitle/PageTitle';
+import withAnimation from '../../../hooks/withAnimation';
 import config from '../../../config/config';
 import axios from 'axios';
 
@@ -69,4 +70,4 @@ const At480Page = () => {
   );
 };
 
-export default At480Page;
+export default withAnimation(At480Page);

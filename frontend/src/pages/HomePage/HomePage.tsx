@@ -1,5 +1,4 @@
 import * as React from 'react';
-import CallToAction from '../../components/CallToAction/CallToAction';
 import ContactBanner from '../../components/ContactBanner/ContactBanner';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import HowToBook from '../../components/HowToBook/HowToBook';
@@ -14,7 +13,6 @@ const HomePage = () => {
       <ProductValues />
       <Features />
       <HowToBook />
-      <CallToAction />
       <ContactBanner />
     </>
   );

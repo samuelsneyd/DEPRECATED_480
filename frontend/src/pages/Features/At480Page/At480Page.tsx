@@ -1,25 +1,25 @@
 import * as React from 'react';
+import { useEffect, useState } from 'react';
 import { Container, Grid, Link, Typography } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import CarouselImage from '../../../components/CarouselImage/CarouselImage';
 import PageTitle from '../../../components/PageTitle/PageTitle';
-import withAnimation from '../../../hooks/withAnimation';
-import { useEffect, useState } from 'react';
+import config from '../../../config/config';
 import axios from 'axios';
 
 const fallbackImages = [
   {
-    title: 'School of fish',
-    alt: 'School of fish underwater',
-    image: '../../../../static/images/school-of-fish.jpg'
+    title: '480 Landscape',
+    alt: '480 Landscape',
+    image: '../../../../static/images/home_page.jpg'
   }
 ];
 
-const OceanPage = () => {
+const At480Page = () => {
   const [images, setImages] = useState(fallbackImages);
 
   useEffect(() => {
-    axios.get('/api/images?tag=ocean')
+    axios.get('/api/images?tag=at480')
       .then((response) => {
         response.data?.length > 0 ? setImages(response.data) : null;
       })
@@ -28,7 +28,7 @@ const OceanPage = () => {
 
   return (
     <Container>
-      <PageTitle title={'Beaches & Swimming'} />
+      <PageTitle title={`At ${config.siteName}`} />
       <Grid container spacing={2} minHeight={450} sx={{ mb: 1 }}>
         <Grid item xs={12} md={6}>
           <Carousel
@@ -41,28 +41,27 @@ const OceanPage = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant={'h5'}>
-            {'Explore the ocean'}
+            {config.siteSubtitle}
           </Typography>
           <Typography sx={{ my: 1 }}>
-            {'We have beautiful white sandy beaches and blue water nearby.'}
+            We have several walking tracks on our property, providing you with quiet private strolls.
           </Typography>
           <Typography sx={{ my: 1 }}>
-            <Link href={'https://www.tutukakacoastnz.com/matapouri-bay/'}>Matapouri</Link>
-            {' and '}
-            <Link href={'https://www.tutukakacoastnz.com/matapouri-bay/'}>Whale Bay</Link>
-            {'are popular beaches within 20 minutes drive.'}
+            We are a clothing optional retreat, giving you the option to experience nature without barriers in complete
+            privacy.
           </Typography>
           <Typography sx={{ my: 1 }}>
-            {'Or, contact one of the tourist boat operators to take you to the fabulous islands of Tawhiti Rahi and Aorangi, aka the '}
-            <Link href={'https://www.tutukakacoastnz.com/poor-knights-islands/'}>{'Poor Knights Islands'}</Link>
-            {', one of the top 10 dive sites in the world.'}
+            At {config.siteName}, you will see and hear a wide range of birds, thanks largely to the protection of
+            habitat we provide and the elimination of pests by <Link href={'https://tutukakalandcare.org.nz/'}>Tutukaka
+            Land Care</Link>. Typically, you will see or hear Tui, Piwakawaka, Kiwi, Ruru, Kotare, Pīpīwharauroa,
+            Kererū, Kākāriki, and Toutouwai. Plus noisy Australian Rosellas.
           </Typography>
           <Typography sx={{ my: 1 }}>
-            {'About an hour away is the gorgeous naturist beach of '}
-            <Link href={'https://www.freebeaches.org.nz/uretiti.htm'}>{'Uretiti'}</Link>
-            {'.'}
+            At night we have minimal light pollution; get your star app out and look for the Magellanic Clouds and the
+            Carina Nebula.
           </Typography>
           <Typography sx={{ my: 1 }}>
+            But most of all, {config.siteName} is about peace and quiet, local walks, and restoring your spirit.
           </Typography>
         </Grid>
       </Grid>
@@ -70,4 +69,4 @@ const OceanPage = () => {
   );
 };
 
-export default withAnimation(OceanPage);
+export default At480Page;

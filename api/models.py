@@ -66,20 +66,16 @@ class Email(models.Model):
 
 
 class Image(models.Model):
-    """Images uploaded to the Django backend"""
+    """Images uploaded to the Django backend."""
 
     class Tags:
         tags = (
+            ("AT-480", "At 480"),
             ("ABOUT", "About"),
             ("ACCOMMODATION", "Accommodation"),
-            ("BEACHES", "Beaches"),
-            ("BIRDS", "Birds"),
-            ("BOATING", "Boating"),
-            ("HIKING", "Hiking"),
             ("MISC", "Misc"),
             ("OCEAN", "Ocean"),
-            ("STARS", "Stars"),
-            ("SWIMMING", "Swimming"),
+            ("OTHER", "Other"),
         )
 
     name = models.CharField(max_length=128)
@@ -96,7 +92,7 @@ class Image(models.Model):
 
 
 class FeatureItem(models.Model):
-    """Restaurants in the area."""
+    """Items that can be featured as a card item."""
 
     class Tags:
         tags = (

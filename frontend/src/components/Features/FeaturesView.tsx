@@ -30,7 +30,7 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
   height: '45vh',
   [theme.breakpoints.down('md')]: {
     width: '100% !important',
-    height: 100
+    height: 150
   },
   '&:hover': {
     zIndex: 1

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { Container, Grid, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Container, Grid, Link, Typography } from '@mui/material';
 import axios from 'axios';
 import PageTitle from '../../../components/PageTitle/PageTitle';
 import Carousel from 'react-material-ui-carousel';
@@ -46,24 +45,36 @@ const OtherPage = () => {
           </Typography>
           <Typography sx={{ my: 1 }}>
             {'Within 60 minutes drive you can explore Whangarei and the '}
-            <Link to={'https://www.hundertwasserartcentre.co.nz/'}>{'Hunterwasser Art Centre'}</Link>.
+            <Link
+              href={'https://www.hundertwasserartcentre.co.nz/'}
+              target={'_blank'}
+            >
+              {'Hunterwasser Art Centre'}
+            </Link>.
           </Typography>
           <Typography sx={{ my: 1 }}>
             {' There\'s a nice walk around '}
             <Link
-              to={'https://www.wdc.govt.nz/Community/Parks-and-recreation/Parks-and-reserves/Otuihau-Whangarei-Falls'}
+              href={'https://www.wdc.govt.nz/Community/Parks-and-recreation/Parks-and-reserves/Otuihau-Whangarei-Falls'}
+              target={'_blank'}
             >
               {'Whangarei Falls'}
             </Link>
             {' or climb up '}
-            <Link to={'https://www.wdc.govt.nz/Community/Parks-and-recreation/Parks-and-reserves/Parihaka'}>
+            <Link
+              href={'https://www.wdc.govt.nz/Community/Parks-and-recreation/Parks-and-reserves/Parihaka'}
+              target={'_blank'}
+            >
               {'Parihaka'}
             </Link>
             {'.'}
           </Typography>
           <Typography sx={{ my: 1 }}>
             {'If you’re feeling adventurous you can go underground at '}
-            <Link to={'https://www.wdc.govt.nz/Community/Parks-and-recreation/Parks-and-reserves/Abbey-Caves'}>
+            <Link
+              href={'https://www.wdc.govt.nz/Community/Parks-and-recreation/Parks-and-reserves/Abbey-Caves'}
+              target={'_blank'}
+            >
               {'Abbey Caves'}
             </Link>
             {'.'}

@@ -47,19 +47,39 @@ const OceanPage = () => {
             {'We have beautiful white sandy beaches and blue water nearby.'}
           </Typography>
           <Typography sx={{ my: 1 }}>
-            <Link href={'https://www.tutukakacoastnz.com/matapouri-bay/'}>Matapouri</Link>
+            <Link
+              href={'https://www.tutukakacoastnz.com/matapouri-bay/'}
+              target={'_blank'}
+            >
+              {'Matapouri'}
+            </Link>
             {' and '}
-            <Link href={'https://www.tutukakacoastnz.com/matapouri-bay/'}>Whale Bay</Link>
-            {'are popular beaches within 20 minutes drive.'}
+            <Link
+              href={'https://www.tutukakacoastnz.com/matapouri-bay/'}
+              target={'_blank'}
+            >
+              {'Whale Bay'}
+            </Link>
+            {' are popular beaches within 20 minutes drive.'}
           </Typography>
           <Typography sx={{ my: 1 }}>
             {'Or, contact one of the tourist boat operators to take you to the fabulous islands of Tawhiti Rahi and Aorangi, aka the '}
-            <Link href={'https://www.tutukakacoastnz.com/poor-knights-islands/'}>{'Poor Knights Islands'}</Link>
+            <Link
+              href={'https://www.tutukakacoastnz.com/poor-knights-islands/'}
+              target={'_blank'}
+            >
+              {'Poor Knights Islands'}
+            </Link>
             {', one of the top 10 dive sites in the world.'}
           </Typography>
           <Typography sx={{ my: 1 }}>
             {'About an hour away is the gorgeous naturist beach of '}
-            <Link href={'https://www.freebeaches.org.nz/uretiti.htm'}>{'Uretiti'}</Link>
+            <Link
+              href={'https://www.freebeaches.org.nz/uretiti.htm'}
+              target={'_blank'}
+            >
+              {'Uretiti'}
+            </Link>
             {'.'}
           </Typography>
           <Typography sx={{ my: 1 }}>

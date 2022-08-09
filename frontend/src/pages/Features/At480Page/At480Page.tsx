@@ -64,7 +64,7 @@ const At480Page = () => {
             {'At night we have minimal light pollution; get your star app out and look for the Magellanic Clouds and the Carina Nebula.'}
           </Typography>
           <Typography sx={{ my: 1 }}>
-            {`But most of all, {config.siteName} is about peace and quiet, local walks, and restoring your spirit.`}
+            {`But most of all, ${config.siteName} is about peace and quiet, local walks, and restoring your spirit.`}
           </Typography>
         </Grid>
       </Grid>

@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Paper, Typography } from '@mui/material';
+import { Button, Paper } from '@mui/material';
 import HeroHeaderLayout from './HeroHeaderLayout';
-import config from '../../config/config';
 import theme from '../../config/theme';
 
 const backgroundImage = '../../../../static/images/home_page.jpg';
-const logo = '../../../../static/images/logo_plain.png';
+const logo = '../../../../static/images/logo_text.png';
 
 const HeroHeader = () => {
   return (
@@ -28,10 +27,11 @@ const HeroHeader = () => {
           component={'img'}
           src={logo}
           sx={{
-            maxHeight: '45vh',
+            maxHeight: '35vh',
             maxWidth: '100%',
             backgroundColor: 'transparent',
-            boxShadow: 'none'
+            boxShadow: 'none',
+            my: 4
           }}
         />
       </Link>
@@ -44,13 +44,6 @@ const HeroHeader = () => {
       >
         {'Book Now'}
       </Button>
-      <Typography
-        variant={'h5'}
-        color={'inherit'}
-        sx={{ mt: 2 }}
-      >
-        {config.siteSubtitle}
-      </Typography>
     </HeroHeaderLayout>
   );
 };

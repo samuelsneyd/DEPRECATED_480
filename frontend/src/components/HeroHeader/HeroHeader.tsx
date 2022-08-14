@@ -4,8 +4,8 @@ import { Button, Paper } from '@mui/material';
 import HeroHeaderLayout from './HeroHeaderLayout';
 import theme from '../../config/theme';
 
-const backgroundImage = '../../../../static/images/home_page.jpg';
-const logo = '../../../../static/images/logo_text.png';
+const backgroundImage = '../../../../static/images/home_page_min.jpg';
+const logo = '../../../../static/images/logo_text_min.png';
 
 const HeroHeader = () => {
   return (

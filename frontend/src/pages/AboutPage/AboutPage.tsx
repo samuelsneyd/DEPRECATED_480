@@ -12,7 +12,7 @@ const fallbackImages = [
   {
     title: '480 - Nature Without Barriers',
     alt: '480 - Nature Without Barriers',
-    image: '../../../../static/images/home_page.jpg',
+    image: '../../../../static/images/home_page_min.jpg',
     src: ''
   }
 ];

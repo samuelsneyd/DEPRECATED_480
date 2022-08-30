@@ -10,7 +10,7 @@ type Image = {
 
 const images: Image[] = [
   {
-    src: '../../../../static/images/home_page.jpg',
+    src: '../../../../static/images/home_page_min.jpg',
     href: '/features/480/',
     title: 'At 480',
     width: '55%'

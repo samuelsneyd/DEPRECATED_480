@@ -12,7 +12,7 @@ const fallbackImages = [
   {
     title: '480 Landscape',
     alt: '480 Landscape',
-    image: '../../../../static/images/home_page.jpg'
+    image: '../../../../static/images/home_page_min.jpg'
   }
 ];
 

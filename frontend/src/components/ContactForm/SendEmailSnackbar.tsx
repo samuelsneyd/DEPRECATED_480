@@ -1,15 +1,17 @@
 import * as React from 'react';
 import { Alert, AlertTitle, Snackbar } from '@mui/material';
 
-type SendEmailSnackbarProps = {
-  isSent: boolean,
-  setIsSent: (isSent: boolean) => void,
-  failSend: boolean,
-  setFailSend: (isSent: boolean) => void
-};
+interface SendEmailSnackbarProps {
+  isSending: boolean;
+  isSent: boolean;
+  setIsSent: React.Dispatch<React.SetStateAction<boolean>>;
+  failSend: boolean;
+  setFailSend: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
 const SendEmailSnackbar = (props: SendEmailSnackbarProps) => {
   const {
+    isSending,
     isSent,
     setIsSent,
     failSend,
@@ -18,6 +20,17 @@ const SendEmailSnackbar = (props: SendEmailSnackbarProps) => {
 
   return (
     <>
+      <Snackbar
+        open={isSending}
+      >
+        <Alert
+          severity={'info'}
+          sx={{ width: '100%' }}
+        >
+          <AlertTitle>{'Sending'}</AlertTitle>
+          {'Sending email now...'}
+        </Alert>
+      </Snackbar>
       <Snackbar
         open={isSent}
         onClick={() => setIsSent(false)}

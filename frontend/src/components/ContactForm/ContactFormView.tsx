@@ -16,18 +16,19 @@ type ContactFormValues = {
   message: string
 }
 
-type ContactFormViewProps = {
-  values: ContactFormValues,
-  errors: ContactFormValues,
-  minMessageLength: number,
-  messageHelperText: string,
-  handleInputChange: React.FormEventHandler,
-  handleSubmit: React.FormEventHandler,
-  isSent: boolean,
-  setIsSent: (isSent: boolean) => void,
-  failSend: boolean,
-  setFailSend: (isSent: boolean) => void
-};
+interface ContactFormViewProps {
+  values: ContactFormValues;
+  errors: ContactFormValues;
+  minMessageLength: number;
+  messageHelperText: string;
+  handleInputChange: React.FormEventHandler;
+  handleSubmit: React.FormEventHandler;
+  isSent: boolean;
+  setIsSent: React.Dispatch<React.SetStateAction<boolean>>;
+  isSending: boolean;
+  failSend: boolean;
+  setFailSend: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
 const ContactFormView = (props: ContactFormViewProps) => {
   const {
@@ -39,6 +40,7 @@ const ContactFormView = (props: ContactFormViewProps) => {
     handleSubmit,
     isSent,
     setIsSent,
+    isSending,
     failSend,
     setFailSend
   } = props;
@@ -82,6 +84,7 @@ const ContactFormView = (props: ContactFormViewProps) => {
                       error={!!errors.firstName}
                       helperText={errors.firstName}
                       fullWidth
+                      disabled={isSending}
                     />
                   </Grid>
                   <Grid item xs={12} sm={6}>
@@ -95,6 +98,7 @@ const ContactFormView = (props: ContactFormViewProps) => {
                       error={!!errors.lastName}
                       helperText={errors.lastName}
                       fullWidth
+                      disabled={isSending}
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -109,6 +113,7 @@ const ContactFormView = (props: ContactFormViewProps) => {
                       error={!!errors.email}
                       helperText={errors.email}
                       fullWidth
+                      disabled={isSending}
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -124,6 +129,7 @@ const ContactFormView = (props: ContactFormViewProps) => {
                       fullWidth
                       multiline
                       minRows={6}
+                      disabled={isSending}
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -132,6 +138,7 @@ const ContactFormView = (props: ContactFormViewProps) => {
                       variant={'contained'}
                       color={'secondary'}
                       fullWidth
+                      disabled={isSending}
                     >
                       {'Submit'}
                     </Button>
@@ -143,6 +150,7 @@ const ContactFormView = (props: ContactFormViewProps) => {
         </Grid>
       </Grid>
       <SendEmailSnackbar
+        isSending={isSending}
         isSent={isSent}
         setIsSent={setIsSent}
         failSend={failSend}

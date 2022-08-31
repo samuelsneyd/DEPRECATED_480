@@ -24,6 +24,7 @@ const ContactForm = () => {
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState(initialValues);
   const [isSent, setIsSent] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const [failSend, setFailSend] = useState(false);
   const minMessageLength = 30;
   const messageHelperText = `${values.message.length}/${minMessageLength} characters minimum`;
@@ -56,6 +57,7 @@ const ContactForm = () => {
   const handleSubmit: React.FormEventHandler = (e: React.FormEvent<HTMLInputElement>) => {
     e.preventDefault();
     if (validateInput()) {
+      setIsSending(true);
       axios
         .post('/api/email', { ...values })
         .then((response) => {
@@ -67,7 +69,8 @@ const ContactForm = () => {
             setFailSend(true);
           }
         })
-        .catch(() => setFailSend(true));
+        .catch(() => setFailSend(true))
+        .finally(() => setIsSending(false));
     }
   };
 
@@ -81,6 +84,7 @@ const ContactForm = () => {
       handleSubmit={handleSubmit}
       isSent={isSent}
       setIsSent={setIsSent}
+      isSending={isSending}
       failSend={failSend}
       setFailSend={setFailSend}
     />

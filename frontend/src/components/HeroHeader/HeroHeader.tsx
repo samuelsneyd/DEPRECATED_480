@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Paper } from '@mui/material';
 import HeroHeaderLayout from './HeroHeaderLayout';
@@ -8,6 +9,8 @@ const backgroundImage = '../../../../static/images/home_page_min.jpg';
 const logo = '../../../../static/images/logo_text_min.png';
 
 const HeroHeader = () => {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
   return (
     <HeroHeaderLayout
       sxBackground={{
@@ -15,12 +18,14 @@ const HeroHeader = () => {
         backgroundColor: theme.palette.primary.main,
         backgroundPosition: 'center'
       }}
+      isImageLoaded={isImageLoaded}
     >
       {/* Increase the network loading priority of the background image. */}
       <img
         style={{ display: 'none' }}
         src={backgroundImage}
         alt={'increase priority'}
+        onLoad={() => setIsImageLoaded(true)}
       />
       <Link to={'/about/'}>
         <Paper

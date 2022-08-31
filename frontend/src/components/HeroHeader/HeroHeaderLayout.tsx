@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Container, styled, SxProps, Theme } from '@mui/material';
+import { Box, Container, Skeleton, styled, SxProps, Theme } from '@mui/material';
 
 const ProductHeroLayoutRoot = styled('section')(({ theme }) => ({
   color: theme.palette.common.white,
@@ -29,10 +29,11 @@ const Background = styled(Box)({
 
 interface HeroHeaderLayoutProps {
   sxBackground: SxProps<Theme>;
+  isImageLoaded: boolean;
 }
 
 const HeroHeaderLayout = (props: React.HTMLAttributes<HTMLDivElement> & HeroHeaderLayoutProps) => {
-  const { children, sxBackground } = props;
+  const { children, sxBackground, isImageLoaded } = props;
 
   return (
     <ProductHeroLayoutRoot>
@@ -58,7 +59,22 @@ const HeroHeaderLayout = (props: React.HTMLAttributes<HTMLDivElement> & HeroHead
             zIndex: -1
           }}
         />
-        <Background sx={sxBackground} />
+        {
+          isImageLoaded
+            ? <Background sx={sxBackground} />
+            :
+            <Skeleton
+              variant={'rectangular'}
+              sx={{
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 0,
+                zIndex: -2
+              }}
+            />
+        }
         <Box
           component="img"
           src="../../../../static/images/icons/productHeroArrowDown.png"

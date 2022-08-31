@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Container, Grid, Link, Typography } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import CarouselImage from '../../../components/CarouselImage/CarouselImage';
+import CarouselSkeleton from '../../../components/CarouselImage/CarouselSkeleton';
 import PageTitle from '../../../components/PageTitle/PageTitle';
 import withAnimation from '../../../hooks/withAnimation';
 import config from '../../../config/config';
@@ -18,13 +19,15 @@ const fallbackImages = [
 
 const At480Page = () => {
   const [images, setImages] = useState(fallbackImages);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     axios.get('/api/images?tag=at480')
       .then((response) => {
         response.data?.length > 0 ? setImages(response.data) : null;
       })
-      .catch(() => setImages(fallbackImages));
+      .catch(() => setImages(fallbackImages))
+      .finally(() => setIsLoaded(true));
   }, []);
 
   return (
@@ -32,13 +35,17 @@ const At480Page = () => {
       <PageTitle title={`At ${config.siteName}`} />
       <Grid container spacing={2} minHeight={450} sx={{ mb: 1 }}>
         <Grid item xs={12} md={6}>
-          <Carousel
-            animation={'fade'}
-            duration={2000}
-            swipe
-          >
-            {images.map((image) => <CarouselImage key={image.title} image={image} />)}
-          </Carousel>
+          {isLoaded
+            ?
+            <Carousel
+              animation={'fade'}
+              duration={2000}
+              swipe
+            >
+              {images.map((image) => <CarouselImage key={image.title} image={image} />)}
+            </Carousel>
+            : <CarouselSkeleton />
+          }
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant={'h5'}>

@@ -7,6 +7,7 @@ import AccommodationIcons from '../../components/AccommodationIcons/Accommodatio
 import CarouselImage from '../../components/CarouselImage/CarouselImage';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import withAnimation from '../../hooks/withAnimation';
+import CarouselSkeleton from '../../components/CarouselImage/CarouselSkeleton';
 
 const fallbackImages = [
   {
@@ -19,13 +20,15 @@ const fallbackImages = [
 
 const AccommodationPage = () => {
   const [images, setImages] = useState(fallbackImages);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     axios.get('/api/images?tag=accommodation')
       .then((response) => {
         response.data?.length > 0 ? setImages(response.data) : null;
       })
-      .catch(() => setImages(fallbackImages));
+      .catch(() => setImages(fallbackImages))
+      .finally(() => setIsLoaded(true));
   }, []);
 
   return (
@@ -33,13 +36,17 @@ const AccommodationPage = () => {
       <PageTitle title={'Your Studio'} />
       <Grid container spacing={2} minHeight={450} sx={{ mb: 1 }}>
         <Grid item xs={12} md={6}>
-          <Carousel
-            animation={'fade'}
-            duration={2000}
-            swipe
-          >
-            {images.map((image) => <CarouselImage key={image.title} image={image} />)}
-          </Carousel>
+          {isLoaded
+            ?
+            <Carousel
+              animation={'fade'}
+              duration={2000}
+              swipe
+            >
+              {images.map((image) => <CarouselImage key={image.title} image={image} />)}
+            </Carousel>
+            : <CarouselSkeleton />
+          }
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant={'h5'}>

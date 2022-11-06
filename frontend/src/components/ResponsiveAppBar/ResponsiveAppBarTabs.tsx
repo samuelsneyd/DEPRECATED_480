@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { Box, Button } from '@mui/material';
+import { Box, Button, Link as MuiLink } from '@mui/material';
 import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
+import config from '../../config/config';
 
 type Page = {
   title: string,
@@ -18,10 +19,13 @@ const ResponsiveAppBarTabs = ({ pages }: ResponsiveAppBarTabsProps) => {
   return (
     <Box sx={{ flexGrow: 1, display: 'flex' }}>
       {pages.map((page) => (
+        // @ts-ignore
         <Button
-          component={Link}
+          component={page.href === config.bookingLink ? MuiLink : Link}
           variant={pathname.includes(page.href) ? 'contained' : 'text'}
+          target={page.href === config.bookingLink ? '_blank' : null}
           to={page.href}
+          href={page.href}
           key={page.title}
           sx={{
             my: 2,

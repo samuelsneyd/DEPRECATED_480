@@ -1,6 +1,6 @@
-# 480
+# DEPRECATED - 480
 
-https://retreat-480.herokuapp.com/
+See the new repo here: https://github.com/samuelsneyd/480 and live deployment: https://www.480.kiwi/
 
 ### Tech stack
 
